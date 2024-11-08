@@ -11,4 +11,5 @@ I'm Mark, a senior Computer Engineering student at the University of British Col
 - [Battleship Game](https://github.com/Mark-Mekhail/Battleship)
 
 ## Public Profile Links
+- [GitHub](https://github.com/Mark-Mekhail)
 - [LinkedIn](www.linkedin.com/in/markmekhail)
