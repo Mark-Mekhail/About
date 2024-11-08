@@ -12,4 +12,4 @@ I'm Mark, a senior Computer Engineering student at the University of British Col
 
 ## Public Profile Links
 - [GitHub](https://github.com/Mark-Mekhail)
-- [LinkedIn](www.linkedin.com/in/markmekhail)
+- [LinkedIn](https://www.linkedin.com/in/markmekhail)
