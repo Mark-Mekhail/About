@@ -6,8 +6,8 @@ I'm Mark Mekhail, a senior Computer Engineering student at the University of Bri
 ## Code Samples
 - [Meta Careers Coding Puzzle Solutions](https://github.com/Mark-Mekhail/Meta-Careers-Coding-Puzzle-Solutions)
 - [Braille Translator](https://github.com/Mark-Mekhail/Braille-Translator)
-- [Wikipedia Race](https://github.com/Mark-Mekhail/Wikipedia-Race)
 - [Battleship Game](https://github.com/Mark-Mekhail/Battleship)
+- [Some Course Projects](https://github.com/Mark-Mekhail/CPEN221-Projects)
 
 ## Public Profile Links
 - [GitHub](https://github.com/Mark-Mekhail)
