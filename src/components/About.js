@@ -14,12 +14,12 @@ const About = () => {
     {
       title: "Proactive Leader",
       icon: leader,
-      content: "Throughout my studies and work experience, I have consistently demonstrated leadership qualities. I took on the role of coordinating the team for my senior capstone project, which involved delegating tasks, setting deadlines, and ensuring that the project was completed on time. I have also been an executive of the Coptic Orthodox Student Association at UBC for the past four years, where I have been responsible for organizing events and leading meetings. Even during my co-op term at Intel I took on the initiative of formally leading the intern cohort in organizing social events and activities."
+      content: "Throughout my studies and work experiences I have consistently taken on leadership roles. For my senior capstone project, I coordinated the members of my team which by delegating tasks, setting deadlines, and ensuring that project milestones were being met on time. With the Coptic Orthodox Student Association at UBC I was a club executive for four years, during which I was responsible for organizing events, leading meetings, and maintining good standing with the Alma Mater Society. At Intel I took on the initiative of formally leading the intern cohort in organizing social events and activities."
     },
     {
       title: "Top 4% Student",
       icon: student,
-      content: "I have achieved a GPA comfortably within the top 4% of my cohort. Throughout my studies I have also earned the top score in my section of a number of courses, including: Basic Algorithms and Data Structures, Intermediate Algorithms and Data Structures, Machine Learning and Data Mining, Computer Communications, Computing Systems I, University Writing, Technical Communication, and Principles of Microeconomics."
+      content: "I have achieved a GPA comfortably within the top 4% of my cohort. I have also maintained a perfect straight-A record so far in my studies across all subject matter, with only two courses remaining. Throughout my studies I have demonstrated excellence by earning the top score in my section of a number of courses, including: Basic Algorithms and Data Structures, Intermediate Algorithms and Data Structures, Machine Learning and Data Mining, Computer Communications, Computing Systems I, University Writing, Technical Communication, and Principles of Microeconomics."
     }
   ]
   return (
