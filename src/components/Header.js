@@ -1,10 +1,15 @@
 import React from "react";
+import mark from "../images/mark-portrait.jpeg";
 
 const Header = () => {
   return (
-    <header className="header">
-      <h1>Mark Mekhail</h1>
-      <h2>Software Engineer</h2>
+    <header class="header">
+      <div id="dropdown">
+      </div>
+      <div id="signature">
+        <img id="mark-photo" src={mark}/>
+        <p>Mark Mekhail</p>
+      </div>
     </header>
   );
 };

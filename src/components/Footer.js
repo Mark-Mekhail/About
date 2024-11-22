@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="social-links">
+    <footer class="footer">
+      <div class="social-links">
         <a href="https://www.linkedin.com/in/markmekhail" target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>

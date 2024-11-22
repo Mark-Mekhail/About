@@ -1,4 +1,5 @@
 import React from "react";
+import Intro from "./components/Intro";
 import Header from "./components/Header";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
@@ -7,11 +8,14 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div>
+    <div id="top-div">
       <Header />
-      <About />
-      <Portfolio />
-      {/* <Experience /> */}
+      <div id="main-body">
+        <Intro />
+        <About />
+        <Experience />
+        <Portfolio />
+      </div>
       <Footer />
     </div>
   );
