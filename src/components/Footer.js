@@ -1,4 +1,6 @@
 import React from "react";
+
+// Importing images
 import linkedin from "../images/icons8-linkedin.png";
 import github from "../images/icons8-github.png";
 
@@ -17,10 +19,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer class="footer">
-      <div class="social-links">
+    <footer className="footer">
+      <div className="social-links">
         {socials.map((social, index) => (
-          <a href="https://www.linkedin.com/in/markmekhail" target="_blank" rel="noopener noreferrer">
+          <a key={index} href="https://www.linkedin.com/in/markmekhail" target="_blank" rel="noopener noreferrer">
             <img src={social.image} />
             {social.site}
           </a>

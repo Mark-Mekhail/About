@@ -4,7 +4,7 @@ import mark from "../images/mark-portrait.jpeg";
 
 const Header = () => {
   return (
-    <header class="header">
+    <header className="header">
       <div id="dropdown">
         <img id="menu-icon" src={menu}/>
       </div>

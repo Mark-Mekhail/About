@@ -34,9 +34,9 @@ const Portfolio = () => {
   ];
 
   return (
-    <section class="portfolio">
+    <section className="portfolio">
       <h1>Portfolio</h1>
-      <div class="projects">
+      <div className="projects">
         {projects.map((project, index) => (ProjectCard(index, project.link, project.image, project.title, project.description)))}
       </div>
     </section>

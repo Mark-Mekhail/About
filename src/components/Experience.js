@@ -41,9 +41,9 @@ const Experience = () => {
   ];
 
   return (
-    <section class="experience">
+    <section className="experience">
       <h1>Professional Experience</h1>
-      <div class="experiences">
+      <div className="experiences">
         {experiences.map((exp, index) => (ExperienceCard(index, exp.role, exp.company, exp.description, exp.logo)))}
       </div>
     </section>

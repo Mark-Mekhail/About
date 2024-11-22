@@ -23,9 +23,9 @@ const About = () => {
     }
   ]
   return (
-    <section class="about">
+    <section className="about">
       <h1>About Me</h1>
-      <div class="about-section">
+      <div className="about-section">
         {sections.map((section, index) => (AboutCard(index, section.title, section.icon, section.content)))}
       </div>
     </section>
