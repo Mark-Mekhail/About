@@ -1,4 +1,5 @@
 import React from "react";
+import ExperienceCard from "./ExperienceCard";
 import intelLogo from "../images/intel-foundry.jpeg";
 import selLogo from "../images/sel.jpg";
 import ubcLogo from "../images/ubc-ece.jpeg";
@@ -41,18 +42,9 @@ const Experience = () => {
 
   return (
     <section class="experience">
-      <h2>Professional Experience</h2>
+      <h1>Professional Experience</h1>
       <div class="experiences">
-        {experiences.map((exp, index) => (
-          <div key={index} class="experience-card">
-            <h4>{exp.role}</h4>
-            <h5 class="company-name">{exp.company}</h5>
-            <p>
-              {exp.description}
-            </p>
-            <img src={exp.logo} class="experience-logo" />
-          </div>
-        ))}
+        {experiences.map((exp, index) => (ExperienceCard(index, exp.role, exp.company, exp.description, exp.logo)))}
       </div>
     </section>
   );

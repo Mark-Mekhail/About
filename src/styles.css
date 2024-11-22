@@ -6,7 +6,7 @@
   --theme-color-4: #AAA;
   --theme-color-5: #555;
   --card-gap: 2rem;
-  --portrait-radius: 1rem;
+  --icon-radius: 1rem;
   --card-width: 32rem;
   --card-border-radius: 1rem;
   --card-border-width: 0.1rem;
@@ -21,15 +21,14 @@ body {
 
 h1 {
   font-weight: 300;
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin: 0rem;
-  justify-items: left;
 }
 
 h2 {
   margin: 0rem;
   font-weight: 300;
-  font-size: 2.75rem;
+  font-size: 3rem;
 }
 
 h3 {
@@ -41,13 +40,13 @@ h3 {
 h4 {
   margin: 0rem;
   font-weight: 300;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 h5 {
   margin: 0rem;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--theme-color-5);
 }
 
@@ -67,7 +66,6 @@ section {
 #top-div {
   display: flex;
   flex-direction: column;
-  align-self: center;
   width: 100%;
 }
 
@@ -84,6 +82,18 @@ section {
   padding: 1% 2%;
 }
 
+#menu-icon {
+  box-sizing: border-box;
+  width: calc(2 * var(--icon-radius));
+  height: calc(2 * var(--icon-radius));
+  border-radius: var(--icon-radius);
+  border: solid;
+  border-width: var(--card-border-width);
+  border-color: var(--theme-color-4);
+  padding: 10%;
+  display: none;
+}
+
 #signature {
   margin: 0px;
   display: flex;
@@ -92,12 +102,12 @@ section {
 }
 
 #mark-photo {
-  width: calc(2 * var(--portrait-radius));
-  height: calc(2 * var(--portrait-radius));
+  width: calc(2 * var(--icon-radius));
+  height: calc(2 * var(--icon-radius));
   margin-right: 0.5rem;
   object-fit: cover;
   object-position: 0% 90%;
-  border-radius: var(--portrait-radius);
+  border-radius: var(--icon-radius);
 }
 
 /* Footer component styling */
@@ -114,23 +124,34 @@ section {
   gap: var(--card-gap);
 }
 
+.footer a {
+  color: var(--theme-color-3);
+  text-decoration: underline;
+}
+
 .footer p {
   font-size: 1rem;
 }
 
 .footer .social-links {
-  display: inline;
+  display: flex;
+  gap: 1rem;
 }
 
 .footer .social-links a {
-  width: 100%;
   color: var(--theme-color-3);
   text-decoration: none;
   margin: calc(var(--card-gap) / 2);
+  display: flex;
+  gap: 0.25rem;
 }
 
-.footer .social-links a:hover {
-  text-decoration: underline;
+.footer .social-links a img {
+  height: 1rem;
+}
+
+.footer a:hover {
+  color: var(--theme-color-5);
 }
 
 /* Main body styling */
@@ -160,17 +181,30 @@ section {
 /* About component styling */
 .about-section {
   display: flex;
-  align-items: normal;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--card-gap);
 }
 
 .about-section-card {
   display: flex;
+  align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
   width: var(--card-width);
   gap: calc(var(--card-gap) / 2);
+}
+
+.about-card-heading {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-icon {
+  height: 2rem;
+  align-self: flex-start;
 }
 
 .about-section-card p {
@@ -238,14 +272,27 @@ section {
   text-decoration: none;
 }
 
-.project-description {
-  color: black;
+.project-overlay {
   background-color: rgba(240, 240, 240, 0.95);
-  font-size: 1rem;
   margin: 0;
   padding: 2% 5%;
-  height: 30%;
+  height: 25%;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.project-title {
+  font-weight: 400;
+  justify-content: center;
+  text-align: left;
+}
+
+.project-description {
+  color: black;
+  font-size: 1rem;
   line-height: 1.4;
 }
 

@@ -1,8 +1,9 @@
 import React from "react";
-import braille_alphabet from "../images/braille-alphabet.jpeg";
+import braille_alphabet from "../images/braille.jpg";
 import meta_puzzles from "../images/meta-puzzles.png";
 import website from "../images/website.png";
 import cpen_code from "../images/cpen-code.png";
+import ProjectCard from "./ProjectCard";
 
 const Portfolio = () => {
   const projects = [
@@ -34,17 +35,9 @@ const Portfolio = () => {
 
   return (
     <section class="portfolio">
-      <h2>Portfolio</h2>
+      <h1>Portfolio</h1>
       <div class="projects">
-        {projects.map((project, index) => (
-          <a key={index} href={project.link} class="project-card" style={{ backgroundImage: `url(${project.image})` }}>
-            <p class="project-description">
-              <strong>{project.title}</strong>
-              <br />
-              {project.description}
-            </p>
-          </a>
-        ))}
+        {projects.map((project, index) => (ProjectCard(index, project.link, project.image, project.title, project.description)))}
       </div>
     </section>
   );
