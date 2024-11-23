@@ -2,7 +2,7 @@ import React from "react";
 
 const Intro = () => {
   return (
-    <section id="intro">
+    <section className="intro">
       <h1>Mark Mekhail</h1>
       <p>
         Hey there! I&apos;m Mark, a human being who happens to be studying Computer Engineering at the University of British Columbia. 

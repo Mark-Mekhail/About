@@ -1,6 +1,6 @@
 import React from "react";
 
-// Importing images
+// Required Images
 import linkedin from "../images/icons8-linkedin.png";
 import github from "../images/icons8-github.png";
 

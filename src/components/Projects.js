@@ -1,11 +1,15 @@
 import React from "react";
+
+// Required components
+import ProjectCard from "./ProjectCard";
+
+// Required images
 import braille_alphabet from "../images/braille.jpg";
 import meta_puzzles from "../images/meta-puzzles.png";
 import website from "../images/website.png";
 import cpen_code from "../images/cpen-code.png";
-import ProjectCard from "./ProjectCard";
 
-const Portfolio = () => {
+const Projects = () => {
   const projects = [
     {
       title: "Meta Coding Puzzles",
@@ -34,13 +38,13 @@ const Portfolio = () => {
   ];
 
   return (
-    <section className="portfolio">
-      <h1>Portfolio</h1>
-      <div className="projects">
+    <section className="projects">
+      <h1>Projects</h1>
+      <div className="section-body">
         {projects.map((project, index) => (ProjectCard(index, project.link, project.image, project.title, project.description)))}
       </div>
     </section>
   );
 };
 
-export default Portfolio;
+export default Projects;

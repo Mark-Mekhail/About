@@ -8,7 +8,7 @@ const ExperienceCard = (index, role, company, description, logo) => {
       <p>
         {description}
       </p>
-      <img src={logo} className="experience-logo" />
+      <img src={logo} className="logo" />
     </div>
   );
 };

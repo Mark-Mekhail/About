@@ -6,7 +6,8 @@
   --theme-color-4: #AAA;
   --theme-color-5: #555;
   --card-gap: 2rem;
-  --icon-radius: 1rem;
+  --signature-icon-radius: 1.5rem;
+  --about-icon-width: 2rem;
   --card-width: 32rem;
   --card-border-radius: 1rem;
   --card-border-width: 0.1rem;
@@ -14,114 +15,107 @@
 
 /* General Styling */
 body {
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 
 h1 {
+  margin: 0;
   font-weight: 300;
   font-size: 4rem;
-  margin: 0rem;
 }
 
 h2 {
-  margin: 0rem;
+  margin: 0;
   font-weight: 300;
   font-size: 3rem;
 }
 
 h3 {
-  margin: 0rem;
+  margin: 0;
   font-weight: 300;
   font-size: 2rem;
 }
 
 h4 {
-  margin: 0rem;
+  margin: 0;
   font-weight: 300;
   font-size: 1.5rem;
 }
 
 h5 {
-  margin: 0rem;
+  margin: 0;
   font-weight: 300;
   font-size: 1.1rem;
   color: var(--theme-color-5);
 }
 
 p {
+  margin: 0;
   font-weight: 300;
   line-height: 1.7rem;
-  max-width: 60vw;
-  margin: 0;
-}
-
-section {
-  padding: 1vh;
-  margin: 1vh;
 }
 
 /* React app styling */
 #top-div {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 /* Header component styling */
 .header {
-  display: flex;
-  justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
+  padding: 2% 4%;
   position: fixed;
   top: 0;
+  display: flex;
+  justify-content: space-between;
   background-color: var(--theme-color-1);
   z-index: 1;
-  padding: 1% 2%;
 }
 
-#menu-icon {
+.dropdown .menu-icon {
   box-sizing: border-box;
   width: calc(2 * var(--icon-radius));
   height: calc(2 * var(--icon-radius));
+  padding: 10%;
   border-radius: var(--icon-radius);
   border: solid;
   border-width: var(--card-border-width);
   border-color: var(--theme-color-4);
-  padding: 10%;
   display: none;
 }
 
-#signature {
-  margin: 0px;
+.signature {
+  margin: 0;
   display: flex;
   align-items: center;
-  width: fit-content;
+  gap: 1rem;
 }
 
-#mark-photo {
-  width: calc(2 * var(--icon-radius));
-  height: calc(2 * var(--icon-radius));
-  margin-right: 0.5rem;
+.signature .icon {
+  width: calc(2 * var(--signature-icon-radius));
+  height: calc(2 * var(--signature-icon-radius));
+  border-radius: var(--signature-icon-radius);
   object-fit: cover;
   object-position: 0% 90%;
-  border-radius: var(--icon-radius);
 }
 
 /* Footer component styling */
 .footer {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  background-color: var(--theme-color-2);
-  color: var(--theme-color-3);
   box-sizing: border-box;
   width: 100%;
   padding: var(--card-gap);
-  gap: var(--card-gap);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  background-color: var(--theme-color-2);
+  color: var(--theme-color-3);
 }
 
 .footer a {
@@ -139,11 +133,11 @@ section {
 }
 
 .footer .social-links a {
-  color: var(--theme-color-3);
-  text-decoration: none;
   margin: calc(var(--card-gap) / 2);
   display: flex;
   gap: 0.25rem;
+  color: var(--theme-color-3);
+  text-decoration: none;
 }
 
 .footer .social-links a img {
@@ -155,17 +149,17 @@ section {
 }
 
 /* Main body styling */
-#main-body {
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+.main-body {
+  width: 90%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  align-self: center;
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  align-self: center;
-  width: 90%;
 }
 
-#main-body section {
+.main-body section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -173,92 +167,92 @@ section {
 }
 
 /* Intro component styling */
-#intro p {
+.intro p {
   font-size: 1.2rem;
   text-align: center;
 }
 
 /* About component styling */
-.about-section {
+.about .section-body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--card-gap);
 }
 
-.about-section-card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
+/* AboutCard component styling */
+.about-card {
   width: var(--card-width);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
   gap: calc(var(--card-gap) / 2);
 }
 
 .about-card-heading {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.about-icon {
-  height: 2rem;
-  align-self: flex-start;
+.about-card-heading .icon {
+  height: var(--about-icon-width);
+  object-fit: cover;
+  object-position: 0% 90%;
 }
 
-.about-section-card p {
-  font-size: 1rem;
+.about-card p {
   text-align: justify;
 }
 
 /* Experience component styling */
-.experiences {
+.experience .section-body {
   width: 100%;
   display: grid;
-  justify-content: center;
   grid-template-columns: repeat(auto-fit, var(--card-width));
   gap: var(--card-gap);
 }
 
+/* ExperienceCard component styling */
 .experience-card {
-  position: relative;
   box-sizing: border-box;
   width: var(--card-width);
   height: calc(0.85 * var(--card-width));
+  padding: 5%;
   border: solid;
   border-radius: var(--card-border-radius);
   border-color: var(--theme-color-4);
   border-width: var(--card-border-width);
+  position: relative;
   text-align: left;
-  padding: 5%;
 }
 
-.company-name {
+.experience-card .company-name {
   margin-top: 2%;
   margin-bottom: 4%;
 }
 
-.experience-logo {
+.experience-card .logo {
   max-width: 50%;
   max-height: 20%;
   margin: 0;
   padding: 0;
-  right: 0;
   position: absolute;
   right: 5%;
   bottom: 5%;
 }
 
-/* Portfolio component styling */
-.projects {
+/* Projects component styling */
+.projects .section-body {
   width: 100%;
   display: grid;
-  justify-content: center;
   grid-template-columns: repeat(auto-fit, var(--card-width));
   gap: var(--card-gap);
+  justify-content: center;
 }
 
+/* ProjectCard component styling */
 .project-card {
   width: var(--card-width);
   height: calc(3 * var(--card-width) / 4);
@@ -266,31 +260,31 @@ section {
   border-radius: var(--card-border-radius);
   border-color: var(--theme-color-4);
   border-width: var(--card-border-width);
-  overflow: hidden;
   background-size: 100% 100%;
+  overflow: hidden;
   align-content: end;
   text-decoration: none;
 }
 
-.project-overlay {
-  background-color: rgba(240, 240, 240, 0.95);
+.project-card-overlay {
+  box-sizing: border-box;
+  height: 25%;
   margin: 0;
   padding: 2% 5%;
-  height: 25%;
-  box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1rem;
   align-items: center;
+  background-color: rgb(240 240 240 / 95%);
 }
 
-.project-title {
+.project-card .title {
   font-weight: 400;
   justify-content: center;
   text-align: left;
 }
 
-.project-description {
+.project-card .description {
   color: black;
   font-size: 1rem;
   line-height: 1.4;
