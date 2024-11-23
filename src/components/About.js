@@ -13,7 +13,7 @@ const About = () => {
     {
       title: "Skilled Software Engineer",
       icon: developerIcon,
-      content: "I take my craft seriously and am always looking to learn and improve. \
+      content: "I take my profession seriously and am always looking to learn and improve. \
         Beyond learning about data structures and algorithms, various programming \
         languages, and other fundamentals of software development, I have leveraged my \
         education and internship opportunities to develop a range of skills in software \
