@@ -28,7 +28,7 @@ const Footer = () => {
           </a>
         ))}
       </div>
-      <p>&copy; 2024 Mark Mekhail. Icons by <a href="https://icons8.com/">Icons8</a></p>
+      <p>&copy; {new Date().getUTCFullYear()} Mark Mekhail. Icons by <a href="https://icons8.com/">Icons8</a></p>
     </footer>
   );
 };
