@@ -11,6 +11,7 @@
   --card-width: 32rem;
   --card-border-radius: 1rem;
   --card-border-width: 0.1rem;
+  --section-gap: 8rem;
 }
 
 /* General Styling */
@@ -24,6 +25,7 @@ h1 {
   margin: 0;
   font-weight: 300;
   font-size: 4rem;
+  text-align: center;
 }
 
 h2 {
@@ -68,7 +70,8 @@ p {
 .header {
   box-sizing: border-box;
   width: 100%;
-  padding: 2% 4%;
+  height: calc(4 * var(--signature-icon-radius));
+  padding: 0% 5%;
   position: fixed;
   top: 0;
   display: flex;
@@ -151,12 +154,12 @@ p {
 /* Main body styling */
 .main-body {
   width: 90%;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: calc(4 * var(--signature-icon-radius) + 5%);
+  margin-bottom: 5%;
   align-self: center;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: var(--section-gap);
 }
 
 .main-body section {
@@ -212,6 +215,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, var(--card-width));
   gap: var(--card-gap);
+  justify-content: center;
 }
 
 /* ExperienceCard component styling */
