@@ -35,7 +35,7 @@ const Experience = () => {
       logo: selLogo,
     },
     {
-      role: "Teaching Assistant: Computing Systems I",
+      role: "Teaching Assistant: CPEN 211",
       company: "UBC Department of Electrical and Computer Engineering",
       description: "CPEN 211 (Computing Systems I) is a fundamental course in \
         digital logic design that covers the following topics: digital circuits, \

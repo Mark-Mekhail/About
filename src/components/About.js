@@ -11,7 +11,7 @@ import studentIcon from "../images/icons8-student.png";
 const About = () => {
   const sections = [
     {
-      title: "Skilled Software Engineer",
+      title: "Skilled Engineer",
       icon: developerIcon,
       content: "I take my profession seriously and am always looking to learn and improve. \
         Beyond learning about data structures and algorithms, various programming \

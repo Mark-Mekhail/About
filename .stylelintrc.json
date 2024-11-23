@@ -1,6 +1,3 @@
 { 
-  "extends": ["stylelint-config-standard"],
-  "rules": {
-    "unit-allowed-list": ["rem", "%", "fr"]
-  }
+  "extends": ["stylelint-config-standard"]
 }

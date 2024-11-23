@@ -12,7 +12,7 @@ const Header = () => {
       </div>
       <div className="signature">
         <img className="icon" src={mark}/>
-        <h4>Mark Mekhail</h4>
+        <h3>Mark Mekhail</h3>
       </div>
     </header>
   );
