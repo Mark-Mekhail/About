@@ -1,5 +1,8 @@
 import React from "react";
+
+// Required components
 import Intro from "./components/Intro";
+import Photos from "./components/Photos";
 import Header from "./components/Header";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -12,6 +15,7 @@ const App = () => {
       <Header />
       <div className="main-body">
         <Intro />
+        <Photos />
         <About />
         <Experience />
         <Projects />

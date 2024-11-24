@@ -147,44 +147,47 @@ p {
 }
 
 /* Intro component styling */
-.intro .intro-images {
-  max-width: 90vw;
+
+/* Photos component styling */
+section.photos {
   width: fit-content;
-  height: fit-content;
-  margin-bottom: 5vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto 50vh auto;
-  justify-content: center;
+  grid-template-columns: min(25vw, fit-content) auto min(25vw, fit-content);
+  gap: 0;
+  align-self: center;
 }
 
-.intro .intro-images img {
+.photos img {
   border-radius: 1em;
 }
 
-.intro .intro-images .top-image {
-  max-width: 40vw;
-  max-height: 30vh;
+.photos .top-image {
+  max-width: 25vw;
+  max-height: 35vh;
+  margin-top: -50%;
   grid-row: 1;
-  grid-column: 1;
-  margin-bottom: -80%;
-  margin-left: 40%;
+  align-self: start;
+  position: relative;
+  left: 50%;
   z-index: 1;
 }
 
-.intro .intro-images .central-image {
-  height: 50vh;
-  grid-row: 2;
-  grid-column: 2;
+.photos .central-image {
+  max-width: 65vw;
+  max-height: 60vh;
+  grid-row: 1;
 }
 
-.intro .intro-images .bottom-image {
-  max-width: 40vw;
-  max-height: 30vh;
-  grid-row: 3;
-  grid-column: 3;
-  margin-top: -80%;
-  margin-left: -40%;
+.photos .bottom-image {
+  max-width: 25vw;
+  max-height: 35vh;
+  margin-bottom: -50%;
+  grid-row: 1;
+  align-self: end;
+  position: relative;
+  right: 50%;
   z-index: 1;
 }
 
@@ -340,6 +343,7 @@ p {
 .footer {
   box-sizing: border-box;
   width: 100%;
+  margin-top: 5vh;
   padding: calc(var(--header-vertical-padding));
   display: flex;
   flex-direction: column;
