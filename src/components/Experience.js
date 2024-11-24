@@ -4,11 +4,11 @@ import React from "react";
 import ExperienceCard from "./ExperienceCard";
 
 // Required images
-import intelLogo from "../images/intel-foundry.jpeg";
-import selLogo from "../images/sel.jpg";
-import ubcLogo from "../images/ubc-ece.jpeg";
-import safeLogo from "../images/safe-software.png";
-import dndLogo from "../images/dnd-canada.jpg";
+import intelLogo from "../images/intel.png";
+import selLogo from "../images/sel.png";
+import ubcLogo from "../images/ubc.png";
+import safeLogo from "../images/safe.png";
+import dndLogo from "../images/canada-dnd.png";
 
 const Experience = () => {
   const experiences = [

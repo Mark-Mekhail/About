@@ -26,7 +26,8 @@
   --card-border-radius: 1em;
   --card-border-width: 0.1em;
   --signature-icon-radius: calc(0.5em + 5 * var(--font-size-multiplier));
-  --about-icon-width: calc(2em + 5 * (var(--font-size-multiplier) - 0.1em));
+  --about-icon-height: calc(2em + 5 * (var(--font-size-multiplier) - 0.1em));
+  --num-intro-images: 5;
 }
 
 /* General Styling */
@@ -96,7 +97,7 @@ p {
   display: flex;
   justify-content: space-between;
   background-color: var(--theme-color-1);
-  z-index: 1;
+  z-index: 2;
 }
 
 .dropdown .menu-icon {
@@ -125,6 +126,214 @@ p {
   border-radius: var(--signature-icon-radius);
   object-fit: cover;
   object-position: 0% 90%;
+}
+
+/* Main body styling */
+.main-body {
+  width: 90vw;
+  margin-top: calc(2 * var(--signature-icon-radius) + 10vh);
+  margin-bottom: 5vh;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+
+.main-body section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--card-gap);
+}
+
+/* Intro component styling */
+.intro .intro-images {
+  max-width: 90vw;
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 5vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto 50vh auto;
+  justify-content: center;
+}
+
+.intro .intro-images img {
+  border-radius: 1em;
+}
+
+.intro .intro-images .top-image {
+  max-width: 40vw;
+  max-height: 30vh;
+  grid-row: 1;
+  grid-column: 1;
+  margin-bottom: -80%;
+  margin-left: 40%;
+  z-index: 1;
+}
+
+.intro .intro-images .central-image {
+  height: 50vh;
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.intro .intro-images .bottom-image {
+  max-width: 40vw;
+  max-height: 30vh;
+  grid-row: 3;
+  grid-column: 3;
+  margin-top: -80%;
+  margin-left: -40%;
+  z-index: 1;
+}
+
+.intro p {
+  font-size: calc(1em + var(--font-size-multiplier));
+  text-align: center;
+}
+
+/* About component styling */
+.about .section-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--card-gap);
+}
+
+/* AboutCard component styling */
+.about-card {
+  max-width: var(--card-width);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: calc(var(--card-gap) / 2);
+}
+
+.about-card-heading {
+  width: 100%;
+  display: flex;
+  place-content: end center;
+  gap: 1em;
+}
+
+.about-card-heading h3 {
+  align-self: end;
+}
+
+.about-card-heading .icon {
+  height: var(--about-icon-height);
+}
+
+/* Experience component styling */
+.experience .section-body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--card-width));
+  grid-auto-rows: 1fr;
+  gap: var(--card-gap);
+  justify-content: center;
+}
+
+/* ExperienceCard component styling */
+.experience-card {
+  box-sizing: border-box;
+  max-width: var(--card-width);
+  height: auto;
+  padding: 5%;
+  border: solid;
+  border-radius: var(--card-border-radius);
+  border-color: var(--theme-color-4);
+  border-width: var(--card-border-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.experience-card .company-name {
+  margin-top: 2%;
+  margin-bottom: 4%;
+  color: var(--theme-color-5);
+}
+
+.experience-card .logo {
+  max-width: 6em;
+  max-height: 5em;
+  margin-top: 10%;
+  align-self: flex-end;
+}
+
+/* Projects component styling */
+.projects .section-body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--card-width));
+  gap: var(--card-gap);
+  justify-content: center;
+}
+
+/* ProjectCard component styling */
+.project-card {
+  width: var(--card-width);
+  height: calc(3 * var(--card-width) / 4);
+  border: solid;
+  border-radius: var(--card-border-radius);
+  border-color: var(--theme-color-4);
+  border-width: var(--card-border-width);
+  background-size: 100% 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.project-card .tags {
+  max-width: 75%;
+  padding: 3%;
+  align-self: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1em;
+  font-size: 0.85em;
+}
+
+.project-card .tags .tag {
+  padding: 0.5em;
+  border-radius: 2em;
+  background-color: rgba(100 100 100 / 80%);
+  color: white;
+}
+
+.project-card .overlay {
+  box-sizing: border-box;
+  min-height: fit-content;
+  height: var(--card-overlay-height);
+  margin: 0;
+  padding: 2% 5%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1em;
+  align-items: center;
+  background-color: rgb(240 240 240 / 95%);
+}
+
+.project-card .overlay .title {
+  font-weight: 400;
+  justify-content: center;
+  color: var(--theme-color-5)
+}
+
+.project-card .overlay .description {
+  color: black;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
 }
 
 /* Footer component styling */
@@ -168,153 +377,4 @@ p {
 
 .footer a:hover {
   color: var(--theme-color-5);
-}
-
-/* Main body styling */
-.main-body {
-  width: 90vw;
-  margin-top: calc(2 * var(--signature-icon-radius) + 10vh);
-  margin-bottom: 5vh;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: var(--section-gap);
-}
-
-.main-body section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--card-gap);
-}
-
-/* Intro component styling */
-.intro p {
-  font-size: calc(1em + var(--font-size-multiplier));
-  text-align: center;
-}
-
-/* About component styling */
-.about .section-body {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--card-gap);
-}
-
-/* AboutCard component styling */
-.about-card {
-  max-width: var(--card-width);
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  gap: calc(var(--card-gap) / 2);
-}
-
-.about-card-heading {
-  width: 100%;
-  display: flex;
-  place-content: end center;
-  gap: 1em;
-}
-
-.about-card-heading h3 {
-  align-self: end;
-}
-
-.about-card-heading .icon {
-  height: var(--about-icon-width);
-  object-fit: cover;
-  object-position: 0% 90%;
-}
-
-/* Experience component styling */
-.experience .section-body {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, var(--card-width));
-  grid-auto-rows: 1fr;
-  gap: var(--card-gap);
-  justify-content: center;
-}
-
-/* ExperienceCard component styling */
-.experience-card {
-  box-sizing: border-box;
-  max-width: var(--card-width);
-  height: auto;
-  padding: 5%;
-  border: solid;
-  border-radius: var(--card-border-radius);
-  border-color: var(--theme-color-4);
-  border-width: var(--card-border-width);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
-}
-
-.experience-card .company-name {
-  margin-top: 2%;
-  margin-bottom: 4%;
-  color: var(--theme-color-5);
-}
-
-.experience-card .logo {
-  max-width: 50%;
-  max-height: 5em;
-  margin-top: 10%;
-  align-self: flex-end;
-}
-
-/* Projects component styling */
-.projects .section-body {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, var(--card-width));
-  gap: var(--card-gap);
-  justify-content: center;
-}
-
-/* ProjectCard component styling */
-.project-card {
-  width: var(--card-width);
-  height: calc(3 * var(--card-width) / 4);
-  border: solid;
-  border-radius: var(--card-border-radius);
-  border-color: var(--theme-color-4);
-  border-width: var(--card-border-width);
-  background-size: 100% 100%;
-  overflow: hidden;
-  align-content: end;
-  text-decoration: none;
-}
-
-.project-card-overlay {
-  box-sizing: border-box;
-  min-height: fit-content;
-  height: var(--card-overlay-height);
-  margin: 0;
-  padding: 2% 5%;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 1em;
-  align-items: center;
-  background-color: rgb(240 240 240 / 95%);
-}
-
-.project-card .title {
-  font-weight: 400;
-  justify-content: center;
-  color: var(--theme-color-5)
-}
-
-.project-card .description {
-  color: black;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-.project-card:hover {
-  transform: scale(1.02);
 }
