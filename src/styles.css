@@ -151,10 +151,9 @@ p {
 /* Photos component styling */
 section.photos {
   width: fit-content;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  display: grid;
-  grid-template-columns: min(25vw, fit-content) auto min(25vw, fit-content);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   gap: 0;
   align-self: center;
 }
@@ -164,30 +163,23 @@ section.photos {
 }
 
 .photos .top-image {
-  max-width: 25vw;
-  max-height: 35vh;
-  margin-top: -50%;
-  grid-row: 1;
-  align-self: start;
-  position: relative;
-  left: 50%;
+  max-width: 20vw;
+  max-height: 50vh;
+  margin-right: -10%;
+  margin-bottom: 15%;
   z-index: 1;
 }
 
 .photos .central-image {
-  max-width: 65vw;
-  max-height: 60vh;
-  grid-row: 1;
+  max-width: 60vw;
+  max-height: 80vh;
 }
 
 .photos .bottom-image {
-  max-width: 25vw;
-  max-height: 35vh;
-  margin-bottom: -50%;
-  grid-row: 1;
-  align-self: end;
-  position: relative;
-  right: 50%;
+  max-width: 20vw;
+  max-height: 50vh;
+  margin-left: -10%;
+  margin-top: 15%;
   z-index: 1;
 }
 
