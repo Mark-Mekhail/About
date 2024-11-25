@@ -30,6 +30,30 @@
   --num-intro-images: 5;
 }
 
+/* Animations keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animation {
+  animation-name: fadeIn, slideIn;
+  animation-duration: 2s;
+}
+
 /* General Styling */
 body {
   margin: 0;
@@ -98,6 +122,7 @@ p {
   justify-content: space-between;
   background-color: var(--theme-color-1);
   z-index: 2;
+  animation: fadeIn 2s;
 }
 
 .dropdown .menu-icon {
@@ -147,13 +172,18 @@ p {
 }
 
 /* Intro component styling */
+.intro p {
+  font-size: calc(1em + var(--font-size-multiplier));
+  text-align: center;
+}
 
 /* Photos component styling */
-section.photos {
+.photos-div {
   width: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 0;
   align-self: center;
 }
@@ -162,7 +192,7 @@ section.photos {
   border-radius: 1em;
 }
 
-.photos .top-image {
+.photos-div .top-image {
   max-width: 20vw;
   max-height: 50vh;
   margin-right: -10%;
@@ -170,22 +200,17 @@ section.photos {
   z-index: 1;
 }
 
-.photos .central-image {
+.photos-div .central-image {
   max-width: 60vw;
   max-height: 80vh;
 }
 
-.photos .bottom-image {
+.photos-div .bottom-image {
   max-width: 20vw;
   max-height: 50vh;
   margin-left: -10%;
   margin-top: 15%;
   z-index: 1;
-}
-
-.intro p {
-  font-size: calc(1em + var(--font-size-multiplier));
-  text-align: center;
 }
 
 /* About component styling */
