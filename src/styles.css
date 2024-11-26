@@ -19,39 +19,15 @@
   --theme-color-3: black;
   --theme-color-4: #AAA;
   --theme-color-5: #555;
-  --section-gap: 10vh;
+  --section-gap: min(5vh, 5rem);
   --header-vertical-padding: 2vh;
-  --card-gap: max(2vh, 2em);
-  --card-width: min(90vw, 32em);
-  --card-border-radius: 1em;
-  --card-border-width: 0.1em;
-  --signature-icon-radius: calc(0.5em + 5 * var(--font-size-multiplier));
-  --about-icon-height: calc(2em + 5 * (var(--font-size-multiplier) - 0.1em));
+  --card-gap: max(2vh, 2rem);
+  --card-width: min(90vw, 32rem);
+  --card-border-radius: 1rem;
+  --card-border-width: 0.1rem;
+  --signature-icon-radius: calc(0.5rem + 5 * var(--font-size-multiplier));
+  --about-icon-height: calc(2rem + 5 * (var(--font-size-multiplier) - 0.1rem));
   --num-intro-images: 5;
-}
-
-/* Animations keyframes */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-.animation {
-  animation-name: fadeIn, slideIn;
-  animation-duration: 2s;
 }
 
 /* General Styling */
@@ -104,6 +80,14 @@ p {
   line-height: 1.5em;
 }
 
+section {
+  margin: var(--section-gap) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--card-gap);
+}
+
 /* React app styling */
 #top-div {
   width: 100%;
@@ -122,7 +106,6 @@ p {
   justify-content: space-between;
   background-color: var(--theme-color-1);
   z-index: 2;
-  animation: fadeIn 2s;
 }
 
 .dropdown .menu-icon {
@@ -142,7 +125,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: min(2vw, 1em);
+  gap: 1em;
 }
 
 .signature .icon {
@@ -161,14 +144,6 @@ p {
   align-self: center;
   display: flex;
   flex-direction: column;
-  gap: var(--section-gap);
-}
-
-.main-body section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--card-gap);
 }
 
 /* Intro component styling */
@@ -178,7 +153,7 @@ p {
 }
 
 /* Photos component styling */
-.photos-div {
+.photos {
   width: fit-content;
   display: flex;
   flex-direction: row;
@@ -192,24 +167,25 @@ p {
   border-radius: 1em;
 }
 
-.photos-div .top-image {
+.photos .top-image {
   max-width: 20vw;
   max-height: 50vh;
   margin-right: -10%;
-  margin-bottom: 15%;
+  margin-bottom: 10%;
   z-index: 1;
 }
 
-.photos-div .central-image {
+.photos .central-image {
   max-width: 60vw;
+  min-width: 40vw;
   max-height: 80vh;
 }
 
-.photos-div .bottom-image {
+.photos .bottom-image {
   max-width: 20vw;
   max-height: 50vh;
   margin-left: -10%;
-  margin-top: 15%;
+  margin-top: 10%;
   z-index: 1;
 }
 
@@ -234,7 +210,6 @@ p {
   width: 100%;
   display: flex;
   place-content: end center;
-  gap: 1em;
 }
 
 .about-card-heading h3 {
