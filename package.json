@@ -4,8 +4,6 @@
   "homepage": "https://mark-mekhail.github.io/About-Me",
   "main": "/src/index.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint src/**/*.js --max-warnings=0 && npx stylelint src/**/*.css --max-warnings=0",
@@ -34,9 +32,9 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 3 safari version"
     ]
   }
 }
