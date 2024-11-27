@@ -10,6 +10,7 @@ import markBeehiveHike from "../images/mark-beehive-hike.jpeg";
 
 const variants = Variants.defaultVariants(0, 0, 0, 0);
 const imageVariants = (order) => {
+  // Custom variants so that images stagger in a customizable order
   const orderedVariants = Variants.defaultVariants(0, 0, 0, 0);
   orderedVariants.animate.transition.delay = order * 0.5;
   return orderedVariants;
