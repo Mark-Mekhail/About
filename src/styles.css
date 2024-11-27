@@ -20,7 +20,7 @@
   --theme-color-4: #AAA;
   --theme-color-5: #555;
   --section-gap: min(5vh, 5rem);
-  --header-vertical-padding: 2vh;
+  --header-vertical-padding: min(2vh, var(--heading-icon-radius));
   --card-gap: max(2vh, 2rem);
   --card-width: min(90vw, 32rem);
   --card-border-radius: 1rem;
@@ -104,26 +104,9 @@ section {
   position: fixed;
   top: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   background-color: var(--theme-color-1);
   z-index: 2;
-}
-
-.dropdown {
-  display: flex;
-  align-items: center;
-}
-
-.dropdown .menu-icon {
-  box-sizing: border-box;
-  width: calc(2 * var(--heading-icon-radius));
-  height: calc(2 * var(--heading-icon-radius));
-  padding: 10%;
-  border-radius: calc(var(--heading-icon-radius) / 2);
-  border: solid;
-  border-width: var(--card-border-width);
-  border-color: var(--theme-color-4);
-  display: none;
 }
 
 .signature {
