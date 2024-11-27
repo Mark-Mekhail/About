@@ -1,5 +1,3 @@
-import { tr } from "framer-motion/client";
-
 class Variants {
   static conditionalVariant(condition, variant) {
     return (condition) => condition ? variant : {};
