@@ -1,24 +1,28 @@
 import React from "react";
 import { motion } from "motion/react";
 
-import Variants from "../animation/Variants";
+import Variants from "../utils/Variants";
 
-const Intro = () => {
-  const variants = {
-    initial: Variants.baseInitialVariant(),
-    animate: Variants.baseAnimationVariant()
-  };
+const sectionVariants = Variants.defaultVariants(0, 0, 0, 0);
+const headingVariants = Variants.headingVariants;
+const bodyVariants = Variants.defaultVariants("10vw");
 
+export default function Intro() {
   return (
-    <motion.section variants={variants} initial="initial" whileInView="animate" viewport={{ once: true }} className="intro">
-      <h1>Mark Mekhail</h1>
-      <p>
-        Hey there! I&apos;m Mark, a human being who happens to be studying Computer Engineering at the University of British Columbia. 
+    <motion.section
+      variants={sectionVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, margin: "-100px" }}
+      className="intro"
+    >
+      <motion.h1 variants={headingVariants}>Mark Mekhail</motion.h1>
+      <motion.p variants={bodyVariants}>
+        Hey there! I&apos;m Mark, a human being who happens to be studying
+        Computer Engineering at the University of British Columbia.
         <br></br>
         Thank you for visiting my website!
-      </p>
+      </motion.p>
     </motion.section>
   );
-};
-
-export default Intro;
+}
