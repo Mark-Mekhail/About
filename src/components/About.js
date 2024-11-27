@@ -13,7 +13,13 @@ const cardVariants = Variants.cardVariants;
 
 export default function About() {
   return (
-    <motion.section variants={sectionVariants} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-100px" }} className="about">
+    <motion.section
+      variants={sectionVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, margin: "-100px" }}
+      className="about"
+    >
       <motion.h1 variants={headingVariants}>About Me</motion.h1>
       <div className="section-body">
         {abouts.map((section, index) => {
@@ -26,4 +32,4 @@ export default function About() {
       </div>
     </motion.section>
   );
-};
+}

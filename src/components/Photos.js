@@ -14,14 +14,32 @@ const imageVariants = (order) => {
   const orderedVariants = Variants.defaultVariants(0, 0, 0, 0);
   orderedVariants.animate.transition.delay = order * 0.5;
   return orderedVariants;
-}
+};
 
 export default function Photos() {
   return (
-    <motion.section variants={variants} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-100px" }} className="photos">
-      <motion.img variants={imageVariants(1)} src={markBanff} className="top-image"/>
-      <motion.img variants={imageVariants(0)} src={markBeehiveHike} className="central-image"/>
-      <motion.img variants={imageVariants(2)} src={markSeattle} className="bottom-image"/>
+    <motion.section
+      variants={variants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, margin: "-100px" }}
+      className="photos"
+    >
+      <motion.img
+        variants={imageVariants(1)}
+        src={markBanff}
+        className="top-image"
+      />
+      <motion.img
+        variants={imageVariants(0)}
+        src={markBeehiveHike}
+        className="central-image"
+      />
+      <motion.img
+        variants={imageVariants(2)}
+        src={markSeattle}
+        className="bottom-image"
+      />
     </motion.section>
   );
-};
+}

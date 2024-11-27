@@ -1,10 +1,26 @@
 import React from "react";
 
-export default function ProjectCard(index, link, image, title, description, tags) {
+export default function ProjectCard(
+  index,
+  link,
+  image,
+  title,
+  description,
+  tags
+) {
   return (
-    <a key={index} href={link} className="project-card" style={{ backgroundImage: `url(${image})` }}>
+    <a
+      key={index}
+      href={link}
+      className="project-card"
+      style={{ backgroundImage: `url(${image})` }}
+    >
       <span className="tags">
-        {tags.map((tag, index) => (<p key={index} className="tag">{tag}</p>))}
+        {tags.map((tag, index) => (
+          <p key={index} className="tag">
+            {tag}
+          </p>
+        ))}
       </span>
       <div className="overlay">
         <h5 className="title">{title}</h5>
@@ -12,4 +28,4 @@ export default function ProjectCard(index, link, image, title, description, tags
       </div>
     </a>
   );
-};
+}

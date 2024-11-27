@@ -3,7 +3,7 @@ class Variants {
     return {
       opacity: 0,
       x: x,
-      y: y
+      y: y,
     };
   }
 
@@ -15,15 +15,20 @@ class Variants {
       transition: {
         delayChildren: delayChildren,
         staggerChildren: staggerChildren,
-        duration: 2
-      }
+        duration: 2,
+      },
     };
   }
 
-  static defaultVariants(x = 0, y = 0, delayChildren = 0, staggerChildren = 0.5) {
+  static defaultVariants(
+    x = 0,
+    y = 0,
+    delayChildren = 0,
+    staggerChildren = 0.5
+  ) {
     return {
       initial: Variants.defaultInitialVariant(x, y),
-      animate: Variants.defaultAnimateVariant(delayChildren, staggerChildren)
+      animate: Variants.defaultAnimateVariant(delayChildren, staggerChildren),
     };
   }
 

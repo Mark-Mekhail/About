@@ -13,17 +13,30 @@ const cardVariants = Variants.cardVariants;
 
 export default function Projects() {
   return (
-    <motion.section variants={sectionVariants} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-100px" }} className="projects">
+    <motion.section
+      variants={sectionVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, margin: "-100px" }}
+      className="projects"
+    >
       <motion.h1 variants={headingVariants}>Projects</motion.h1>
       <div className="section-body">
         {projects.map((project, index) => {
           return (
             <motion.div variants={cardVariants} key={index}>
-              {ProjectCard(index, project.link, project.image, project.title, project.description, project.tags)}
+              {ProjectCard(
+                index,
+                project.link,
+                project.image,
+                project.title,
+                project.description,
+                project.tags
+              )}
             </motion.div>
           );
         })}
       </div>
     </motion.section>
   );
-};
+}

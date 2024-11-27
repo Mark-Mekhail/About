@@ -15,9 +15,9 @@
 
 :root {
   --theme-color-1: white;
-  --theme-color-2: #CCC;
+  --theme-color-2: #ccc;
   --theme-color-3: black;
-  --theme-color-4: #AAA;
+  --theme-color-4: #aaa;
   --theme-color-5: #555;
   --section-gap: min(5vh, 5rem);
   --header-vertical-padding: min(2vh, var(--heading-icon-radius));
@@ -308,7 +308,7 @@ section {
 .project-card .overlay .title {
   font-weight: 400;
   justify-content: center;
-  color: var(--theme-color-5)
+  color: var(--theme-color-5);
 }
 
 .project-card .overlay .description {

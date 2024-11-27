@@ -6,7 +6,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "eslint src/**/*.js --max-warnings=0 && npx stylelint src/**/*.css --max-warnings=0",
+    "prettier": "prettier -c src/**/*.js src/**/*.css",
+    "lint": "eslint src/**/*.js --max-warnings=0 && stylelint src/**/*.css --max-warnings=0",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
@@ -21,6 +22,7 @@
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.2",
     "globals": "^15.12.0",
+    "prettier": "3.4.1",
     "stylelint": "^16.10.0",
     "stylelint-config-standard": "^36.0.1"
   },
@@ -35,5 +37,14 @@
       "last 3 firefox version",
       "last 3 safari version"
     ]
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "es5"
   }
 }
