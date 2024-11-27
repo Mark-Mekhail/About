@@ -15,10 +15,9 @@
 
 :root {
   --theme-color-1: white;
-  --theme-color-2: #ccc;
-  --theme-color-3: black;
-  --theme-color-4: #aaa;
-  --theme-color-5: #555;
+  --theme-color-2: black;
+  --theme-color-3: #aaa;
+  --theme-color-4: #555;
   --section-gap: min(5vh, 5rem);
   --header-vertical-padding: min(2vh, var(--heading-icon-radius));
   --card-gap: max(2vh, 2rem);
@@ -105,8 +104,8 @@ section {
   top: 0;
   display: flex;
   justify-content: right;
-  background-color: var(--theme-color-1);
   z-index: 2;
+  background-color: rgba(255 255 255 / 80%);
 }
 
 .signature {
@@ -228,7 +227,7 @@ section {
   padding: 5%;
   border: solid;
   border-radius: var(--card-border-radius);
-  border-color: var(--theme-color-4);
+  border-color: var(--theme-color-3);
   border-width: var(--card-border-width);
   display: flex;
   flex-direction: column;
@@ -239,7 +238,7 @@ section {
 .experience-card .company-name {
   margin-top: 2%;
   margin-bottom: 4%;
-  color: var(--theme-color-5);
+  color: var(--theme-color-4);
 }
 
 .experience-card .logo {
@@ -264,7 +263,7 @@ section {
   height: calc(3 * var(--card-width) / 4);
   border: solid;
   border-radius: var(--card-border-radius);
-  border-color: var(--theme-color-4);
+  border-color: var(--theme-color-3);
   border-width: var(--card-border-width);
   background-size: 100% 100%;
   overflow: hidden;
@@ -308,7 +307,7 @@ section {
 .project-card .overlay .title {
   font-weight: 400;
   justify-content: center;
-  color: var(--theme-color-5);
+  color: var(--theme-color-4);
 }
 
 .project-card .overlay .description {
@@ -332,13 +331,13 @@ section {
   align-items: center;
   gap: 2vh;
   text-align: center;
-  background-color: var(--theme-color-2);
-  color: var(--theme-color-3);
+  background-color: rgba(200 200 200 / 80%);
+  color: var(--theme-color-2);
   overflow: hidden;
 }
 
 .footer a {
-  color: var(--theme-color-3);
+  color: var(--theme-color-2);
   text-decoration: underline;
 }
 
@@ -354,7 +353,7 @@ section {
 .footer .social-links a {
   display: flex;
   gap: 0.25em;
-  color: var(--theme-color-3);
+  color: var(--theme-color-2);
   text-decoration: none;
 }
 
@@ -363,5 +362,5 @@ section {
 }
 
 .footer a:hover {
-  color: var(--theme-color-5);
+  color: var(--theme-color-4);
 }
