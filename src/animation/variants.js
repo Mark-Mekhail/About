@@ -1,19 +1,26 @@
 import { tr } from "framer-motion/client";
 
 class Variants {
-  static visibilityVariant() {
+  static conditionalVariant(condition, variant) {
+    return (condition) => condition ? variant : {};
+  }
+
+  static baseInitialVariant() {
     return {
-      hidden: { 
-        opacity: 0
-      },
-      visible: {
-        opacity: 1,
-        transition: {
-          duration: 3
-        } 
+      opacity: 0
+    };
+  }
+
+  static baseAnimationVariant(delayChildren = 0.5, staggerChildren = 0.5, duration = 2) {
+    return {
+      opacity: 1,
+      transition: {
+        delayChildren: delayChildren,
+        staggerChildren: staggerChildren,
+        duration: duration
       }
-    }
-  } 
+    };
+  }
 }
 
 export default Variants;

@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
+import { motion } from "motion/react";
 
-import Variants from "../animation/variants";
+import Variants from "../animation/Variants";
 
 // Required components
 import ExperienceCard from "./ExperienceCard";
@@ -71,22 +70,22 @@ const experiences = [
 ];
 
 const Experience = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  const aboutVariants = Variants.visibilityVariant();
-
-  useEffect(() => {
-    if (inView) { 
-      controls.start("visible");    
-    }  
-  }, [controls, inView]);
+  const variants = {
+    initial: Variants.baseInitialVariant(),
+    animate: Variants.baseAnimationVariant()
+  };
 
   return (
-    <motion.section ref={ref} animate={controls} initial="hidden" variants={aboutVariants}  className="experience">
+    <motion.section variants={variants} initial="initial" whileInView="animate" viewport={{ once: true }} className="experience">
       <h1>Professional Experience</h1>
       <div className="section-body">
-        {experiences.map((exp, index) => (ExperienceCard(index, exp.role, exp.company, exp.description, exp.logo)))}
+        {experiences.map((exp, index) => {
+          return (
+            <motion.div variants={variants} key={index}>
+              {ExperienceCard(index, exp.role, exp.company, exp.description, exp.logo)}
+            </motion.div>
+          );
+        })}
       </div>
     </motion.section>
   );

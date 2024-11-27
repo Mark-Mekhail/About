@@ -144,6 +144,7 @@ section {
   align-self: center;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 /* Intro component styling */
@@ -234,7 +235,7 @@ section {
 .experience-card {
   box-sizing: border-box;
   max-width: var(--card-width);
-  height: auto;
+  height: 100%;
   padding: 5%;
   border: solid;
   border-radius: var(--card-border-radius);

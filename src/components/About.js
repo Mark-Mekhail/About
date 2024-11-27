@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
+import { motion } from "motion/react";
 
-import Variants from "../animation/variants";
+import Variants from "../animation/Variants";
 
 // Required components
 import AboutCard from "./AboutCard";
@@ -51,22 +50,22 @@ const sections = [
 ]
 
 const About = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  const aboutVariants = Variants.visibilityVariant();
-
-  useEffect(() => {
-    if (inView) { 
-      controls.start("visible");    
-    }  
-  }, [controls, inView]);
+  const variants = {
+    initial: Variants.baseInitialVariant(),
+    animate: Variants.baseAnimationVariant()
+  };
 
   return (
-    <motion.section ref={ref} animate={controls} initial="hidden" variants={aboutVariants} className="about">
+    <motion.section variants={variants} initial="initial" whileInView="animate" viewport={{ once: true }} className="about">
       <h1>About Me</h1>
       <div className="section-body">
-        {sections.map((section, index) => (AboutCard(index, section.title, section.icon, section.content)))}
+        {sections.map((section, index) => {
+          return (
+            <motion.div key={index} variants={variants}>
+              {AboutCard(index, section.title, section.icon, section.content)}
+            </motion.div>
+          );
+        })}
       </div>
     </motion.section>
   );

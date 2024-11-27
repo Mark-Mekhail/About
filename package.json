@@ -11,10 +11,9 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "framer-motion": "^11.11.17",
+    "motion": "^11.11.17",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-intersection-observer": "^9.13.1",
     "react-scripts": "^5.0.0"
   },
   "devDependencies": {
