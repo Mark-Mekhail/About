@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 
-import Variants from "../animation/Variants";
+import Variants from "../utils/Variants";
 import { abouts } from "../constants/content";
 
 // Required components
