@@ -1,6 +1,6 @@
 import React from "react";
 
-const ExperienceCard = (index, role, company, description, logo) => {
+export default function ExperienceCard(index, role, company, description, logo) {
   return (
     <div key={index} className="experience-card">
       <div>
@@ -14,5 +14,3 @@ const ExperienceCard = (index, role, company, description, logo) => {
     </div>
   );
 };
-
-export default ExperienceCard;

@@ -1,36 +1,28 @@
 import React from "react";
+import { motion } from "motion/react";
 
-// Required Images
-import linkedin from "../images/icons8-linkedin.png";
-import github from "../images/icons8-github.png";
+import Variants from "../animation/Variants";
+import { socials } from "../constants/content";
 
-const Footer = () => {
-  const socials = [
-    {
-      link: "https://www.linkedin.com/in/markmekhail",
-      site: "LinkedIn",
-      image: linkedin
-    },
-    {
-      link: "https://github.com/Mark-Mekhail",
-      site: "GitHub",
-      image: github
-    }
-  ];
+export default function Footer() {
+  const variants = {
+    initial: Variants.baseInitialVariant(),
+    animate: Variants.baseAnimationVariant()
+  };
 
   return (
     <footer className="footer">
-      <div className="social-links">
+      <motion.div variants={variants} initial="initial" whileInView="animate" viewport={{ once: true }} className="social-links">
         {socials.map((social, index) => (
           <a key={index} href="https://www.linkedin.com/in/markmekhail" target="_blank" rel="noopener noreferrer">
             <img src={social.image} />
             {social.site}
           </a>
         ))}
-      </div>
-      <p>&copy; {new Date().getUTCFullYear()} Mark Mekhail. Icons by <a href="https://icons8.com/">Icons8</a></p>
+      </motion.div>
+      <motion.p variants={variants} initial="initial" whileInView="animate" viewport={{ once: true }}>
+        &copy; {new Date().getUTCFullYear()} Mark Mekhail. Icons by <a href="https://icons8.com/">Icons8</a>
+      </motion.p>
     </footer>
   );
 };
-
-export default Footer;

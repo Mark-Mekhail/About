@@ -25,7 +25,7 @@
   --card-width: min(90vw, 32rem);
   --card-border-radius: 1rem;
   --card-border-width: 0.1rem;
-  --signature-icon-radius: calc(0.5rem + 5 * var(--font-size-multiplier));
+  --heading-icon-radius: calc(0.5rem + 5 * var(--font-size-multiplier));
   --about-icon-height: calc(2rem + 5 * (var(--font-size-multiplier) - 0.1rem));
   --num-intro-images: 5;
 }
@@ -108,16 +108,20 @@ section {
   z-index: 2;
 }
 
+.dropdown {
+  display: flex;
+  align-items: center;
+}
+
 .dropdown .menu-icon {
   box-sizing: border-box;
-  width: calc(2 * var(--icon-radius));
-  height: calc(2 * var(--icon-radius));
+  width: calc(2 * var(--heading-icon-radius));
+  height: calc(2 * var(--heading-icon-radius));
   padding: 10%;
-  border-radius: var(--icon-radius);
+  border-radius: calc(var(--heading-icon-radius) / 2);
   border: solid;
   border-width: var(--card-border-width);
   border-color: var(--theme-color-4);
-  display: none;
 }
 
 .signature {
@@ -129,9 +133,9 @@ section {
 }
 
 .signature .icon {
-  width: calc(2 * var(--signature-icon-radius));
-  height: calc(2 * var(--signature-icon-radius));
-  border-radius: var(--signature-icon-radius);
+  width: calc(2 * var(--heading-icon-radius));
+  height: calc(2 * var(--heading-icon-radius));
+  border-radius: var(--heading-icon-radius);
   object-fit: cover;
   object-position: 0% 90%;
 }
@@ -139,7 +143,7 @@ section {
 /* Main body styling */
 .main-body {
   width: 90vw;
-  margin-top: calc(2 * var(--signature-icon-radius) + 10vh);
+  margin-top: calc(2 * var(--heading-icon-radius) + 10vh);
   margin-bottom: 5vh;
   align-self: center;
   display: flex;

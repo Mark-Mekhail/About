@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProjectCard = (index, link, image, title, description, tags) => {
+export default function ProjectCard(index, link, image, title, description, tags) {
   return (
     <a key={index} href={link} className="project-card" style={{ backgroundImage: `url(${image})` }}>
       <span className="tags">
@@ -13,5 +13,3 @@ const ProjectCard = (index, link, image, title, description, tags) => {
     </a>
   );
 };
-
-export default ProjectCard;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const AboutCard = (index, title, icon, content) => {
+export default function AboutCard(index, title, icon, content) {
   return (
     <div key={index} className="about-card">
       <div className="about-card-heading">
@@ -11,5 +11,3 @@ const AboutCard = (index, title, icon, content) => {
     </div>
   );
 };
-
-export default AboutCard;
