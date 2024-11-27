@@ -199,6 +199,7 @@ section {
   width: 100%;
   display: flex;
   place-content: end center;
+  gap: 1em;
 }
 
 .about-card-heading h3 {
