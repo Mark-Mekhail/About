@@ -4,7 +4,6 @@ import { motion } from "motion/react";
 import Variants from "../utils/Variants";
 
 // Required images
-import menu from "../images/menu-icon.png";
 import mark from "../images/mark-portrait.jpeg";
 
 const signatureVariants = Variants.defaultVariants(0, "5vh", 0, 0);

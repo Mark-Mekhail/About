@@ -27,9 +27,8 @@ class Variants {
     };
   }
 
-  static cardVariants() {
-    return this.defaultVariants(0, "5vh", 0, 0);
-  }
+  static headingVariants = this.defaultVariants("-10vw");
+  static cardVariants = this.defaultVariants(0, "5vh");
 }
 
 export default Variants;

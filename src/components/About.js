@@ -7,13 +7,14 @@ import { abouts } from "../constants/content";
 // Required components
 import AboutCard from "./AboutCard";
 
-const variants = Variants.defaultVariants();
-const cardVariants = Variants.defaultVariants(0, "5vh", 0, 0);
+const sectionVariants = Variants.defaultVariants();
+const headingVariants = Variants.headingVariants;
+const cardVariants = Variants.cardVariants;
 
 export default function About() {
   return (
-    <motion.section variants={variants} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-100px" }} className="about">
-      <h1>About Me</h1>
+    <motion.section variants={sectionVariants} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-100px" }} className="about">
+      <motion.h1 variants={headingVariants}>About Me</motion.h1>
       <div className="section-body">
         {abouts.map((section, index) => {
           return (

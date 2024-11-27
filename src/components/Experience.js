@@ -7,13 +7,14 @@ import { experiences } from "../constants/content";
 // Required components
 import ExperienceCard from "./ExperienceCard";
 
-const variants = Variants.defaultVariants();
-const cardVariants = Variants.cardVariants();
+const sectionVariants = Variants.defaultVariants();
+const headingVariants = Variants.headingVariants;
+const cardVariants = Variants.cardVariants;
 
 export default function Experience() {
   return (
-    <motion.section variants={variants} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-100px" }} className="experience">
-      <h1>Professional Experience</h1>
+    <motion.section variants={sectionVariants} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-100px" }} className="experience">
+      <motion.h1 variants={headingVariants}>Professional Experience</motion.h1>
       <div className="section-body">
         {experiences.map((exp, index) => {
           return (

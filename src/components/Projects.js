@@ -7,13 +7,14 @@ import { projects } from "../constants/content";
 // Required components
 import ProjectCard from "./ProjectCard";
 
-const variants = Variants.defaultVariants();
-const cardVariants = Variants.cardVariants();
+const sectionVariants = Variants.defaultVariants();
+const headingVariants = Variants.headingVariants;
+const cardVariants = Variants.cardVariants;
 
 export default function Projects() {
   return (
-    <motion.section variants={variants} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-100px" }} className="projects">
-      <h1>Projects</h1>
+    <motion.section variants={sectionVariants} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-100px" }} className="projects">
+      <motion.h1 variants={headingVariants}>Projects</motion.h1>
       <div className="section-body">
         {projects.map((project, index) => {
           return (
