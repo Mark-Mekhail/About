@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 
-import Variants from "../animation/Variants";
+import Variants from "../utils/Variants";
 import { projects } from "../constants/content";
 
 // Required components
@@ -12,7 +12,7 @@ const cardVariants = Variants.cardVariants();
 
 export default function Projects() {
   return (
-    <motion.section variants={variants} initial="initial" whileInView="animate" viewport={{ once: true }} className="projects">
+    <motion.section variants={variants} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-100px" }} className="projects">
       <h1>Projects</h1>
       <div className="section-body">
         {projects.map((project, index) => {

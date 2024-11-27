@@ -1,18 +1,17 @@
 import React from "react";
 import { motion } from "motion/react";
 
-import Variants from "../animation/Variants";
+import Variants from "../utils/Variants";
 import { socials } from "../constants/content";
 
-export default function Footer() {
-  const variants = {
-    initial: Variants.baseInitialVariant(),
-    animate: Variants.baseAnimationVariant()
-  };
+const footerVariants = Variants.defaultVariants();
+const socialVariants = Variants.defaultVariants("-10vw");
+const copyrightVariants = Variants.defaultVariants("10vw");
 
+export default function Footer() {
   return (
-    <footer className="footer">
-      <motion.div variants={variants} initial="initial" whileInView="animate" viewport={{ once: true }} className="social-links">
+    <motion.footer variants={footerVariants} initial="initial" whileInView="animate" viewport={{ once: true }} className="footer">
+      <motion.div variants={socialVariants} className="social-links">
         {socials.map((social, index) => (
           <a key={index} href="https://www.linkedin.com/in/markmekhail" target="_blank" rel="noopener noreferrer">
             <img src={social.image} />
@@ -20,9 +19,9 @@ export default function Footer() {
           </a>
         ))}
       </motion.div>
-      <motion.p variants={variants} initial="initial" whileInView="animate" viewport={{ once: true }}>
+      <motion.p variants={copyrightVariants}>
         &copy; {new Date().getUTCFullYear()} Mark Mekhail. Icons by <a href="https://icons8.com/">Icons8</a>
       </motion.p>
-    </footer>
+    </motion.footer>
   );
 };

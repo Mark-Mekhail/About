@@ -12,7 +12,7 @@ const cardVariants = Variants.cardVariants();
 
 export default function Experience() {
   return (
-    <motion.section variants={variants} initial="initial" whileInView="animate" viewport={{ once: true }} className="experience">
+    <motion.section variants={variants} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-100px" }} className="experience">
       <h1>Professional Experience</h1>
       <div className="section-body">
         {experiences.map((exp, index) => {

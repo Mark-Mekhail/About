@@ -1,5 +1,5 @@
 class Variants {
-  static baseInitialVariant(x = 0, y = 0) {
+  static defaultInitialVariant(x = 0, y = 0) {
     return {
       opacity: 0,
       x: x,
@@ -7,7 +7,7 @@ class Variants {
     };
   }
 
-  static baseAnimationVariant(delayChildren = 0, staggerChildren = 0.5) {
+  static defaultAnimateVariant(delayChildren = 0, staggerChildren = 0.5) {
     return {
       x: 0,
       y: 0,
@@ -22,8 +22,8 @@ class Variants {
 
   static defaultVariants(x = 0, y = 0, delayChildren = 0, staggerChildren = 0.5) {
     return {
-      initial: Variants.baseInitialVariant(x, y),
-      animate: Variants.baseAnimationVariant(delayChildren, staggerChildren)
+      initial: Variants.defaultInitialVariant(x, y),
+      animate: Variants.defaultAnimateVariant(delayChildren, staggerChildren)
     };
   }
 
