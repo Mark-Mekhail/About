@@ -193,6 +193,7 @@ section {
   flex-flow: column wrap;
   align-items: center;
   gap: calc(var(--card-gap) / 2);
+  text-align: justify;
 }
 
 .about-card-heading {
