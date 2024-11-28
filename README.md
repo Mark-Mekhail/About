@@ -1,3 +1,3 @@
-# About-Me
+# About-Mark
 ## Description
-This is a repository containing the code I wrote for my [personal website](https://mark-mekhail.github.io/About-Me/).
+This is a repository containing the code I wrote for my [personal website](https://mark-mekhail.github.io/About-Mark/).

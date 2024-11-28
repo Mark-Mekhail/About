@@ -134,7 +134,7 @@ const projects = [
   {
     title: "Personal Website",
     description: "The website you are currently viewing.",
-    link: "https://github.com/Mark-Mekhail/About-Me",
+    link: "https://github.com/Mark-Mekhail/About-Mark",
     image: website,
     tags: ["React", "JavaScript", "HTML", "CSS", "GitHub Actions (CI/CD)"],
   },
