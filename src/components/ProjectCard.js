@@ -13,6 +13,7 @@ export default function ProjectCard(
       key={index}
       href={link}
       target="_blank"
+      rel="noopener noreferrer"
       className="project-card"
       style={{ backgroundImage: `url(${image})` }}
     >

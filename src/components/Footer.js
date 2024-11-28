@@ -32,7 +32,9 @@ export default function Footer() {
       </motion.div>
       <motion.p variants={copyrightVariants}>
         &copy; {new Date().getUTCFullYear()} Mark Mekhail. Icons by{" "}
-        <a href="https://icons8.com/" target="_blank">Icons8</a>
+        <a href="https://icons8.com/" target="_blank" rel="noreferrer noopener">
+          Icons8
+        </a>
       </motion.p>
     </motion.footer>
   );
