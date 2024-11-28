@@ -15,13 +15,13 @@
 
 :root {
   --theme-color-1: white;
-  --theme-color-2: black;
+  --theme-color-2: #222;
   --theme-color-3: #aaa;
   --theme-color-4: #555;
   --section-gap: min(5vh, 5rem);
   --header-vertical-padding: min(2vh, var(--heading-icon-radius));
   --card-gap: max(2vh, 2rem);
-  --card-width: min(90vw, 33rem);
+  --card-width: min(90vw, 32rem);
   --card-border-radius: 1rem;
   --card-border-width: 0.1rem;
   --heading-icon-radius: calc(0.5rem + 5 * var(--font-size-multiplier));
@@ -35,11 +35,12 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
+  color: var(--theme-color-2)
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-weight: lighter;
+  font-weight: normal;
   font-family: 'Roboto Mono', monospace;
 }
 
