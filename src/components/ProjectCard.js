@@ -12,6 +12,7 @@ export default function ProjectCard(
     <a
       key={index}
       href={link}
+      target="_blank"
       className="project-card"
       style={{ backgroundImage: `url(${image})` }}
     >
