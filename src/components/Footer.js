@@ -21,7 +21,7 @@ export default function Footer() {
         {socials.map((social, index) => (
           <a
             key={index}
-            href="https://www.linkedin.com/in/markmekhail"
+            href={social.link}
             target="_blank"
             rel="noopener noreferrer"
           >
