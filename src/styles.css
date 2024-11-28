@@ -21,7 +21,7 @@
   --section-gap: min(5vh, 5rem);
   --header-vertical-padding: min(2vh, var(--heading-icon-radius));
   --card-gap: max(2vh, 2rem);
-  --card-width: min(90vw, 32rem);
+  --card-width: min(90vw, 33rem);
   --card-border-radius: 1rem;
   --card-border-width: 0.1rem;
   --heading-icon-radius: calc(0.5rem + 5 * var(--font-size-multiplier));
@@ -33,51 +33,45 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Merriweather', serif;
   overflow-x: hidden;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-weight: 300;
+  font-weight: lighter;
+  font-family:'Open Sans', sans-serif;
+}
+
+h1 {
   font-size: calc(1em + 28 * var(--font-size-multiplier));
   text-align: center;
 }
 
 h2 {
-  margin: 0;
-  font-weight: 300;
   font-size: calc(1em + 20 * var(--font-size-multiplier));
 }
 
 h3 {
-  margin: 0;
-  font-weight: 300;
   font-size: calc(1em + 10 * var(--font-size-multiplier));
 }
 
 h4 {
-  margin: 0;
-  font-weight: 300;
   font-size: calc(1em + 6 * var(--font-size-multiplier));
 }
 
 h5 {
-  margin: 0;
-  font-weight: 300;
   font-size: calc(1em + 3 * var(--font-size-multiplier));
 }
 
 h6 {
-  margin: 0;
-  font-weight: 300;
   font-size: calc(1em + var(--font-size-multiplier));
 }
 
 p {
   margin: 0;
   font-weight: 300;
-  line-height: 1.5em;
+  line-height: 1.7em;
 }
 
 section {
@@ -198,12 +192,9 @@ section {
 .about-card-heading {
   width: 100%;
   display: flex;
-  place-content: end center;
+  justify-content: center;
+  align-items: center;
   gap: 1em;
-}
-
-.about-card-heading h3 {
-  align-self: end;
 }
 
 .about-card-heading .icon {
@@ -353,6 +344,7 @@ section {
 
 .footer .social-links a {
   display: flex;
+  align-items: center;
   gap: 0.25em;
   color: var(--theme-color-2);
   text-decoration: none;
