@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 
 import Variants from "../utils/Variants";
+import { viewportConfig } from "../constants/configs";
 
 // Required images
 import markSeattle from "../images/mark-seattle.jpeg";
@@ -22,7 +23,7 @@ export default function Photos() {
       variants={variants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={viewportConfig}
       className="photos"
     >
       <motion.img

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 
 import Variants from "../utils/Variants";
+import { viewportConfig } from "../constants/configs";
 
 const sectionVariants = Variants.defaultVariants(0, 0, 0, 0);
 const headingVariants = Variants.headingVariants;
@@ -13,7 +14,7 @@ export default function Intro() {
       variants={sectionVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={viewportConfig}
       className="intro"
     >
       <motion.h1 variants={headingVariants}>Mark Mekhail</motion.h1>

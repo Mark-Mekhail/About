@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 
 import Variants from "../utils/Variants";
+import { viewportConfig } from "../constants/configs";
 import { projects } from "../constants/content";
 
 // Required components
@@ -17,7 +18,7 @@ export default function Projects() {
       variants={sectionVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={viewportConfig}
       className="projects"
     >
       <motion.h1 variants={headingVariants}>Projects</motion.h1>

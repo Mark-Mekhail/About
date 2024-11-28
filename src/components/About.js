@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 
 import Variants from "../utils/Variants";
+import { viewportConfig } from "../constants/configs";
 import { abouts } from "../constants/content";
 
 // Required components
@@ -17,7 +18,7 @@ export default function About() {
       variants={sectionVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={viewportConfig}
       className="about"
     >
       <motion.h1 variants={headingVariants}>About Me</motion.h1>
