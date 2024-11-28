@@ -17,7 +17,7 @@ const App = () => {
         <Intro />
         <Photos />
         <About />
-        <Experience />
+        {Experience("Internship Experience")}
         <Projects />
       </div>
       <Footer />

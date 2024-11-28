@@ -12,7 +12,7 @@ const sectionVariants = Variants.defaultVariants();
 const headingVariants = Variants.headingVariants;
 const cardVariants = Variants.cardVariants;
 
-export default function Experience() {
+export default function Experience(title) {
   return (
     <motion.section
       variants={sectionVariants}
@@ -21,7 +21,7 @@ export default function Experience() {
       viewport={viewportConfig}
       className="experience"
     >
-      <motion.h1 variants={headingVariants}>Professional Experience</motion.h1>
+      <motion.h1 variants={headingVariants}>{title}</motion.h1>
       <div className="section-body">
         {experiences.map((exp, index) => {
           return (

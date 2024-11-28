@@ -63,7 +63,7 @@ const abouts = [
 
 const experiences = [
   {
-    role: "Simulation Software Engineer Intern",
+    role: "Simulation Software Engineer",
     company: "Intel Corporation",
     description:
       "The Virtual Platform teams at Intel Foundry Services (IFS) \
@@ -75,7 +75,7 @@ const experiences = [
     logo: intelLogo,
   },
   {
-    role: "Software Engineer Intern",
+    role: "Software Engineer",
     company: "Schweitzer Engineering Laboratories (SEL)",
     description:
       "SEL specializes in creating digital products and systems \
@@ -100,7 +100,7 @@ const experiences = [
     logo: ubcLogo,
   },
   {
-    role: "Backend Software Developer Co-op",
+    role: "Backend Software Developer",
     company: "Safe Software",
     description:
       'Safe Software (aka. "Safe") develops and sells FME, the \
@@ -111,7 +111,7 @@ const experiences = [
     logo: safeLogo,
   },
   {
-    role: "Full-Stack Software Developer Co-op",
+    role: "Full-Stack Software Developer",
     company: "Canadian Department of National Defence",
     description:
       "While most of the work completed at the Department of \
