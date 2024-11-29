@@ -8,6 +8,13 @@ import { experiences } from "../constants/content";
 // Required components
 import ExperienceCard from "./ExperienceCard";
 
+/**
+ * Renders the Experience component.
+ *
+ * @param {Object} props - The component props.
+ * @param {string} props.title - The title of the experience section.
+ * @returns {JSX.Element} The rendered Experience component.
+ */
 export default function Experience({ title }) {
   const staggerAnimationHelper = new StaggerAnimationHelper(
     experiences.length + 1

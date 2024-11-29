@@ -8,6 +8,10 @@ const footerVariants = Variants.defaultVariants();
 const socialVariants = Variants.defaultVariants("-10vw");
 const copyrightVariants = Variants.defaultVariants("10vw");
 
+/**
+ * Renders the Footer component.
+ * @returns {JSX.Element} The rendered Footer component.
+ */
 export default function Footer() {
   return (
     <motion.footer

@@ -8,6 +8,10 @@ import mark from "../images/mark-portrait.jpeg";
 
 const signatureVariants = Variants.defaultVariants(0, "5vh");
 
+/**
+ * Renders the header component.
+ * @returns {JSX.Element} The rendered header component.
+ */
 export default function Header() {
   return (
     <header className="header">

@@ -1,28 +1,20 @@
 import React from "react";
 
 // Required components
-import Intro from "./components/Intro";
-import Photos from "./components/Photos";
 import Header from "./components/Header";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Experience from "./components/Experience";
+import Body from "./components/Body";
 import Footer from "./components/Footer";
 
-const App = () => {
+/**
+ * The main component of the application.
+ * @returns {JSX.Element} The rendered App component.
+ */
+export default function App() {
   return (
-    <div id="top-div">
+    <div id="react-app">
       <Header />
-      <div className="main-body">
-        <Intro />
-        <Photos />
-        <About />
-        <Experience title="Internship Experience" />
-        <Projects />
-      </div>
+      <Body />
       <Footer />
     </div>
   );
 };
-
-export default App;

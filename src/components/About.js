@@ -7,6 +7,10 @@ import { abouts } from "../constants/content";
 // Required components
 import AboutCard from "./AboutCard";
 
+/**
+ * Renders the About section of the website.
+ * @returns {JSX.Element} The About section component.
+ */
 export default function About() {
   const staggerAnimationHelper = new StaggerAnimationHelper(abouts.length + 1);
 

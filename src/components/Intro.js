@@ -7,6 +7,10 @@ const sectionVariants = Variants.defaultVariants();
 const headingVariants = Variants.headingVariants;
 const bodyVariants = Variants.defaultVariants("10vw");
 
+/**
+ * Renders the introductory section of the website.
+ * @returns {JSX.Element} The JSX element representing the introductory section.
+ */
 export default function Intro() {
   return (
     <motion.section

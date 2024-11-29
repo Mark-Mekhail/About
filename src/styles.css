@@ -1,19 +1,39 @@
+/**
+ * This file defines general styling for the body, headings, paragraphs, sections, and various components.
+ * 
+ * The main components styled in this file are:
+ * - React app (#react-app)
+ * - Header component (.header)
+ * - Main body (.main-body)
+ * - Intro component (.intro)
+ * - Photos component (.photos)
+ * - About component (.about)
+ * - AboutCard component (.about-card)
+ * - Experience component (.experience)
+ * - ExperienceCard component (.experience-card)
+ * - Projects component (.projects)
+ * - ProjectCard component (.project-card)
+ * 
+ * Each component has its own specific styling rules and classes.
+ * The file also includes media queries to adjust the font size multiplier based on the width of the viewport.
+ */
+
 /* Variables */
-@media (width >= 700px) {
+@media (width >= 34rem) {
   :root {
-    --font-size-multiplier: 0.1em;
+    --heading-font-size-multiplier: 0.1;
   }
 }
 
-@media (width < 700px) and (width >= 400px) {
+@media (width < 34rem) and (width >= 28rem) {
   :root {
-    --font-size-multiplier: 0.05em;
+    --heading-font-size-multiplier: 0.75;
   }
 }
 
-@media (width < 400px) {
+@media (width < 28rem) {
   :root {
-    --font-size-multiplier: 0.03em;
+    --heading-font-size-multiplier: 0.05;
   }
 }
 
@@ -22,15 +42,16 @@
   --theme-color-2: #222;
   --theme-color-3: #aaa;
   --theme-color-4: #555;
-  --section-gap: min(5vh, 5rem);
+  --section-gap: min(5vh, 5em);
   --header-vertical-padding: min(2vh, var(--heading-icon-radius));
-  --card-gap: max(2vh, 2rem);
-  --card-width: min(90vw, 32rem);
-  --card-border-radius: 1rem;
-  --card-border-width: 0.1rem;
-  --heading-icon-radius: calc(0.5rem + 5 * var(--font-size-multiplier));
-  --about-icon-height: calc(2rem + 5 * (var(--font-size-multiplier) - 0.1rem));
-  --num-intro-images: 5;
+  --card-gap: max(1vh, 2em);
+  --card-width: min(90vw, 32em);
+  --card-border-radius: 1em;
+  --card-border-width: 0.1em;
+  --heading-icon-radius: calc(
+    0.5em + 5em * var(--heading-font-size-multiplier)
+  );
+  --about-icon-height: calc(1em + 10em * var(--heading-font-size-multiplier));
 }
 
 /* General Styling */
@@ -40,6 +61,7 @@ body {
   font-family: Roboto, sans-serif;
   overflow-x: hidden;
   color: var(--theme-color-2);
+  font-size: max(min(max(2vh, 2vw), 1rem), 12px);
 }
 
 h1,
@@ -54,28 +76,28 @@ h6 {
 }
 
 h1 {
-  font-size: calc(1em + 28 * var(--font-size-multiplier));
+  font-size: calc(1em + 28em * var(--heading-font-size-multiplier));
   text-align: center;
 }
 
 h2 {
-  font-size: calc(1em + 20 * var(--font-size-multiplier));
+  font-size: calc(1em + 20em * var(--heading-font-size-multiplier));
 }
 
 h3 {
-  font-size: calc(1em + 10 * var(--font-size-multiplier));
+  font-size: calc(1em + 10em * var(--heading-font-size-multiplier));
 }
 
 h4 {
-  font-size: calc(1em + 6 * var(--font-size-multiplier));
+  font-size: calc(1em + 6em * var(--heading-font-size-multiplier));
 }
 
 h5 {
-  font-size: calc(1em + 3 * var(--font-size-multiplier));
+  font-size: calc(1em + 3em * var(--heading-font-size-multiplier));
 }
 
 h6 {
-  font-size: calc(1em + var(--font-size-multiplier));
+  font-size: calc(1em + 1em * var(--heading-font-size-multiplier));
 }
 
 p {
@@ -93,7 +115,7 @@ section {
 }
 
 /* React app styling */
-#top-div {
+#react-app {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -140,7 +162,7 @@ section {
 
 /* Intro component styling */
 .intro p {
-  font-size: calc(1em + var(--font-size-multiplier));
+  font-size: calc(1em + var(--heading-font-size-multiplier));
   text-align: center;
 }
 
@@ -239,8 +261,8 @@ section {
 }
 
 .experience-card .company-name {
-  margin-top: 2%;
-  margin-bottom: 4%;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
   color: var(--theme-color-4);
 }
 
@@ -282,12 +304,12 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 1em;
+  gap: min(1em, 2vw);
   font-size: 0.85em;
 }
 
 .project-card .tags .tag {
-  padding: 0.5em;
+  padding: min(0.5em, 1.5vw);
   border-radius: 2em;
   background-color: rgba(100 100 100 / 80%);
   color: white;
@@ -295,9 +317,8 @@ section {
 
 .project-card .overlay {
   box-sizing: content-box;
-  min-height: 25%;
-  margin: 0;
-  padding: 2% 5%;
+  min-height: 20%;
+  padding: 1em 2em;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1em;
@@ -306,14 +327,13 @@ section {
 }
 
 .project-card .overlay .title {
+  margin: 0;
   font-weight: 400;
-  justify-content: center;
   color: var(--theme-color-4);
 }
 
 .project-card .overlay .description {
   color: black;
-  font-size: 1em;
   line-height: 1.4;
 }
 

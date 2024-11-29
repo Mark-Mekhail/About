@@ -20,6 +20,7 @@ import dndLogo from "../images/canada-dnd.png";
 import linkedin from "../images/icons8-linkedin.png";
 import github from "../images/icons8-github.png";
 
+// About section content
 const abouts = [
   {
     title: "Top 4% Student",
@@ -61,6 +62,7 @@ const abouts = [
   },
 ];
 
+// Experience section content
 const experiences = [
   {
     role: "Simulation Software Engineer",
@@ -122,6 +124,7 @@ const experiences = [
   },
 ];
 
+// Project section content
 const projects = [
   {
     title: "Meta Coding Puzzles",
@@ -160,6 +163,7 @@ const projects = [
   },
 ];
 
+// Social links content
 const socials = [
   {
     link: "https://www.linkedin.com/in/markmekhail",

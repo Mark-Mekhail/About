@@ -9,13 +9,19 @@ import markBanff from "../images/mark-banff.jpeg";
 import markBeehiveHike from "../images/mark-beehive-hike.jpeg";
 
 const variants = Variants.defaultVariants();
+
+// Helper function to create animation variants for each image based on the order they should appear in
 const imageVariants = (order) => {
-  // Custom variants so that images stagger in a customizable order
   const orderedVariants = Variants.defaultVariants();
   orderedVariants.animate.transition.delay = order * 0.75;
   return orderedVariants;
 };
 
+/**
+ * Renders a section with three images for the Photos component.
+ *
+ * @returns {JSX.Element} The rendered Photos component.
+ */
 export default function Photos() {
   return (
     <motion.section

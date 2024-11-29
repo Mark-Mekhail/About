@@ -12,6 +12,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "motion": "^11.11.17",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
