@@ -1,3 +1,4 @@
-const viewportConfig = { once: true, margin: "-200px 0px 0px 0px" };
+const headingViewportConfig = { once: true, amount: 'all' };
+const cardViewportConfig = { once: true, amount: 0.5 };
 
-export { viewportConfig };
+export { headingViewportConfig, cardViewportConfig };

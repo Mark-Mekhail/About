@@ -1,36 +1,27 @@
 import React from "react";
 import { motion } from "motion/react";
 
-import Variants from "../utils/Variants";
-import { viewportConfig } from "../constants/configs";
+import StaggerAnimationHelper from "../utils/StaggerAnimationHelper";
 import { abouts } from "../constants/content";
 
 // Required components
 import AboutCard from "./AboutCard";
 
-const sectionVariants = Variants.defaultVariants();
-const headingVariants = Variants.headingVariants;
-const cardVariants = Variants.cardVariants;
-
 export default function About() {
+  const staggerAnimationHelper = new StaggerAnimationHelper(abouts.length + 1);
+
   return (
-    <motion.section
-      variants={sectionVariants}
-      initial="initial"
-      whileInView="animate"
-      viewport={viewportConfig}
-      className="about"
-    >
-      <motion.h1 variants={headingVariants}>About Me</motion.h1>
+    <section className="about">
+      <motion.h1 {...staggerAnimationHelper.getHeadingProps()}>About Me</motion.h1>
       <div className="section-body">
-        {abouts.map((section, index) => {
+        {abouts.map((about, index) => {
           return (
-            <motion.div key={index} variants={cardVariants}>
-              {AboutCard(index, section.title, section.icon, section.content)}
+            <motion.div key={about.title} {...staggerAnimationHelper.getCardProps(index)}>
+              <AboutCard title={about.title} icon={about.icon} content={about.content} />
             </motion.div>
           );
         })}
       </div>
-    </motion.section>
+    </section>
   );
 }

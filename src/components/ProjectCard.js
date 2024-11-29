@@ -1,16 +1,8 @@
 import React from "react";
 
-export default function ProjectCard(
-  index,
-  link,
-  image,
-  title,
-  description,
-  tags
-) {
+export default function ProjectCard( { link, image, title, description, tags }) {
   return (
     <a
-      key={index}
       href={link}
       target="_blank"
       rel="noopener noreferrer"

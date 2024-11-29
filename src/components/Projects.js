@@ -2,42 +2,32 @@ import React from "react";
 import { motion } from "motion/react";
 
 import Variants from "../utils/Variants";
-import { viewportConfig } from "../constants/configs";
+import StaggerAnimationHelper from "../utils/StaggerAnimationHelper";
+import { cardViewportConfig, headingViewportConfig } from "../constants/configs";
 import { projects } from "../constants/content";
 
 // Required components
 import ProjectCard from "./ProjectCard";
 
-const sectionVariants = Variants.defaultVariants();
-const headingVariants = Variants.headingVariants;
-const cardVariants = Variants.cardVariants;
-
 export default function Projects() {
+  const staggerAnimationHelper = new StaggerAnimationHelper(projects.length + 1);
+
   return (
-    <motion.section
-      variants={sectionVariants}
-      initial="initial"
-      whileInView="animate"
-      viewport={viewportConfig}
-      className="projects"
-    >
-      <motion.h1 variants={headingVariants}>Projects</motion.h1>
+    <section className="projects">
+      <motion.h1 {...staggerAnimationHelper.getHeadingProps()}>Projects</motion.h1>
       <div className="section-body">
-        {projects.map((project, index) => {
-          return (
-            <motion.div variants={cardVariants} key={index}>
-              {ProjectCard(
-                index,
-                project.link,
-                project.image,
-                project.title,
-                project.description,
-                project.tags
-              )}
-            </motion.div>
-          );
-        })}
+        {projects.map((project, index) => (
+          <motion.div key={project.link} {...staggerAnimationHelper.getCardProps(index)}>
+            <ProjectCard
+              link={project.link}
+              image={project.image}
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+            />
+          </motion.div>
+        ))}
       </div>
-    </motion.section>
+    </section>
   );
 }

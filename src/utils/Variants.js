@@ -1,4 +1,8 @@
-class Variants {
+export default class Variants {
+  static coniditionalVariant(condition, variant) {
+    return condition ? variant : {};
+  }
+  
   static defaultInitialVariant(x = 0, y = 0) {
     return {
       opacity: 0,
@@ -7,14 +11,12 @@ class Variants {
     };
   }
 
-  static defaultAnimateVariant(delayChildren = 0, staggerChildren = 0.5) {
+  static defaultAnimateVariant() {
     return {
       x: 0,
       y: 0,
       opacity: 1,
       transition: {
-        delayChildren: delayChildren,
-        staggerChildren: staggerChildren,
         duration: 2,
       },
     };
@@ -22,18 +24,14 @@ class Variants {
 
   static defaultVariants(
     x = 0,
-    y = 0,
-    delayChildren = 0,
-    staggerChildren = 0.5
+    y = 0
   ) {
     return {
-      initial: Variants.defaultInitialVariant(x, y),
-      animate: Variants.defaultAnimateVariant(delayChildren, staggerChildren),
+      initial: this.defaultInitialVariant(x, y),
+      animate: this.defaultAnimateVariant(),
     };
   }
 
   static headingVariants = this.defaultVariants("-10vw");
   static cardVariants = this.defaultVariants(0, "5vh");
 }
-
-export default Variants;

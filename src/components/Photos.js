@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "motion/react";
 
 import Variants from "../utils/Variants";
-import { viewportConfig } from "../constants/configs";
 
 // Required images
 import markSeattle from "../images/mark-seattle.jpeg";
@@ -13,7 +12,7 @@ const variants = Variants.defaultVariants(0, 0, 0, 0);
 const imageVariants = (order) => {
   // Custom variants so that images stagger in a customizable order
   const orderedVariants = Variants.defaultVariants(0, 0, 0, 0);
-  orderedVariants.animate.transition.delay = order * 0.5;
+  orderedVariants.animate.transition.delay = order * 1;
   return orderedVariants;
 };
 
@@ -23,7 +22,7 @@ export default function Photos() {
       variants={variants}
       initial="initial"
       whileInView="animate"
-      viewport={viewportConfig}
+      viewport={{ once: true, amount: 0.5 }}
       className="photos"
     >
       <motion.img
