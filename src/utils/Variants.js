@@ -2,7 +2,7 @@ export default class Variants {
   static coniditionalVariant(condition, variant) {
     return condition ? variant : {};
   }
-  
+
   static defaultInitialVariant(x = 0, y = 0) {
     return {
       opacity: 0,
@@ -22,10 +22,7 @@ export default class Variants {
     };
   }
 
-  static defaultVariants(
-    x = 0,
-    y = 0
-  ) {
+  static defaultVariants(x = 0, y = 0) {
     return {
       initial: this.defaultInitialVariant(x, y),
       animate: this.defaultAnimateVariant(),

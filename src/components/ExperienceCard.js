@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function ExperienceCard({ role, company, description, logo }) {
   return (
@@ -12,3 +13,10 @@ export default function ExperienceCard({ role, company, description, logo }) {
     </div>
   );
 }
+
+ExperienceCard.propTypes = {
+  role: PropTypes.string.isRequired,
+  company: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  logo: PropTypes.string.isRequired,
+};

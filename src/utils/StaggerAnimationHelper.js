@@ -1,7 +1,10 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 import Variants from "./Variants";
-import { headingViewportConfig, cardViewportConfig } from "../constants/configs";
+import {
+  headingViewportConfig,
+  cardViewportConfig,
+} from "../constants/configs";
 
 const headingVariants = Variants.headingVariants;
 const cardVariants = Variants.cardVariants;
@@ -19,33 +22,44 @@ export default class StaggerAnimationHelper {
       this.canStart.push(state);
       this.setCanStart.push(setState);
     }
-  };
+  }
 
-  getHeadingProps(initial = headingVariants.initial, animate = headingVariants.animate, viewport = headingViewportConfig) {
+  getHeadingProps(
+    initial = headingVariants.initial,
+    animate = headingVariants.animate,
+    viewport = headingViewportConfig
+  ) {
     return {
       initial: initial,
       whileInView: animate,
       viewport: viewport,
-      onAnimationStart: this.getOnAnimationStart(0)
-    }
-  };
+      onAnimationStart: this.getOnAnimationStart(0),
+    };
+  }
 
-  getCardProps(index, initial = cardVariants.initial, animate = cardVariants.animate, viewport = cardViewportConfig) {
+  getCardProps(
+    index,
+    initial = cardVariants.initial,
+    animate = cardVariants.animate,
+    viewport = cardViewportConfig
+  ) {
     index++;
 
     return {
       initial: initial,
       whileInView: Variants.coniditionalVariant(this.canStart[index], animate),
       viewport: viewport,
-      onAnimationStart: this.getOnAnimationStart(index)
-    }
-  };
+      onAnimationStart: this.getOnAnimationStart(index),
+    };
+  }
 
   getOnAnimationStart(index) {
     return () => {
       if (index < this.numItems - 1) {
-        setTimeout(() => {this.setCanStart[index + 1](true)}, this.delay);
+        setTimeout(() => {
+          this.setCanStart[index + 1](true);
+        }, this.delay);
       }
-    }
-  };
+    };
+  }
 }

@@ -13,7 +13,7 @@ export default function Intro() {
       variants={sectionVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, amount: 'all' }}
+      viewport={{ once: true, amount: "all" }}
       className="intro"
     >
       <motion.h1 variants={headingVariants}>Mark Mekhail</motion.h1>

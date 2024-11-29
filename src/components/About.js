@@ -12,12 +12,21 @@ export default function About() {
 
   return (
     <section className="about">
-      <motion.h1 {...staggerAnimationHelper.getHeadingProps()}>About Me</motion.h1>
+      <motion.h1 {...staggerAnimationHelper.getHeadingProps()}>
+        About Me
+      </motion.h1>
       <div className="section-body">
         {abouts.map((about, index) => {
           return (
-            <motion.div key={about.title} {...staggerAnimationHelper.getCardProps(index)}>
-              <AboutCard title={about.title} icon={about.icon} content={about.content} />
+            <motion.div
+              key={about.title}
+              {...staggerAnimationHelper.getCardProps(index)}
+            >
+              <AboutCard
+                title={about.title}
+                icon={about.icon}
+                content={about.content}
+              />
             </motion.div>
           );
         })}

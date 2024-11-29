@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function AboutCard({ title, icon, content }) {
   return (
@@ -11,3 +12,9 @@ export default function AboutCard({ title, icon, content }) {
     </div>
   );
 }
+
+AboutCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+};

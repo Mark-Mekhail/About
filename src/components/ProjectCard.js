@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export default function ProjectCard( { link, image, title, description, tags }) {
+export default function ProjectCard({ link, image, title, description, tags }) {
   return (
     <a
       href={link}
@@ -23,3 +24,11 @@ export default function ProjectCard( { link, image, title, description, tags }) 
     </a>
   );
 }
+
+ProjectCard.propTypes = {
+  link: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  tags: PropTypes.array.isRequired,
+};
