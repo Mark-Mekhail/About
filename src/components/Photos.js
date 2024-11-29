@@ -8,10 +8,10 @@ import markSeattle from "../images/mark-seattle.jpeg";
 import markBanff from "../images/mark-banff.jpeg";
 import markBeehiveHike from "../images/mark-beehive-hike.jpeg";
 
-const variants = Variants.defaultVariants(0, 0, 0, 0);
+const variants = Variants.defaultVariants();
 const imageVariants = (order) => {
   // Custom variants so that images stagger in a customizable order
-  const orderedVariants = Variants.defaultVariants(0, 0, 0, 0);
+  const orderedVariants = Variants.defaultVariants();
   orderedVariants.animate.transition.delay = order * 0.75;
   return orderedVariants;
 };

@@ -6,7 +6,7 @@ import Variants from "../utils/Variants";
 // Required images
 import mark from "../images/mark-portrait.jpeg";
 
-const signatureVariants = Variants.defaultVariants(0, "5vh", 0, 0);
+const signatureVariants = Variants.defaultVariants(0, "5vh");
 
 export default function Header() {
   return (

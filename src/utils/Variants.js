@@ -3,18 +3,16 @@ export default class Variants {
     return condition ? variant : {};
   }
 
-  static defaultInitialVariant(x = 0, y = 0) {
+  static defaultInitialVariant() {
     return {
       opacity: 0,
-      x: x,
-      y: y,
     };
   }
 
-  static defaultAnimateVariant() {
+  static defaultAnimateVariant(x = 0, y = 0) {
     return {
-      x: 0,
-      y: 0,
+      x: [x, 0],
+      y: [y, 0],
       opacity: 1,
       transition: {
         duration: 2,
@@ -24,8 +22,8 @@ export default class Variants {
 
   static defaultVariants(x = 0, y = 0) {
     return {
-      initial: this.defaultInitialVariant(x, y),
-      animate: this.defaultAnimateVariant(),
+      initial: this.defaultInitialVariant(),
+      animate: this.defaultAnimateVariant(x, y),
     };
   }
 

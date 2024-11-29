@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 import Variants from "../utils/Variants";
 
-const sectionVariants = Variants.defaultVariants(0, 0, 0, 0);
+const sectionVariants = Variants.defaultVariants();
 const headingVariants = Variants.headingVariants;
 const bodyVariants = Variants.defaultVariants("10vw");
 

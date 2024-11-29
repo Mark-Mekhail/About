@@ -6,10 +6,17 @@
   }
 }
 
-@media (width < 700px) {
+@media (width < 700px) and (width >= 400px) {
   :root {
     --font-size-multiplier: 0.05em;
     --card-overlay-height: 35%;
+  }
+}
+
+@media (width < 400px) {
+  :root {
+    --font-size-multiplier: 0.03em;
+    --card-overlay-height: 40%;
   }
 }
 
