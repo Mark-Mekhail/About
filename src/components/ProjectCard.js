@@ -1,7 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function ProjectCard({ link, image, title, description, tags }) {
+export default function ProjectCard({
+  link,
+  image,
+  title,
+  description,
+  tags,
+  overlayHeight,
+  overlayTitleRef,
+  overlayContentRef,
+}) {
   return (
     <a
       href={link}
@@ -17,9 +26,13 @@ export default function ProjectCard({ link, image, title, description, tags }) {
           </p>
         ))}
       </span>
-      <div className="overlay">
-        <h5 className="title">{title}</h5>
-        <p className="description">{description}</p>
+      <div className="overlay" style={{ height: overlayHeight }}>
+        <h5 ref={overlayTitleRef} className="title">
+          {title}
+        </h5>
+        <p ref={overlayContentRef} className="description">
+          {description}
+        </p>
       </div>
     </a>
   );
@@ -31,4 +44,8 @@ ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
+  overlayHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    .isRequired,
+  overlayTitleRef: PropTypes.func.isRequired,
+  overlayContentRef: PropTypes.func.isRequired,
 };

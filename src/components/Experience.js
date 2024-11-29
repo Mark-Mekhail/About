@@ -25,12 +25,7 @@ export default function Experience({ title }) {
               key={exp.company}
               {...staggerAnimationHelper.getCardProps(index)}
             >
-              <ExperienceCard
-                role={exp.role}
-                company={exp.company}
-                description={exp.description}
-                logo={exp.logo}
-              />
+              <ExperienceCard {...exp} />
             </motion.div>
           );
         })}

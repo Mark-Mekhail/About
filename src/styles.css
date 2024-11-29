@@ -2,21 +2,18 @@
 @media (width >= 700px) {
   :root {
     --font-size-multiplier: 0.1em;
-    --card-overlay-height: 30%;
   }
 }
 
 @media (width < 700px) and (width >= 400px) {
   :root {
     --font-size-multiplier: 0.05em;
-    --card-overlay-height: 35%;
   }
 }
 
 @media (width < 400px) {
   :root {
     --font-size-multiplier: 0.03em;
-    --card-overlay-height: 40%;
   }
 }
 
@@ -280,7 +277,7 @@ section {
 }
 
 .project-card .tags {
-  max-width: 75%;
+  max-width: 80%;
   padding: 3%;
   align-self: flex-end;
   display: flex;
@@ -298,9 +295,8 @@ section {
 }
 
 .project-card .overlay {
-  box-sizing: border-box;
-  min-height: fit-content;
-  height: var(--card-overlay-height);
+  box-sizing: content-box;
+  min-height: 25%;
   margin: 0;
   padding: 2% 5%;
   display: grid;

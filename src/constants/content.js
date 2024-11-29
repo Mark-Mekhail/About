@@ -136,7 +136,7 @@ const projects = [
     description: "The website you are currently viewing.",
     link: "https://github.com/Mark-Mekhail/About-Mark",
     image: website,
-    tags: ["React", "JavaScript", "HTML", "CSS", "GitHub Actions (CI/CD)"],
+    tags: ["GitHub Actions (CI/CD)", "React", "JavaScript", "HTML", "CSS"],
   },
   {
     title: "Braille Translator",
@@ -152,10 +152,10 @@ const projects = [
     link: "https://github.com/Mark-Mekhail/CPEN221-Projects",
     image: cpen_code,
     tags: [
-      "Concurrent Programming",
+      "Object-Oriented Programming",
       "Java",
       "JUnit",
-      "Object-Oriented Programming",
+      "Concurrent Programming",
     ],
   },
 ];

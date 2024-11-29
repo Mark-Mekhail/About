@@ -22,11 +22,7 @@ export default function About() {
               key={about.title}
               {...staggerAnimationHelper.getCardProps(index)}
             >
-              <AboutCard
-                title={about.title}
-                icon={about.icon}
-                content={about.content}
-              />
+              <AboutCard {...about} />
             </motion.div>
           );
         })}
