@@ -277,7 +277,6 @@ section {
 }
 
 .project-card .tags {
-  max-width: 80%;
   padding: 3%;
   align-self: flex-end;
   display: flex;
