@@ -1,4 +1,4 @@
-name: Build and Deploy to GitHub Pages
+name: Main Branch CI
 
 on:
   push:
@@ -16,34 +16,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  main:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+  jobs-build:
+    name: Build React App
+    uses: ./.github/workflows/jobs-build.yml
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '21'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Lint project
-        run: |
-          npm run prettier
-          npm run lint
-
-      - name: Build project
-        run: npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload build directory
-          path: './build'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  jobs-deploy:
+    name: Deploy to GitHub Pages
+    uses: ./.github/workflows/jobs-deploy.yml
