@@ -12,6 +12,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  jobs-build:
+  develop:
     name: Build React App
-    uses: ./.github/workflows/jobs-build.yml
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        uses: ./.github/actions/build
