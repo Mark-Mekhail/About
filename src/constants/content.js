@@ -107,6 +107,13 @@ const projects = [
     tags: ["Python"],
   },
   {
+    title: "Battleship",
+    description: "A server for multiplayer Battleship games",
+    link: "https://github.com/Mark-Mekhail/Battleship",
+    image: cpen_code,
+    tags: ["Node.js", "Express", "WebSocket", "REST API"],
+  },
+  {
     title: "Course Project Samples",
     description:
       "A collection of projects completed for a Software Construction course",
