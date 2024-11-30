@@ -14,8 +14,8 @@ import PropTypes from "prop-types";
 export default function ExperienceCard({ role, company, description, logo }) {
   return (
     <div className="experience-card">
-      <div class="heading">
-        <div class="info">
+      <div className="heading">
+        <div className="info">
           <h5>{role}</h5>
           <h6 className="company-name">{company}</h6>
         </div>

@@ -48,7 +48,9 @@
   --twelfth-width: 8rem;
   --about-card-max-width: calc(4 * var(--twelfth-width) - var(--card-gap) / 3);
   --experience-card-max-width: calc(6 * var(--twelfth-width));
-  --project-card-max-width: calc(3 * var(--twelfth-width) - var(--card-gap) / 2);
+  --project-card-max-width: calc(
+    3 * var(--twelfth-width) - var(--card-gap) / 2
+  );
   --card-border-radius: 1em;
   --card-border-width: 0.1em;
   --heading-icon-radius: calc(
@@ -216,7 +218,6 @@ section {
     margin-left: -5%;
     margin-top: 10%;
   }
-
 }
 
 @media (width >= 80em) {
@@ -296,7 +297,10 @@ section {
 .experience .section-body {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, min(100%, var(--experience-card-max-width)));
+  grid-template-columns: repeat(
+    auto-fit,
+    min(100%, var(--experience-card-max-width))
+  );
   grid-auto-rows: 1fr;
   gap: var(--card-gap);
   justify-content: center;
@@ -346,7 +350,10 @@ section {
 .projects .section-body {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, min(100%, var(--project-card-max-width)));
+  grid-template-columns: repeat(
+    auto-fit,
+    min(100%, var(--project-card-max-width))
+  );
   grid-auto-rows: 1fr;
   gap: var(--card-gap);
   justify-content: center;

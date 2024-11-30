@@ -25,17 +25,20 @@ const abouts = [
   {
     title: "Top 4% Student",
     icon: studentIcon,
-    content: "I have consistently demonstrated academic excellence throughout my studies, achieving a GPA that comfortably places me within the top 4% of my cohort. With a perfect straight-A record across all subjects, I have proven my dedication to achieving exceptional results. Notably, I have earned the highest score in my section for several challenging courses, including Basic Algorithms and Data Structures, Intermediate Algorithms and Data Structures, Machine Learning and Data Mining, Computer Communications, Computing Systems, University Writing, Technical Communication, and Principles of Microeconomics."
+    content:
+      "I have consistently demonstrated academic excellence throughout my studies, achieving a GPA that comfortably places me within the top 4% of my cohort. With a perfect straight-A record across all subjects, I have proven my dedication to achieving exceptional results. Notably, I have earned the highest score in my section for several challenging courses, including Basic Algorithms and Data Structures, Intermediate Algorithms and Data Structures, Machine Learning and Data Mining, Computer Communications, Computing Systems, University Writing, Technical Communication, and Principles of Microeconomics.",
   },
   {
     title: "Skilled Engineer",
     icon: developerIcon,
-    content: "I am a dedicated and skilled engineer with a solid understanding of data structures, algorithms, and various programming languages. I have gained valuable experience in web application development, devops, software simulation, computer networking, cybersecurity, and machine learning. As someone who is eager to learn and improve, I enjoy working on personal projects to enhance my skills and knowledge. I welcome you to explore my project portfolio and see for yourself the quality and extent of my work."
+    content:
+      "I am a dedicated and skilled engineer with a solid understanding of data structures, algorithms, and various programming languages. I have gained valuable experience in web application development, devops, software simulation, computer networking, cybersecurity, and machine learning. As someone who is eager to learn and improve, I enjoy working on personal projects to enhance my skills and knowledge. I welcome you to explore my project portfolio and see for yourself the quality and extent of my work.",
   },
   {
     title: "Proactive Leader",
     icon: leaderIcon,
-    content: "Throughout my studies and work experiences, I have consistently demonstrated my ability to take initiative, actively engage, and excel as a leader. In my senior capstone project, I took charge of coordinating my team by delegating tasks, setting deadlines, and ensuring that project milestones were met on time. As a club executive for the Coptic Orthodox Student Association at UBC for four years, I actively organized events, led meetings, and maintained a strong relationship with the Alma Mater Society. At Intel, I formally led the intern cohort in organizing social events and activities."
+    content:
+      "Throughout my studies and work experiences, I have consistently demonstrated my ability to take initiative, actively engage, and excel as a leader. In my senior capstone project, I took charge of coordinating my team by delegating tasks, setting deadlines, and ensuring that project milestones were met on time. As a club executive for the Coptic Orthodox Student Association at UBC for four years, I actively organized events, led meetings, and maintained a strong relationship with the Alma Mater Society. At Intel, I formally led the intern cohort in organizing social events and activities.",
   },
 ];
 
@@ -44,25 +47,29 @@ const experiences = [
   {
     role: "Simulation Software Engineer Co-op",
     company: "Intel Corporation",
-    description: "The Virtual Platform teams at Intel Foundry Services (IFS) specialize in the development of software simulations for system-on-chip (SoC) designs. As a member of one of these teams, I played a crucial role in developing these simulations. Additionally, I took the initiative to complete infrastructure-related tasks, such as creating a template repository project that streamlined the setup process for new system repositories.",
+    description:
+      "The Virtual Platform teams at Intel Foundry Services (IFS) specialize in the development of software simulations for system-on-chip (SoC) designs. As a member of one of these teams, I played a crucial role in developing these simulations. Additionally, I took the initiative to complete infrastructure-related tasks, such as creating a template repository project that streamlined the setup process for new system repositories.",
     logo: intelLogo,
   },
   {
     role: "Software Engineer Intern",
     company: "Schweitzer Engineering Laboratories (SEL)",
-    description: "SEL specializes in creating digital products and systems that protect, control, and automate power systems around the world. In my role, I contributed to various aspects of the development process. This included developing Jenkins pipelines for team projects, configuring Windows and Linux machines for CI/CD pipelines, writing VHDL testbenches for RTL components, and creating Python scripts to automate testing of SEL networking devices.",
+    description:
+      "SEL specializes in creating digital products and systems that protect, control, and automate power systems around the world. In my role, I contributed to various aspects of the development process. This included developing Jenkins pipelines for team projects, configuring Windows and Linux machines for CI/CD pipelines, writing VHDL testbenches for RTL components, and creating Python scripts to automate testing of SEL networking devices.",
     logo: selLogo,
   },
   {
     role: "Teaching Assistant: CPEN 211",
     company: "UBC Department of Electrical and Computer Engineering",
-    description: "As a teaching assistant for CPEN 211 (Introduction to Computing Systems), I actively engaged with students by holding regular office hours, providing assistance and feedback on assignments, and actively participating in an online forum to answer questions. CPEN 211 is a fundamental course that covers topics such as digital logic design, microcomputer organization, assembly language programming, and I/O programming.",
+    description:
+      "As a teaching assistant for CPEN 211 (Introduction to Computing Systems), I actively engaged with students by holding regular office hours, providing assistance and feedback on assignments, and actively participating in an online forum to answer questions. CPEN 211 is a fundamental course that covers topics such as digital logic design, microcomputer organization, assembly language programming, and I/O programming.",
     logo: ubcLogo,
   },
   {
     role: "Backend Software Developer Co-op",
     company: "Safe Software",
-    description: "As a backend software developer at Safe Software, I played a crucial role in developing the backend of FME Server, a web app that automates data and application integration workflows. Safe Software (aka. \"Safe\") is a leading company that develops and sells FME, the data integration platform with the best support for spatial data.",
+    description:
+      'As a backend software developer at Safe Software, I played a crucial role in developing the backend of FME Server, a web app that automates data and application integration workflows. Safe Software (aka. "Safe") is a leading company that develops and sells FME, the data integration platform with the best support for spatial data.',
     logo: safeLogo,
   },
   {
@@ -86,7 +93,8 @@ const projects = [
   },
   {
     title: "Personal Website",
-    description: "A React application developed to create the website you are currently browsing",
+    description:
+      "A React application developed to create the website you are currently browsing",
     link: "https://github.com/Mark-Mekhail/About-Mark",
     image: website,
     tags: ["GitHub Actions (CI/CD)", "React", "JavaScript", "HTML", "CSS"],
