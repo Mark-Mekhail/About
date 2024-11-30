@@ -14,12 +14,14 @@ import PropTypes from "prop-types";
 export default function ExperienceCard({ role, company, description, logo }) {
   return (
     <div className="experience-card">
-      <div>
-        <h4>{role}</h4>
-        <h6 className="company-name">{company}</h6>
-        <p>{description}</p>
+      <div class="heading">
+        <div class="info">
+          <h5>{role}</h5>
+          <h6 className="company-name">{company}</h6>
+        </div>
+        <img src={logo} className="logo" />
       </div>
-      <img src={logo} className="logo" />
+      <p>{description}</p>
     </div>
   );
 }

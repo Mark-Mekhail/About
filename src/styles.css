@@ -1,6 +1,6 @@
 /**
  * This file defines general styling for the body, headings, paragraphs, sections, and various components.
- * 
+ *
  * The main components styled in this file are:
  * - React app (#react-app)
  * - Header component (.header)
@@ -13,7 +13,7 @@
  * - ExperienceCard component (.experience-card)
  * - Projects component (.projects)
  * - ProjectCard component (.project-card)
- * 
+ *
  * Each component has its own specific styling rules and classes.
  * The file also includes media queries to adjust the font size multiplier based on the width of the viewport.
  */
@@ -27,13 +27,13 @@
 
 @media (width < 34rem) and (width >= 28rem) {
   :root {
-    --heading-font-size-multiplier: 0.75;
+    --heading-font-size-multiplier: 0.07;
   }
 }
 
 @media (width < 28rem) {
   :root {
-    --heading-font-size-multiplier: 0.05;
+    --heading-font-size-multiplier: 0.04;
   }
 }
 
@@ -45,7 +45,10 @@
   --section-gap: min(5vh, 5em);
   --header-vertical-padding: min(2vh, var(--heading-icon-radius));
   --card-gap: max(1vh, 2em);
-  --card-width: min(90vw, 32em);
+  --twelfth-width: 8rem;
+  --about-card-max-width: calc(4 * var(--twelfth-width) - var(--card-gap) / 3);
+  --experience-card-max-width: calc(6 * var(--twelfth-width));
+  --project-card-max-width: calc(3 * var(--twelfth-width) - var(--card-gap) / 2);
   --card-border-radius: 1em;
   --card-border-width: 0.1em;
   --heading-icon-radius: calc(
@@ -61,7 +64,7 @@ body {
   font-family: Roboto, sans-serif;
   overflow-x: hidden;
   color: var(--theme-color-2);
-  font-size: max(min(max(2vh, 2vw), 1rem), 12px);
+  font-size: 1rem;
 }
 
 h1,
@@ -76,12 +79,12 @@ h6 {
 }
 
 h1 {
-  font-size: calc(1em + 28em * var(--heading-font-size-multiplier));
+  font-size: calc(1em + 22em * var(--heading-font-size-multiplier));
   text-align: center;
 }
 
 h2 {
-  font-size: calc(1em + 20em * var(--heading-font-size-multiplier));
+  font-size: calc(1em + 15em * var(--heading-font-size-multiplier));
 }
 
 h3 {
@@ -169,76 +172,131 @@ section {
 /* Photos component styling */
 .photos {
   width: fit-content;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
+  gap: 0;
   justify-content: center;
   align-items: center;
-  gap: 0;
-  align-self: center;
 }
 
 .photos img {
   border-radius: 1em;
 }
 
-.photos .top-image {
-  max-width: 20vw;
-  max-height: 50vh;
-  margin-right: -10%;
-  margin-bottom: 10%;
-  z-index: 1;
+@media (width < 35em) {
+  .photos .top-portrait {
+    width: 100%;
+  }
+
+  .photos .landscape {
+    display: none;
+  }
+
+  .photos .bottom-portrait {
+    display: none;
+  }
 }
 
-.photos .central-image {
-  max-width: 60vw;
-  min-width: 40vw;
-  max-height: 80vh;
-  aspect-ratio: 4 / 3;
+@media (width < 80em) and (width >= 35em) {
+  .photos .top-portrait {
+    max-width: 50vw;
+    max-height: 70vh;
+    margin-right: -5%;
+    margin-bottom: 10%;
+  }
+
+  .photos .landscape {
+    display: none;
+  }
+
+  .photos .bottom-portrait {
+    max-width: 50vw;
+    max-height: 70vh;
+    margin-left: -5%;
+    margin-top: 10%;
+  }
+
 }
 
-.photos .bottom-image {
-  max-width: 20vw;
-  max-height: 50vh;
-  margin-left: -10%;
-  margin-top: 10%;
-  z-index: 1;
+@media (width >= 80em) {
+  .photos .top-portrait {
+    max-width: 20vw;
+    max-height: 50vh;
+    margin-right: -10%;
+    margin-bottom: 10%;
+    z-index: 1;
+  }
+
+  .photos .landscape {
+    max-width: 60vw;
+    min-width: 40vw;
+    max-height: 80vh;
+    aspect-ratio: 4 / 3;
+  }
+
+  .photos .bottom-portrait {
+    max-width: 20vw;
+    max-height: 50vh;
+    margin-left: -10%;
+    margin-top: 10%;
+    z-index: 1;
+  }
 }
 
 /* About component styling */
 .about .section-body {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: var(--card-gap);
+}
+
+@media (width < 80em) {
+  .about .section-body {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (width >= 80em) {
+  .about .section-body {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 /* AboutCard component styling */
 .about-card {
-  max-width: var(--card-width);
+  max-width: var(--about-card-max-width);
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   align-items: center;
-  gap: calc(var(--card-gap) / 2);
-  text-align: justify;
+  gap: 1em;
 }
 
 .about-card-heading {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
   gap: 1em;
+}
+
+.about-card-heading h3 {
+  display: inline;
+  text-wrap: nowrap;
 }
 
 .about-card-heading .icon {
   height: var(--about-icon-height);
 }
 
+.about-card p {
+  text-align: justify;
+}
+
 /* Experience component styling */
 .experience .section-body {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, var(--card-width));
+  grid-template-columns: repeat(auto-fit, min(100%, var(--experience-card-max-width)));
   grid-auto-rows: 1fr;
   gap: var(--card-gap);
   justify-content: center;
@@ -247,45 +305,58 @@ section {
 /* ExperienceCard component styling */
 .experience-card {
   box-sizing: border-box;
-  max-width: var(--card-width);
+  width: 100%;
   height: 100%;
   padding: 5%;
   border: solid;
   border-radius: var(--card-border-radius);
   border-color: var(--theme-color-3);
   border-width: var(--card-border-width);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1.5fr 2fr;
+  gap: 1em;
+  align-items: start;
+  justify-content: start;
   text-align: left;
 }
 
-.experience-card .company-name {
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-  color: var(--theme-color-4);
+.experience-card .heading {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: start;
+  gap: 2em;
 }
 
-.experience-card .logo {
-  max-width: 6em;
-  max-height: 5em;
-  margin-top: 10%;
-  align-self: flex-end;
+.experience-card .heading .logo {
+  max-width: 100%;
+  justify-self: end;
+}
+
+.experience-card .heading .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.experience-card .heading .info .company-name {
+  color: var(--theme-color-4);
 }
 
 /* Projects component styling */
 .projects .section-body {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, var(--card-width));
+  grid-template-columns: repeat(auto-fit, min(100%, var(--project-card-max-width)));
+  grid-auto-rows: 1fr;
   gap: var(--card-gap);
   justify-content: center;
 }
 
 /* ProjectCard component styling */
 .project-card {
-  width: var(--card-width);
-  height: calc(3 * var(--card-width) / 4);
+  width: 100%;
+  min-height: max(calc(var(--project-card-max-width) * 0.8));
+  height: 100%;
   border: solid;
   border-radius: var(--card-border-radius);
   border-color: var(--theme-color-3);

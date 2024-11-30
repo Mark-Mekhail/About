@@ -14,7 +14,7 @@ import intelLogo from "../images/intel.png";
 import selLogo from "../images/sel.png";
 import ubcLogo from "../images/ubc.png";
 import safeLogo from "../images/safe.png";
-import dndLogo from "../images/canada-dnd.png";
+import canadaLogo from "../images/canada.png";
 
 // Social links images
 import linkedin from "../images/icons8-linkedin.png";
@@ -25,102 +25,52 @@ const abouts = [
   {
     title: "Top 4% Student",
     icon: studentIcon,
-    content:
-      "I have achieved a GPA comfortably within the top 4% of my cohort. I \
-      have also maintained a perfect straight-A record so far in my studies across \
-      all subject matter, with only two courses remaining. Throughout my studies I \
-      have demonstrated excellence by earning the top score in my section of a number \
-      of courses, including: Basic Algorithms and Data Structures, Intermediate \
-      Algorithms and Data Structures, Machine Learning and Data Mining, Computer \
-      Communications, Computing Systems I, University Writing, Technical Communication, \
-      and Principles of Microeconomics.",
+    content: "I have consistently demonstrated academic excellence throughout my studies, achieving a GPA that comfortably places me within the top 4% of my cohort. With a perfect straight-A record across all subjects, I have proven my dedication to achieving exceptional results. Notably, I have earned the highest score in my section for several challenging courses, including Basic Algorithms and Data Structures, Intermediate Algorithms and Data Structures, Machine Learning and Data Mining, Computer Communications, Computing Systems, University Writing, Technical Communication, and Principles of Microeconomics."
   },
   {
     title: "Skilled Engineer",
     icon: developerIcon,
-    content:
-      "I take my profession seriously and am always looking to learn and improve. \
-      Beyond learning about data structures and algorithms, various programming \
-      languages, and other fundamentals of software development, I have leveraged my \
-      education and internship opportunities to develop a range of skills in software \
-      engineering such as web application development, devops, software simulation, \
-      computer networking/communications, cybersecurity, and machine learning. I also \
-      work on personal projects to further develop my skills and knowledge.",
+    content: "I am a dedicated and skilled engineer with a solid understanding of data structures, algorithms, and various programming languages. I have gained valuable experience in web application development, devops, software simulation, computer networking, cybersecurity, and machine learning. As someone who is eager to learn and improve, I enjoy working on personal projects to enhance my skills and knowledge. I welcome you to explore my project portfolio and see for yourself the quality and extent of my work."
   },
   {
     title: "Proactive Leader",
     icon: leaderIcon,
-    content:
-      "Throughout my studies and work experiences I have consistently taken \
-      on leadership roles. For my senior capstone project, I coordinated the members of \
-      my team which by delegating tasks, setting deadlines, and ensuring that project \
-      milestones were being met on time. With the Coptic Orthodox Student Association at \
-      UBC I was a club executive for four years, during which I was responsible for \
-      organizing events, leading meetings, and maintining good standing with the Alma \
-      Mater Society. At Intel I took on the initiative of formally leading the intern \
-      cohort in organizing social events and activities.",
+    content: "Throughout my studies and work experiences, I have consistently demonstrated my ability to take initiative, actively engage, and excel as a leader. In my senior capstone project, I took charge of coordinating my team by delegating tasks, setting deadlines, and ensuring that project milestones were met on time. As a club executive for the Coptic Orthodox Student Association at UBC for four years, I actively organized events, led meetings, and maintained a strong relationship with the Alma Mater Society. At Intel, I formally led the intern cohort in organizing social events and activities."
   },
 ];
 
 // Experience section content
 const experiences = [
   {
-    role: "Simulation Software Engineer",
+    role: "Simulation Software Engineer Co-op",
     company: "Intel Corporation",
-    description:
-      "The Virtual Platform teams at Intel Foundry Services (IFS) \
-      develop software simulations of system-on-chip (SoC) designs that \
-      customers contract IFS to help develop and manufacture. I worked on \
-      developing these simulations and also completed infrastructure-related \
-      tasks such as creating a template repository project to accelerate the \
-      process of setting up new system repositories.",
+    description: "The Virtual Platform teams at Intel Foundry Services (IFS) specialize in the development of software simulations for system-on-chip (SoC) designs. As a member of one of these teams, I played a crucial role in developing these simulations. Additionally, I took the initiative to complete infrastructure-related tasks, such as creating a template repository project that streamlined the setup process for new system repositories.",
     logo: intelLogo,
   },
   {
-    role: "Software Engineer",
+    role: "Software Engineer Intern",
     company: "Schweitzer Engineering Laboratories (SEL)",
-    description:
-      "SEL specializes in creating digital products and systems \
-      that protect, control, and automate power systems around the world. My \
-      role was broad in scope and involved developing Jenkins pipelines for \
-      team projects, configuring Windows and Linux machines to act as runners \
-      for our CI/CD pipelines, writing VHDL testbenches for RTL components, \
-      and creating Python scripts to automate testing of SEL networking devices.",
+    description: "SEL specializes in creating digital products and systems that protect, control, and automate power systems around the world. In my role, I contributed to various aspects of the development process. This included developing Jenkins pipelines for team projects, configuring Windows and Linux machines for CI/CD pipelines, writing VHDL testbenches for RTL components, and creating Python scripts to automate testing of SEL networking devices.",
     logo: selLogo,
   },
   {
     role: "Teaching Assistant: CPEN 211",
-    company: "UBC Department of Computer Engineering",
-    description:
-      "CPEN 211 (Computing Systems I) is a fundamental course in \
-      digital logic design that covers the following topics: digital circuits, \
-      organization and operation of microcomputers, memory addressing modes, \
-      representation of information, instruction sets, machine and assembly \
-      language programming, and I/O programming. As a teaching assistant, I \
-      held office hours, graded assignments, and answered questions on an online \
-      forum.",
+    company: "UBC Department of Electrical and Computer Engineering",
+    description: "As a teaching assistant for CPEN 211 (Introduction to Computing Systems), I actively engaged with students by holding regular office hours, providing assistance and feedback on assignments, and actively participating in an online forum to answer questions. CPEN 211 is a fundamental course that covers topics such as digital logic design, microcomputer organization, assembly language programming, and I/O programming.",
     logo: ubcLogo,
   },
   {
-    role: "Backend Software Developer",
+    role: "Backend Software Developer Co-op",
     company: "Safe Software",
-    description:
-      'Safe Software (aka. "Safe") develops and sells FME, the \
-      data integration platform with the best support for spatial data. Safe \
-      is dedicated to helping data users around the world discover the power \
-      that their data holds. My role involved developing the backend of FME \
-      Server, a web app that automates data and application integration workflows.',
+    description: "As a backend software developer at Safe Software, I played a crucial role in developing the backend of FME Server, a web app that automates data and application integration workflows. Safe Software (aka. \"Safe\") is a leading company that develops and sells FME, the data integration platform with the best support for spatial data.",
     logo: safeLogo,
   },
   {
-    role: "Full-Stack Software Developer",
-    company: "Canadian Department of National Defence",
+    role: "Full-Stack Software Developer Co-op",
+    company: "Government of Canada",
     description:
-      "While most of the work completed at the Department of \
-    National Defence (DND) is classified, I can say that I developed frontend \
-    and backend microservices that supported web applications used for national \
-    security purposes.",
-    logo: dndLogo,
+      "During my time working for the Canadian federal government, I had the opportunity to develop both frontend and backend microservices. These microservices were crucial components of web applications used for national security purposes. I gained valuable experience in frontend and backend microservice application development and contributed to projects that required a strong focus on security and reliability.",
+    logo: canadaLogo,
   },
 ];
 
@@ -129,14 +79,14 @@ const projects = [
   {
     title: "Meta Coding Puzzles",
     description:
-      "Solutions to the coding puzzles available on the Meta Careers website.",
+      "Solutions to the coding puzzles available on the Meta Careers website",
     link: "https://github.com/Mark-Mekhail/Meta-Careers-Coding-Puzzle-Solutions",
     image: meta_puzzles,
     tags: ["Data Structures", "Algorithms", "C++", "Python"],
   },
   {
     title: "Personal Website",
-    description: "The website you are currently viewing.",
+    description: "A React application developed to create the website you are currently browsing",
     link: "https://github.com/Mark-Mekhail/About-Mark",
     image: website,
     tags: ["GitHub Actions (CI/CD)", "React", "JavaScript", "HTML", "CSS"],
@@ -151,7 +101,7 @@ const projects = [
   {
     title: "Course Project Samples",
     description:
-      "A collection of projects completed for a Software Construction course.",
+      "A collection of projects completed for a Software Construction course",
     link: "https://github.com/Mark-Mekhail/CPEN221-Projects",
     image: cpen_code,
     tags: [
