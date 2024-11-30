@@ -8,12 +8,15 @@ runs:
         node-version: '21'
 
     - name: Install dependencies
+      shell: bash
       run: npm install
 
     - name: Lint project
+      shell: bash
       run: |
         npm run prettier
         npm run lint
 
     - name: Build project
+      shell: bash
       run: npm run build
