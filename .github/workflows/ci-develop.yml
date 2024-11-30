@@ -16,5 +16,8 @@ jobs:
     name: Build React App
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Build
         uses: ./.github/actions/build
