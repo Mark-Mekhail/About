@@ -23,3 +23,4 @@ jobs:
   jobs-deploy:
     name: Deploy to GitHub Pages
     uses: ./.github/workflows/jobs-deploy.yml
+    needs: jobs-build
