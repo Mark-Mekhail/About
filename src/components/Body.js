@@ -17,7 +17,7 @@ export default function Body() {
       <Intro />
       <Photos />
       <About />
-      <Experience title="Experience" />
+      <Experience title="Student Work Experience" />
       <Projects />
     </div>
   );
