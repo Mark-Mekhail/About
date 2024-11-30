@@ -1,0 +1,17 @@
+name: Development Branch CI
+
+on:
+  push:
+    # Run CI on all branches except main
+    branches-ignore: ["main"]
+
+  workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  jobs-build:
+    name: Build React App
+    uses: ./.github/workflows/jobs-build.yml
