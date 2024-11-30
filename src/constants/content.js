@@ -92,7 +92,7 @@ const projects = [
     tags: ["Data Structures", "Algorithms", "C++", "Python"],
   },
   {
-    title: "Personal Website",
+    title: "About Mark Website",
     description:
       "A React application developed to create the website you are currently browsing",
     link: "https://github.com/Mark-Mekhail/About-Mark",
