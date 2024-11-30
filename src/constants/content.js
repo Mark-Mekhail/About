@@ -12,7 +12,7 @@ import cpen_code from "../images/cpen-code.png";
 // Experience section images
 import intelLogo from "../images/intel.png";
 import selLogo from "../images/sel.png";
-import ubcLogo from "../images/ubc.png";
+import ubcLogo from "../images/ubc.svg";
 import safeLogo from "../images/safe.png";
 import canadaLogo from "../images/canada.png";
 
@@ -45,35 +45,35 @@ const abouts = [
 // Experience section content
 const experiences = [
   {
-    role: "Simulation Software Engineer Co-op",
-    company: "Intel Corporation",
+    role: "Simulation Engineer",
+    company: "Intel",
     description:
       "The Virtual Platform teams at Intel Foundry Services (IFS) specialize in the development of software simulations for system-on-chip (SoC) designs. As a member of one of these teams, I contributed to developing these simulations. Additionally, I took the initiative to complete infrastructure-related tasks, such as creating a template repository project that streamlined the setup process for new system repositories.",
     logo: intelLogo,
   },
   {
-    role: "Software Engineer Intern",
-    company: "Schweitzer Engineering Laboratories (SEL)",
+    role: "Software Engineer",
+    company: "SEL",
     description:
-      "SEL specializes in creating digital products and systems that protect, control, and automate power systems around the world. In my role, I contributed to various aspects of the development process. This included developing Jenkins pipelines for team projects, configuring Windows and Linux machines for CI/CD pipelines, writing VHDL testbenches for RTL components, and creating Python scripts to automate testing of SEL networking devices.",
+      "Schweitzer Engineering Laboratories (SEL) specializes in creating digital products and systems that protect, control, and automate power systems around the world. In my role, I contributed by developing Jenkins pipelines for team projects, configuring Windows and Linux machines for CI/CD pipelines, writing VHDL testbenches for RTL components, and creating Python scripts to automate testing of SEL networking devices.",
     logo: selLogo,
   },
   {
-    role: "Teaching Assistant: CPEN 211",
-    company: "UBC Department of Electrical and Computer Engineering",
+    role: "Teaching Assistant",
+    company: "UBC",
     description:
       "As a teaching assistant for CPEN 211 (Introduction to Computing Systems), I actively engaged with students by holding regular office hours, providing assistance and feedback on assignments, and actively participating in an online forum to answer questions. CPEN 211 is a fundamental course that covers topics such as digital logic design, microcomputer organization, assembly language programming, and I/O programming.",
     logo: ubcLogo,
   },
   {
-    role: "Backend Software Developer Co-op",
+    role: "Backend Developer",
     company: "Safe Software",
     description:
       'As a backend software developer at Safe Software, I played a crucial role in developing the backend of FME Server, a web app that automates data and application integration workflows. Safe Software (aka. "Safe") is a leading company that develops and sells FME, the data integration platform with the best support for spatial data.',
     logo: safeLogo,
   },
   {
-    role: "Full-Stack Software Developer Co-op",
+    role: "Full-Stack Developer",
     company: "Government of Canada",
     description:
       "During my time working for the Canadian federal government, I had the opportunity to develop both frontend and backend microservices. These microservices were critical components of web applications used for national security purposes. I gained valuable experience in frontend and backend microservice application development and contributed to projects that required a strong focus on security and reliability.",

@@ -27,13 +27,13 @@
 
 @media (width < 34rem) and (width >= 28rem) {
   :root {
-    --heading-font-size-multiplier: 0.07;
+    --heading-font-size-multiplier: 0.075;
   }
 }
 
 @media (width < 28rem) {
   :root {
-    --heading-font-size-multiplier: 0.04;
+    --heading-font-size-multiplier: 0.05;
   }
 }
 
@@ -316,30 +316,32 @@ section {
   border-radius: var(--card-border-radius);
   border-color: var(--theme-color-3);
   border-width: var(--card-border-width);
-  display: grid;
-  grid-template-rows: 1.5fr 2fr;
-  gap: 1em;
+  display: flex;
+  flex-direction: column;
   align-items: start;
-  justify-content: start;
+  justify-content: space-between;
+  gap: 2em;
   text-align: left;
 }
 
 .experience-card .heading {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  align-items: start;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   gap: 2em;
 }
 
 .experience-card .heading .logo {
-  max-width: 100%;
-  justify-self: end;
+  max-width: min(40%, 7em);
+  max-height: 5em;
+  align-self: center;
 }
 
 .experience-card .heading .info {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  align-self: center;
 }
 
 .experience-card .heading .info .company-name {

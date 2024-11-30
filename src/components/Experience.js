@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import PropTypes from "prop-types";
 
+import HeightStandardizer from "../utils/HeightStandardizer";
 import StaggerAnimationHelper from "../utils/StaggerAnimationHelper";
 import { experiences } from "../constants/content";
 
@@ -20,19 +21,23 @@ export default function Experience({ title }) {
     experiences.length + 1
   );
 
+  const heightStandardizer = new HeightStandardizer();
+
   return (
     <section className="experience">
-      <motion.h1 {...staggerAnimationHelper.getHeadingProps()}>
-        {title}
-      </motion.h1>
+      <motion.h1 {...staggerAnimationHelper.headingProps()}>{title}</motion.h1>
       <div className="section-body">
         {experiences.map((exp, index) => {
           return (
             <motion.div
               key={exp.company}
-              {...staggerAnimationHelper.getCardProps(index)}
+              {...staggerAnimationHelper.cardProps(index)}
             >
-              <ExperienceCard {...exp} />
+              <ExperienceCard
+                {...exp}
+                headingRef={heightStandardizer.itemRefAssigner(index)}
+                headingHeight={heightStandardizer.heightProp}
+              />
             </motion.div>
           );
         })}

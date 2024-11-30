@@ -11,17 +11,28 @@ import PropTypes from "prop-types";
  * @param {string} props.logo - A logo for the experience.
  * @returns {JSX.Element} The rendered experience card component.
  */
-export default function ExperienceCard({ role, company, description, logo }) {
+export default function ExperienceCard({
+  role,
+  company,
+  description,
+  logo,
+  headingHeight,
+  headingRef,
+}) {
   return (
     <div className="experience-card">
-      <div className="heading">
+      <p>{description}</p>
+      <div
+        ref={headingRef}
+        className="heading"
+        style={{ height: headingHeight }}
+      >
         <div className="info">
           <h5>{role}</h5>
           <h6 className="company-name">{company}</h6>
         </div>
         <img src={logo} className="logo" />
       </div>
-      <p>{description}</p>
     </div>
   );
 }
@@ -31,4 +42,6 @@ ExperienceCard.propTypes = {
   company: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   logo: PropTypes.string.isRequired,
+  headingRef: PropTypes.func.isRequired,
+  headingHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
