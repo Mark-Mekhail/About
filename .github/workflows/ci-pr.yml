@@ -1,9 +1,9 @@
 name: Development Branch CI
 
 on:
-  push:
-    # Run CI on all branches except main
-    branches-ignore: ["main"]
+  pull_request:
+    branches:
+      - main
 
   workflow_dispatch:
 
@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  develop:
+  pull-request:
     name: Build React App
     runs-on: ubuntu-latest
     steps:
