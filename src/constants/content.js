@@ -32,13 +32,13 @@ const abouts = [
     title: "Skilled Engineer",
     icon: developerIcon,
     content:
-      "I am a dedicated and skilled engineer with a solid understanding of data structures, algorithms, and various programming languages. I have gained valuable experience in web application development, devops, software simulation, computer networking, cybersecurity, and machine learning. As someone who is eager to learn and improve, I enjoy working on personal projects to enhance my skills and knowledge. I welcome you to explore my project portfolio and see for yourself the quality and extent of my work.",
+      "I am a dedicated and skilled engineer with a solid understanding of data structures, algorithms, and various programming languages. Through coursework and internship placements I have gained valuable experience in web application development, devops, software simulation, computer networking, cybersecurity, and machine learning. As someone who is eager to learn and improve, I enjoy working on personal projects to enhance my skills and knowledge. I welcome you to explore my project portfolio and see the variety of projects I have worked on.",
   },
   {
     title: "Proactive Leader",
     icon: leaderIcon,
     content:
-      "Throughout my studies and work experiences, I have consistently demonstrated my ability to take initiative, actively engage, and excel as a leader. In my senior capstone project, I took charge of coordinating my team by delegating tasks, setting deadlines, and ensuring that project milestones were met on time. As a club executive for the Coptic Orthodox Student Association at UBC for four years, I actively organized events, led meetings, and maintained a strong relationship with the Alma Mater Society. At Intel, I formally led the intern cohort in organizing social events and activities.",
+      "Throughout my studies and work experiences, I have consistently demonstrated an eagerness to take initiative, actively engage, and excel as a leader. In my senior capstone project, I took charge of coordinating my team by delegating tasks, setting deadlines, and ensuring that project milestones were met on time. As a club executive for the Coptic Orthodox Student Association at UBC for four years, I actively organized events, led meetings, and maintained a strong relationship with the Alma Mater Society. At Intel, I formally led the intern cohort in organizing social events and activities.",
   },
 ];
 
@@ -48,7 +48,7 @@ const experiences = [
     role: "Simulation Software Engineer Co-op",
     company: "Intel Corporation",
     description:
-      "The Virtual Platform teams at Intel Foundry Services (IFS) specialize in the development of software simulations for system-on-chip (SoC) designs. As a member of one of these teams, I played a crucial role in developing these simulations. Additionally, I took the initiative to complete infrastructure-related tasks, such as creating a template repository project that streamlined the setup process for new system repositories.",
+      "The Virtual Platform teams at Intel Foundry Services (IFS) specialize in the development of software simulations for system-on-chip (SoC) designs. As a member of one of these teams, I contributed to developing these simulations. Additionally, I took the initiative to complete infrastructure-related tasks, such as creating a template repository project that streamlined the setup process for new system repositories.",
     logo: intelLogo,
   },
   {
@@ -76,7 +76,7 @@ const experiences = [
     role: "Full-Stack Software Developer Co-op",
     company: "Government of Canada",
     description:
-      "During my time working for the Canadian federal government, I had the opportunity to develop both frontend and backend microservices. These microservices were crucial components of web applications used for national security purposes. I gained valuable experience in frontend and backend microservice application development and contributed to projects that required a strong focus on security and reliability.",
+      "During my time working for the Canadian federal government, I had the opportunity to develop both frontend and backend microservices. These microservices were critical components of web applications used for national security purposes. I gained valuable experience in frontend and backend microservice application development and contributed to projects that required a strong focus on security and reliability.",
     logo: canadaLogo,
   },
 ];
