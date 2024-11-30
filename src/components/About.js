@@ -16,7 +16,7 @@ export default function About() {
 
   return (
     <section className="about">
-      <motion.h1 {...staggerAnimationHelper.getHeadingProps()}>
+      <motion.h1 {...staggerAnimationHelper.headingProps()}>
         About Me
       </motion.h1>
       <div className="section-body">
@@ -24,7 +24,7 @@ export default function About() {
           return (
             <motion.div
               key={about.title}
-              {...staggerAnimationHelper.getCardProps(index)}
+              {...staggerAnimationHelper.cardProps(index)}
             >
               <AboutCard {...about} />
             </motion.div>

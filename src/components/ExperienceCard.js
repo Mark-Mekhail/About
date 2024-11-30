@@ -11,13 +11,13 @@ import PropTypes from "prop-types";
  * @param {string} props.logo - A logo for the experience.
  * @returns {JSX.Element} The rendered experience card component.
  */
-export default function ExperienceCard({ role, company, description, logo }) {
+export default function ExperienceCard({ role, company, description, logo, headingRef, headingHeight }) {
   return (
     <div className="experience-card">
       <p>{description}</p>
-      <div className="heading">
+      <div ref={headingRef} className="heading" style={{ height: headingHeight }}>
         <div className="info">
-          <h6>{role}</h6>
+          <h5>{role}</h5>
           <h6 className="company-name">{company}</h6>
         </div>
         <img src={logo} className="logo" />
