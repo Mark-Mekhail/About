@@ -16,9 +16,7 @@ export default function About() {
 
   return (
     <section className="about">
-      <motion.h1 {...staggerAnimationHelper.headingProps()}>
-        About Me
-      </motion.h1>
+      <motion.h1 {...staggerAnimationHelper.headingProps()}>About Me</motion.h1>
       <div className="section-body">
         {abouts.map((about, index) => {
           return (

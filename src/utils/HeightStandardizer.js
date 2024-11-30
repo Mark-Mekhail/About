@@ -6,9 +6,9 @@ import { debounce } from "lodash";
  */
 export default class HeightStandardizer {
   // Private instance variables
-  #itemRefs;        // An array of references to elements.
-  #maxHeight;       // The maximum height of the elements.
-  #setMaxHeight;    // A function to set the maximum height.
+  #itemRefs; // An array of references to elements.
+  #maxHeight; // The maximum height of the elements.
+  #setMaxHeight; // A function to set the maximum height.
   #updateMaxHeight; // A function to update the maximum height.
 
   /**
@@ -21,7 +21,10 @@ export default class HeightStandardizer {
     this.#updateMaxHeight = () => {
       console.log(this.#itemRefs.current);
       this.#setMaxHeight(
-        this.#itemRefs.current.reduce((max, el) => Math.max(max, el.offsetHeight), 0)
+        this.#itemRefs.current.reduce(
+          (max, el) => Math.max(max, el.offsetHeight),
+          0
+        )
       );
     };
 
@@ -34,9 +37,10 @@ export default class HeightStandardizer {
 
     useEffect(() => {
       window.addEventListener("resize", debouncedUpdateMaxHeight);
-      return () => window.removeEventListener("resize", debouncedUpdateMaxHeight);
+      return () =>
+        window.removeEventListener("resize", debouncedUpdateMaxHeight);
     }, []);
-  };
+  }
 
   /**
    * Gets the height property value.
@@ -44,7 +48,7 @@ export default class HeightStandardizer {
    */
   get heightProp() {
     return this.#maxHeight || "fit-content";
-  };
+  }
 
   /**
    * Assigns a reference to an element at the specified index.
@@ -53,5 +57,5 @@ export default class HeightStandardizer {
    */
   itemRefAssigner(index) {
     return (el) => (this.#itemRefs.current[index] = el);
-  };
+  }
 }

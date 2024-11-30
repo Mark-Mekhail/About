@@ -25,9 +25,7 @@ export default function Experience({ title }) {
 
   return (
     <section className="experience">
-      <motion.h1 {...staggerAnimationHelper.headingProps()}>
-        {title}
-      </motion.h1>
+      <motion.h1 {...staggerAnimationHelper.headingProps()}>{title}</motion.h1>
       <div className="section-body">
         {experiences.map((exp, index) => {
           return (
@@ -35,7 +33,11 @@ export default function Experience({ title }) {
               key={exp.company}
               {...staggerAnimationHelper.cardProps(index)}
             >
-              <ExperienceCard {...exp} headingRef={heightStandardizer.itemRefAssigner(index)} headingHeight={heightStandardizer.heightProp} />
+              <ExperienceCard
+                {...exp}
+                headingRef={heightStandardizer.itemRefAssigner(index)}
+                headingHeight={heightStandardizer.heightProp}
+              />
             </motion.div>
           );
         })}

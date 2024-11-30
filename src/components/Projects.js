@@ -1,6 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import { motion } from "motion/react";
-import { debounce } from "lodash";
 
 import HeightStandardizer from "../utils/HeightStandardizer";
 import StaggerAnimationHelper from "../utils/StaggerAnimationHelper";
@@ -23,9 +22,7 @@ export default function Projects() {
 
   return (
     <section className="projects">
-      <motion.h1 {...staggerAnimationHelper.headingProps()}>
-        Projects
-      </motion.h1>
+      <motion.h1 {...staggerAnimationHelper.headingProps()}>Projects</motion.h1>
       <div className="section-body">
         {projects.map((project, index) => (
           <motion.div
@@ -37,7 +34,9 @@ export default function Projects() {
               tags={project.tags}
               overlayHeight={heightStandardizer.heightProp}
               overlayTitleRef={heightStandardizer.itemRefAssigner(2 * index)}
-              overlayContentRef={heightStandardizer.itemRefAssigner(2 * index + 1)}
+              overlayContentRef={heightStandardizer.itemRefAssigner(
+                2 * index + 1
+              )}
             />
           </motion.div>
         ))}
