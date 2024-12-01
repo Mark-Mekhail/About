@@ -49,6 +49,9 @@ export default function ProjectCard({
           </p>
         </div>
       </div>
+      <div className="hover-overlay">
+        <p>View Code Repository</p>
+      </div>
     </a>
   );
 }
