@@ -22,10 +22,7 @@ export default function ExperienceCard({
   return (
     <div className="experience-card">
       <p>{description}</p>
-      <div
-        className="heading"
-        style={{ height: headingHeight }}
-      >
+      <div className="heading" style={{ height: headingHeight }}>
         <div ref={headingRef} className="heading-content-container">
           <div className="info">
             <h5>{role}</h5>

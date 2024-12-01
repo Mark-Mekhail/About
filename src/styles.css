@@ -119,6 +119,14 @@ section {
   gap: var(--card-gap);
 }
 
+.overlay-text {
+  padding: 0.5em;
+  border-style: solid;
+  border-color: var(--theme-color-4);
+  border-width: 0.1em;
+  color: black;
+}
+
 /* React app styling */
 #react-app {
   width: 100%;
@@ -435,16 +443,9 @@ section {
   opacity: 0;
 }
 
-.project-card .hover-overlay p {
-  padding: 0.5em;
-  border-style: solid;
-  border-color: var(--theme-color-4);
-  border-width: 0.1em;
-  color: black;
-}
-
 .project-card:hover {
   transform: scale(1.02);
+
   .hover-overlay {
     opacity: 1;
   }

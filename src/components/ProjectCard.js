@@ -41,16 +41,12 @@ export default function ProjectCard({
       </span>
       <div className="overlay" style={{ height: overlayHeight }}>
         <div ref={overlayRef} className="overlay-content-container">
-          <h5 className="title">
-            {title}
-          </h5>
-          <p className="description">
-            {description}
-          </p>
+          <h5 className="title">{title}</h5>
+          <p className="description">{description}</p>
         </div>
       </div>
       <div className="hover-overlay">
-        <p>View Code Repository</p>
+        <p className="overlay-text">View Code Repository</p>
       </div>
     </a>
   );
