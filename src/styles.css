@@ -326,25 +326,29 @@ section {
 
 .experience-card .heading {
   width: 100%;
+}
+
+.experience-card .heading .heading-content-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 2em;
 }
 
-.experience-card .heading .logo {
+.experience-card .heading .heading-content-container .logo {
   max-width: min(40%, 7em);
-  max-height: 5em;
+  max-height: 4em;
   align-self: center;
 }
 
-.experience-card .heading .info {
+.experience-card .heading .heading-content-container .info {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
   align-self: center;
 }
 
-.experience-card .heading .info .company-name {
+.experience-card .heading .heading-content-container .info .company-name {
   color: var(--theme-color-4);
 }
 
@@ -384,7 +388,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: min(1em, 2vw);
+  gap: 1em;
   font-size: 0.85em;
 }
 
@@ -396,14 +400,16 @@ section {
 }
 
 .project-card .overlay {
-  box-sizing: content-box;
-  min-height: 20%;
-  padding: 1em 2em;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 1em;
-  align-items: center;
   background-color: rgb(240 240 240 / 95%);
+}
+
+.project-card .overlay .overlay-content-container {
+  box-sizing: border-box;
+  min-height: fit-content;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .project-card .overlay .title {
