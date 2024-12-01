@@ -22,16 +22,14 @@ export default function ExperienceCard({
   return (
     <div className="experience-card">
       <p>{description}</p>
-      <div
-        ref={headingRef}
-        className="heading"
-        style={{ height: headingHeight }}
-      >
-        <div className="info">
-          <h5>{role}</h5>
-          <h6 className="company-name">{company}</h6>
+      <div className="heading" style={{ height: headingHeight }}>
+        <div ref={headingRef} className="heading-content-container">
+          <div className="info">
+            <h5>{role}</h5>
+            <h6 className="company-name">{company}</h6>
+          </div>
+          <img src={logo} className="logo" />
         </div>
-        <img src={logo} className="logo" />
       </div>
     </div>
   );

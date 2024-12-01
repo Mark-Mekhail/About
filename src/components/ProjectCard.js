@@ -22,8 +22,7 @@ export default function ProjectCard({
   description,
   tags,
   overlayHeight,
-  overlayTitleRef,
-  overlayContentRef,
+  overlayRef,
 }) {
   return (
     <a
@@ -41,12 +40,13 @@ export default function ProjectCard({
         ))}
       </span>
       <div className="overlay" style={{ height: overlayHeight }}>
-        <h5 ref={overlayTitleRef} className="title">
-          {title}
-        </h5>
-        <p ref={overlayContentRef} className="description">
-          {description}
-        </p>
+        <div ref={overlayRef} className="overlay-content-container">
+          <h5 className="title">{title}</h5>
+          <p className="description">{description}</p>
+        </div>
+      </div>
+      <div className="hover-overlay">
+        <p className="overlay-text">View Code Repository</p>
       </div>
     </a>
   );
@@ -60,6 +60,5 @@ ProjectCard.propTypes = {
   tags: PropTypes.array.isRequired,
   overlayHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     .isRequired,
-  overlayTitleRef: PropTypes.func.isRequired,
-  overlayContentRef: PropTypes.func.isRequired,
+  overlayRef: PropTypes.func,
 };

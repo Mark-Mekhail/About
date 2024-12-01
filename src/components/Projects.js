@@ -33,10 +33,7 @@ export default function Projects() {
               {...project}
               tags={project.tags}
               overlayHeight={heightStandardizer.heightProp}
-              overlayTitleRef={heightStandardizer.itemRefAssigner(2 * index)}
-              overlayContentRef={heightStandardizer.itemRefAssigner(
-                2 * index + 1
-              )}
+              overlayRef={heightStandardizer.itemRefAssigner(index)}
             />
           </motion.div>
         ))}
