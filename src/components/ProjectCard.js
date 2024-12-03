@@ -30,8 +30,8 @@ export default function ProjectCard({
       target="_blank"
       rel="noopener noreferrer"
       className="project-card"
-      style={{ backgroundImage: `url(${image})` }}
     >
+      <img src={image} className="card-image" />
       <span className="tags">
         {tags.map((tag, index) => (
           <p key={index} className="tag">

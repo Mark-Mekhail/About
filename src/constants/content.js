@@ -5,9 +5,10 @@ import studentIcon from "../images/icons8-student.png";
 
 // Project section images
 import braille_alphabet from "../images/braille.jpg";
-import meta_puzzles from "../images/meta-puzzles.png";
+import meta_puzzles from "../images/computer-puzzle.jpeg";
 import website from "../images/website.png";
-import cpen_code from "../images/cpen-code.png";
+import cpen_code from "../images/coding-project.jpeg";
+import battleship from "../images/battleship.png";
 
 // Experience section images
 import intelLogo from "../images/intel.png";
@@ -110,7 +111,7 @@ const projects = [
     title: "Battleship",
     description: "A server for multiplayer Battleship games",
     link: "https://github.com/Mark-Mekhail/Battleship",
-    image: cpen_code,
+    image: battleship,
     tags: ["Node.js", "Express", "WebSocket", "REST API"],
   },
   {

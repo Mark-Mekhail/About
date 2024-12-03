@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   develop:
-    name: Build React App
+    name: Deploy React App
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
