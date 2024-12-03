@@ -31,7 +31,7 @@ export default function ProjectCard({
       rel="noopener noreferrer"
       className="project-card"
     >
-      <img src={image} className="card-image"/>
+      <img src={image} className="card-image" />
       <span className="tags">
         {tags.map((tag, index) => (
           <p key={index} className="tag">
