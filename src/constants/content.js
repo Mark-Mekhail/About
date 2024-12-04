@@ -1,7 +1,7 @@
 // About section images
-import leaderIcon from "../images/icons8-man-leader.png";
-import developerIcon from "../images/icons8-software-developer.png";
-import studentIcon from "../images/icons8-student.png";
+import leaderIcon from "../images/man-leader.png";
+import developerIcon from "../images/software-developer.png";
+import studentIcon from "../images/student.png";
 
 // Project section images
 import braille_alphabet from "../images/braille.jpg";
@@ -17,9 +17,37 @@ import ubcLogo from "../images/ubc.svg";
 import safeLogo from "../images/safe.png";
 import canadaLogo from "../images/canada.png";
 
+// Skillset section images
+import java from "../images/java.svg";
+import python from "../images/python.svg";
+import javascript from "../images/javascript.svg";
+import cpp from "../images/c++.svg";
+import c from "../images/c.svg";
+import html from "../images/html.svg";
+import css from "../images/css.svg";
+import database from "../images/database.png";
+import processor from "../images/processor.png";
+import git from "../images/git.svg";
+import linux from "../images/linux.png";
+import docker from "../images/docker.svg";
+import jenkins from "../images/jenkins.svg";
+import github from "../images/github.svg";
+import aws from "../images/aws.svg";
+import react from "../images/react.svg";
+import node from "../images/node-js.svg";
+import mongodb from "../images/mongodb.svg";
+import dataStructure from "../images/data-structure.png";
+import algorithm from "../images/algorithm.png";
+import oop from "../images/oop.png";
+import split from "../images/split.png";
+import restApi from "../images/rest-api.png";
+import distributedSystem from "../images/distributed-system.png";
+import ml from "../images/ml.png";
+import cybersecurity from "../images/cybersecurity.png";
+import computerNetwork from "../images/computer-network.png";
+
 // Social links images
-import linkedin from "../images/icons8-linkedin.png";
-import github from "../images/icons8-github.png";
+import linkedin from "../images/linkedin.png";
 
 // About section content
 const abouts = [
@@ -79,6 +107,51 @@ const experiences = [
     description:
       "During my time working for the Canadian federal government, I had the opportunity to develop both frontend and backend microservices. These microservices were critical components of web applications used for national security purposes. I gained valuable experience in frontend and backend microservice application development and contributed to projects that required a strong focus on security and reliability.",
     logo: canadaLogo,
+  },
+];
+
+const skillsets = [
+  {
+    category: "Programming Languages",
+    skills: [
+      { name: "Java", icon: java },
+      { name: "Python", icon: python },
+      { name: "C++", icon: cpp },
+      { name: "C", icon: c },
+      { name: "JavaScript", icon: javascript },
+      { name: "HTML", icon: html },
+      { name: "CSS", icon: css },
+      { name: "SQL", icon: database },
+      { name: "SystemVerilog", icon: processor },
+    ],
+  },
+  {
+    category: "Technologies and Tools",
+    skills: [
+      { name: "Git", icon: git },
+      { name: "Linux", icon: linux },
+      { name: "Docker", icon: docker },
+      { name: "Jenkins", icon: jenkins },
+      { name: "GitHub Actions", icon: github },
+      { name: "AWS", icon: aws },
+      { name: "React", icon: react },
+      { name: "Node.js", icon: node },
+      { name: "MongoDB", icon: mongodb },
+    ],
+  },
+  {
+    category: "Software Concepts",
+    skills: [
+      { name: "Data Structures", icon: dataStructure },
+      { name: "Algorithms", icon: algorithm },
+      { name: "Object-Oriented Programming", icon: oop },
+      { name: "Multithreaded Programming", icon: split },
+      { name: "Computer Networking", icon: computerNetwork },
+      { name: "Distributed Systems", icon: distributedSystem },
+      { name: "REST APIs", icon: restApi },
+      { name: "Machine Learning", icon: ml },
+      { name: "Cybersecurity", icon: cybersecurity },
+    ],
   },
 ];
 
@@ -143,4 +216,4 @@ const socials = [
   },
 ];
 
-export { abouts, experiences, projects, socials };
+export { abouts, experiences, projects, skillsets, socials };

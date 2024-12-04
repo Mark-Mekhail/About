@@ -45,12 +45,14 @@
   --section-gap: min(5vh, 5em);
   --header-vertical-padding: min(2vh, var(--heading-icon-radius));
   --card-gap: max(1vh, 2em);
-  --twelfth-width: 8rem;
-  --about-card-max-width: calc(4 * var(--twelfth-width) - var(--card-gap) / 3);
-  --experience-card-max-width: calc(6 * var(--twelfth-width));
-  --project-card-max-width: calc(
-    3 * var(--twelfth-width) - var(--card-gap) / 2
-  );
+  --unit-width: 5rem;
+  --landscape-photo-max-width: calc(20 * var(--unit-width));
+  --portrait-photo-max-width: calc(var(--landscape-photo-max-width) / 3);
+  --about-card-max-width: calc(8 * var(--unit-width));
+  --experience-card-max-width: calc(8 * var(--unit-width));
+  --skills-banner-max-width: calc(20 * var(--unit-width));
+  --project-card-max-width: calc(5 * var(--unit-width));
+  --skill-tile-width: 10em;
   --card-border-radius: 1em;
   --card-border-width: 0.1em;
   --heading-icon-radius: calc(
@@ -181,13 +183,12 @@ section {
 
 /* Photos component styling */
 .photos {
-  width: fit-content;
-  max-width: 100%;
   display: flex;
   flex-direction: row;
   gap: 0;
   justify-content: center;
   align-items: center;
+  align-self: center;
 }
 
 .photos img {
@@ -230,7 +231,7 @@ section {
 
 @media (width >= 80em) {
   .photos .top-portrait {
-    max-width: 20vw;
+    max-width: min(20vw, var(--portrait-photo-max-width));
     max-height: 50vh;
     margin-right: -10%;
     margin-bottom: 10%;
@@ -238,15 +239,13 @@ section {
   }
 
   .photos .landscape {
-    max-width: 60vw;
-    min-width: 40vw;
+    max-width: min(60vw, var(--landscape-photo-max-width));
     max-height: 80vh;
     aspect-ratio: 4 / 3;
   }
 
   .photos .bottom-portrait {
-    max-width: 20vw;
-    max-height: 50vh;
+    max-width: min(20vw, var(--portrait-photo-max-width));
     margin-left: -10%;
     margin-top: 10%;
     z-index: 1;
@@ -359,6 +358,66 @@ section {
 
 .experience-card .heading .heading-content-container .info .company-name {
   color: var(--theme-color-4);
+}
+
+/* Skills component styling */
+.skills .skillsets {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    min(100%, var(--skills-banner-max-width))
+  );
+  justify-content: center;
+  gap: calc(var(--card-gap) + 1em) var(--card-gap);
+}
+
+.skills .skillsets .skillset-container {
+  width: min(100%, var(--skills-banner-max-width));
+  display: flex;
+  justify-content: center;
+}
+
+/* SkillsetBanner component styling */
+.skillset-banner {
+  width: min(100%, var(--skills-banner-max-width));
+  padding: max(2em, 2%) 1%;
+  border: solid;
+  border-width: var(--card-border-width);
+  border-color: var(--theme-color-3);
+  border-radius: var(--card-border-radius);
+  position: relative;
+}
+
+.skillset-banner .heading {
+  padding: 0 0.5em;
+  position: absolute;
+  top: -0.75em;
+  left: 5%;
+  background-color: var(--theme-color-1);
+}
+
+.skillset-banner .skills-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--skill-tile-width));
+  gap: var(--card-gap) 0.5em;
+  justify-content: center;
+}
+
+.skillset-banner .skill-tile {
+  width: var(--skill-tile-width);
+  height: 8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 0.5em;
+}
+
+.skillset-banner .skill-tile-image {
+  height: 5em;
 }
 
 /* Projects component styling */

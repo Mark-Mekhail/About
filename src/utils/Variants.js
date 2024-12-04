@@ -10,16 +10,6 @@ export default class Variants {
   }
 
   /**
-   * Returns a conditional variant based on the given condition.
-   * @param {boolean} condition - The condition to check.
-   * @param {object} variant - The variant to return if the condition is true.
-   * @returns {object} - The variant object.
-   */
-  static coniditionalVariant(condition, variant) {
-    return condition ? variant : {};
-  }
-
-  /**
    * Returns the default initial variant.
    * @returns {object} - The initial variant object.
    */

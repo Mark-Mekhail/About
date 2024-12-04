@@ -44,14 +44,11 @@ export default class StaggerAnimationHelper {
    * @param {Object} [viewport=headingViewportConfig] - The viewport configuration.
    * @returns {Object} The heading props.
    */
-  headingProps(
-    initial = headingVariants.initial,
-    animate = headingVariants.animate,
-    viewport = headingViewportConfig
-  ) {
+  headingProps(viewport = headingViewportConfig) {
     return {
-      initial: initial,
-      whileInView: animate,
+      variants: headingVariants,
+      initial: "initial",
+      whileInView: "animate",
       viewport: viewport,
       onAnimationStart: this.onAnimationStart(0),
     };
@@ -75,8 +72,12 @@ export default class StaggerAnimationHelper {
     index++;
 
     return {
-      initial: initial,
-      whileInView: Variants.coniditionalVariant(this.#canStart[index], animate),
+      variants: {
+        initial: initial,
+        animate: animate,
+      },
+      initial: "initial",
+      whileInView: this.#canStart[index] ? "animate" : {},
       viewport: viewport,
       onAnimationStart: this.onAnimationStart(index),
     };
@@ -88,7 +89,12 @@ export default class StaggerAnimationHelper {
    * @returns {Function} The onAnimationStart callback.
    */
   onAnimationStart(index) {
-    return () => {
+    return (variant) => {
+      if (variant !== "animate") {
+        console.log(variant);
+        return;
+      }
+
       if (!this.#canStart[index]) {
         console.error(
           "Cannot start animation for an item before the previous item has started."
