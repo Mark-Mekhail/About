@@ -19,7 +19,6 @@ export default class HeightStandardizer {
     [this.#maxHeight, this.#setMaxHeight] = useState(0);
 
     this.#updateMaxHeight = () => {
-      console.log(this.#itemRefs.current);
       this.#setMaxHeight(
         this.#itemRefs.current.reduce(
           (max, el) => Math.max(max, el.offsetHeight),

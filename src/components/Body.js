@@ -5,6 +5,7 @@ import Intro from "./Intro";
 import Photos from "./Photos";
 import About from "./About";
 import Experience from "./Experience";
+import Skills from "./Skills";
 import Projects from "./Projects";
 
 /**
@@ -18,6 +19,7 @@ export default function Body() {
       <Photos />
       <About />
       <Experience title="Student Work Experience" />
+      <Skills />
       <Projects />
     </div>
   );
