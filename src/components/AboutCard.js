@@ -24,6 +24,7 @@ export default function AboutCard({ title, icon, content }) {
 
 AboutCard.propTypes = {
   title: PropTypes.string.isRequired,
-  icon: PropTypes.shape({ src: PropTypes.string, alt: PropTypes.string }).isRequired,
+  icon: PropTypes.shape({ src: PropTypes.string, alt: PropTypes.string })
+    .isRequired,
   content: PropTypes.string.isRequired,
 };

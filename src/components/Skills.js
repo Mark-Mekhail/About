@@ -17,7 +17,7 @@ export default function Skills() {
   );
 
   return (
-    <section className="skills">
+    <section className="skills" role="skills-section">
       <motion.h1 {...staggerAnimationHelper.headingProps()}>Skills</motion.h1>
       <div className="skillsets">
         {skillsets.map((skillset, index) => (

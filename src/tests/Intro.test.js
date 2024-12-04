@@ -5,9 +5,10 @@ import Intro from "../components/Intro";
 describe("Intro Component", () => {
   test("renders the intro section with correct content", () => {
     render(<Intro />);
-    const introElement = screen.getByTestId("intro");
+
+    const introElement = screen.getByRole("intro-section");
     const headingElement = screen.getByText("Mark Mekhail");
-    const paragraphElement = screen.getByText((content, element) => {
+    const paragraphElement = screen.getByText((content) => {
       return (
         content.startsWith("Hey there!") &&
         content.endsWith("Thank you for visiting my website!")

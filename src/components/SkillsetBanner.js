@@ -28,6 +28,7 @@ export default function SkillsetBanner({ category, skills }) {
     <motion.div
       variants={{ initial: { opacity: 0 }, animate: divAnimateVariant }}
       className="skillset-banner"
+      role="skillset-banner"
     >
       <motion.h4 variants={headingVariants} className="heading">
         {category}
@@ -42,7 +43,11 @@ export default function SkillsetBanner({ category, skills }) {
             variants={skillTileVariants}
             className="skill-tile"
           >
-            <img src={skill.icon.src} alt={skill.icon.alt} className="skill-tile-image" />
+            <img
+              src={skill.icon.src}
+              alt={skill.icon.alt}
+              className="skill-tile-image"
+            />
             <h6>{skill.name}</h6>
           </motion.div>
         ))}
@@ -55,7 +60,8 @@ SkillsetBanner.propTypes = {
   category: PropTypes.string.isRequired,
   skills: PropTypes.arrayOf(
     PropTypes.shape({
-      icon: PropTypes.shape({ src: PropTypes.string, alt: PropTypes.string }).isRequired,
+      icon: PropTypes.shape({ src: PropTypes.string, alt: PropTypes.string })
+        .isRequired,
       name: PropTypes.string.isRequired,
     })
   ).isRequired,

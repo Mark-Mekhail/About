@@ -15,33 +15,28 @@ const experience = {
 };
 
 describe("ExperienceCard Component", () => {
-  test("renders the description", () => {
+  test("renders all experience information", () => {
     render(<ExperienceCard {...experience} />);
-    expect(screen.getByText(experience.description)).toBeInTheDocument();
-  });
 
-  test("renders the role and company name", () => {
-    render(<ExperienceCard {...experience} />);
-    expect(screen.getByText(experience.role)).toBeInTheDocument();
-    expect(screen.getByText(experience.company)).toBeInTheDocument();
-  });
-
-  test("renders the logo", () => {
-    const logoSrc = "path/to/logo.png";
-    render(<ExperienceCard {...experience} />);
+    const roleElement = screen.getByText(experience.role);
+    const companyElement = screen.getByText(experience.company);
+    const descriptionElement = screen.getByText(experience.description);
     const logoElement = screen.getByRole("img");
+
+    expect(roleElement).toBeInTheDocument();
+    expect(companyElement).toBeInTheDocument();
+    expect(descriptionElement).toBeInTheDocument();
     expect(logoElement).toBeInTheDocument();
-    expect(logoElement).toHaveAttribute("src", logoSrc);
+    expect(logoElement).toHaveAttribute("src", experience.logo.src);
+    expect(logoElement).toHaveAttribute("alt", experience.logo.alt);
   });
 
-  test("applies the heading height style", () => {
+  test("applies heading props", () => {
     render(<ExperienceCard {...experience} />);
-    const headingElement = screen.getByTestId("experience card heading: ", { exact: false });
+
+    const headingElement = screen.getByRole("experience-card-heading");
+
     expect(headingElement).toHaveStyle({ height: experience.headingHeight });
-  });
-
-  test("assigns the heading ref", () => {
-    render(<ExperienceCard {...experience} />);
     expect(experience.headingRef).toHaveBeenCalled();
   });
 });

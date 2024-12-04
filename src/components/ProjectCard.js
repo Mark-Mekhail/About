@@ -39,7 +39,11 @@ export default function ProjectCard({
           </p>
         ))}
       </span>
-      <div className="overlay" style={{ height: overlayHeight }}>
+      <div
+        className="overlay"
+        style={{ height: overlayHeight }}
+        role="project-card-overlay"
+      >
         <div ref={overlayRef} className="overlay-content-container">
           <h5 className="title">{title}</h5>
           <p className="description">{description}</p>
@@ -54,7 +58,8 @@ export default function ProjectCard({
 
 ProjectCard.propTypes = {
   link: PropTypes.string.isRequired,
-  image: PropTypes.shape({ src: PropTypes.string, alt: PropTypes.string }).isRequired,
+  image: PropTypes.shape({ src: PropTypes.string, alt: PropTypes.string })
+    .isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,

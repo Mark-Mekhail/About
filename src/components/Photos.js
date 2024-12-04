@@ -28,6 +28,7 @@ export default function Photos() {
       whileInView="animate"
       viewport={{ once: true, amount: 0.4 }}
       className="photos"
+      role="photos-section"
     >
       <motion.img
         variants={topPortraitVariants}
