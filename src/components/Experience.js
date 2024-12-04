@@ -31,6 +31,7 @@ export default function Experience({ title }) {
           return (
             <motion.div
               key={exp.company}
+              data-testid={`experience card div: ${exp.company + exp.role}`}
               {...staggerAnimationHelper.cardProps(index)}
             >
               <ExperienceCard

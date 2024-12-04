@@ -31,7 +31,7 @@ export default function ProjectCard({
       rel="noopener noreferrer"
       className="project-card"
     >
-      <img src={image} className="card-image" />
+      <img src={image.src} alt={image.alt} className="card-image" />
       <span className="tags">
         {tags.map((tag, index) => (
           <p key={index} className="tag">
@@ -54,7 +54,7 @@ export default function ProjectCard({
 
 ProjectCard.propTypes = {
   link: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.shape({ src: PropTypes.string, alt: PropTypes.string }).isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,

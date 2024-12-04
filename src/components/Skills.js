@@ -7,6 +7,10 @@ import { skillsets } from "../constants/content";
 // Required components
 import SkillsetBanner from "./SkillsetBanner";
 
+/**
+ * Renders the Skills component.
+ * @returns {JSX.Element} The rendered Skills component.
+ */
 export default function Skills() {
   const staggerAnimationHelper = new StaggerAnimationHelper(
     skillsets.length + 1
