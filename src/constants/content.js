@@ -36,6 +36,9 @@ import aws from "../images/aws.svg";
 import react from "../images/react.svg";
 import node from "../images/node-js.svg";
 import mongodb from "../images/mongodb.svg";
+import jest from "../images/jest.png";
+import junit from "../images/junit.png";
+import cypress from "../images/cypress.png";
 import dataStructure from "../images/data-structure.png";
 import algorithm from "../images/algorithm.png";
 import oop from "../images/oop.png";
@@ -149,9 +152,12 @@ const skillsets = [
         icon: { src: github, alt: "GitHub Actions Icon" },
       },
       { name: "AWS", icon: { src: aws, alt: "AWS Icon" } },
-      { name: "React", icon: { src: react, alt: "React Icon" } },
       { name: "Node.js", icon: { src: node, alt: "Node.js Icon" } },
+      { name: "React", icon: { src: react, alt: "React Icon" } },
       { name: "MongoDB", icon: { src: mongodb, alt: "MongoDB Icon" } },
+      { name: "Jest", icon: { src: jest, alt: "Jest Icon" } },
+      { name: "Cypress", icon: { src: cypress, alt: "Cypress Icon" } },
+      { name: "JUnit", icon: { src: junit, alt: "JUnit Icon" } },
     ],
   },
   {
@@ -210,21 +216,21 @@ const projects = [
       "A React application developed to create the website you are currently browsing",
     link: "https://github.com/Mark-Mekhail/About-Mark",
     image: { src: website, alt: "Website Image" },
-    tags: ["GitHub Actions (CI/CD)", "React", "JavaScript", "HTML", "CSS"],
+    tags: ["GitHub Actions (CI/CD)", "React", "HTML", "CSS", "Jest", "Cypress"],
   },
   {
     title: "Braille Translator",
     description: "A script for converting English to Braille and vice-versa",
     link: "https://github.com/Mark-Mekhail/Braille-Translator",
     image: { src: braille_alphabet, alt: "Braille Alphabet Image" },
-    tags: ["Python"],
+    tags: ["Python", "Git/GitHub"],
   },
   {
     title: "Battleship",
     description: "A server for multiplayer Battleship games",
     link: "https://github.com/Mark-Mekhail/Battleship",
     image: { src: battleship, alt: "Battleship Image" },
-    tags: ["Node.js", "Express", "WebSocket", "REST API"],
+    tags: ["JavaScript", "Node.js", "Express", "WebSocket", "REST API"],
   },
   {
     title: "Course Project Samples",
