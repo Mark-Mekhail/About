@@ -57,15 +57,15 @@ export default class StaggerAnimationHelper {
   /**
    * Get the props for animating a card element.
    * @param {number} index - The index of the card.
-   * @param {Object} [initial=cardVariants.initial] - The initial animation variant.
    * @param {Object} [animate=cardVariants.animate] - The animate animation variant.
+   * @param {Object} [initial=cardVariants.initial] - The initial animation variant.
    * @param {Object} [viewport=cardViewportConfig] - The viewport configuration.
    * @returns {Object} The card props.
    */
   cardProps(
     index,
-    initial = cardVariants.initial,
     animate = cardVariants.animate,
+    initial = cardVariants.initial,
     viewport = cardViewportConfig
   ) {
     // Increment index to account for the heading element.

@@ -4,16 +4,9 @@ import PropTypes from "prop-types";
 
 import Variants from "../utils/Variants";
 
-const divAnimateVariant = {
-  opacity: 1,
-
-  transition: {
-    duration: 0.5,
-    staggerChildren: 0.25,
-  },
-};
+const staggerVariants = Variants.staggerVariants(0.25);
 const headingVariants = Variants.headingVariants;
-const skillTileVariants = Variants.defaultVariants("5vw");
+const skillTileVariants = Variants.defaultVariants("100%");
 
 /**
  * Renders a skillset banner component.
@@ -26,17 +19,14 @@ const skillTileVariants = Variants.defaultVariants("5vw");
 export default function SkillsetBanner({ category, skills }) {
   return (
     <motion.div
-      variants={{ initial: { opacity: 0 }, animate: divAnimateVariant }}
+      variants={staggerVariants}
       className="skillset-banner"
       role="skillset-banner"
     >
       <motion.h4 variants={headingVariants} className="heading">
         {category}
       </motion.h4>
-      <motion.div
-        variants={{ initial: {}, animate: divAnimateVariant }}
-        className="skills-container"
-      >
+      <motion.div variants={staggerVariants} className="skills-container">
         {skills.map((skill, index) => (
           <motion.div
             key={index}

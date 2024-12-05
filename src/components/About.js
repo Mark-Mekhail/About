@@ -1,11 +1,14 @@
 import React from "react";
 import { motion } from "motion/react";
 
+import Variants from "../utils/Variants";
 import StaggerAnimationHelper from "../utils/StaggerAnimationHelper";
 import { abouts } from "../constants/content";
 
 // Required components
 import AboutCard from "./AboutCard";
+
+const aboutCardAnimateVariant = Variants.defaultAnimateVariant();
 
 /**
  * Renders the About section of the website.
@@ -22,7 +25,10 @@ export default function About() {
           return (
             <motion.div
               key={about.title}
-              {...staggerAnimationHelper.cardProps(index)}
+              {...staggerAnimationHelper.cardProps(
+                index,
+                aboutCardAnimateVariant
+              )}
             >
               <AboutCard {...about} />
             </motion.div>

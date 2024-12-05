@@ -1,5 +1,12 @@
 import React from "react";
+import { motion } from "motion/react";
 import PropTypes from "prop-types";
+
+import Variants from "../utils/Variants";
+
+const staggerVariants = Variants.cardStaggerVariants;
+const headingVariants = Variants.defaultVariants("50%", 0, 1);
+const contentVariants = Variants.defaultVariants("-50%", 0, 1);
 
 /**
  * Renders a card component for displaying information about a person.
@@ -12,13 +19,13 @@ import PropTypes from "prop-types";
  */
 export default function AboutCard({ title, icon, content }) {
   return (
-    <div className="about-card">
-      <div className="about-card-heading">
+    <motion.div variants={staggerVariants} className="about-card">
+      <motion.div variants={headingVariants} className="about-card-heading">
         <h3>{title}</h3>
         <img src={icon.src} alt={icon.alt} className="icon" />
-      </div>
-      <p>{content}</p>
-    </div>
+      </motion.div>
+      <motion.p variants={contentVariants}>{content}</motion.p>
+    </motion.div>
   );
 }
 
