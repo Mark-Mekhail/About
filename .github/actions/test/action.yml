@@ -12,5 +12,4 @@ runs:
 
     - name: E2E cypress tests
       shell: bash
-      run: |
-        npm run cypress:run
+      run: npm run cypress:run

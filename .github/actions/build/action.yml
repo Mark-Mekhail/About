@@ -13,9 +13,7 @@ runs:
 
     - name: Lint project
       shell: bash
-      run: |
-        npm run prettier:run
-        npm run lint
+      run: npm run lint
 
     - name: Build project
       shell: bash

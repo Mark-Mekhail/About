@@ -1,8 +1,8 @@
 import globals from "globals";
-import pluginCypress from 'eslint-plugin-cypress/flat'
 import pluginJs from "@eslint/js";
 import pluginReact from "eslint-plugin-react";
 import pluginJest from "eslint-plugin-jest";
+import pluginCypress from "eslint-plugin-cypress/flat";
 
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -33,9 +33,10 @@ export default [
   },
   {
     plugins: {
+      cypress: pluginCypress,
+      jest: pluginJest,
       js: pluginJs,
       react: pluginReact,
-      jest: pluginJest,
     }
   },
   {
