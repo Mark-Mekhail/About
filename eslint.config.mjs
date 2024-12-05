@@ -1,4 +1,5 @@
 import globals from "globals";
+import pluginCypress from 'eslint-plugin-cypress/flat'
 import pluginJs from "@eslint/js";
 import pluginReact from "eslint-plugin-react";
 import pluginJest from "eslint-plugin-jest";
@@ -19,6 +20,7 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.jest,
+        ...pluginCypress.configs.recommended.globals,
       }
     }
   },
@@ -38,9 +40,10 @@ export default [
   },
   {
     rules: {
+      ...pluginCypress.configs.recommended.rules,
+      ...pluginJest.configs.recommended.rules,
       ...pluginJs.configs.recommended.rules,
       ...pluginReact.configs.flat.recommended.rules,
-      ...pluginJest.configs.recommended.rules,
     }
   },
   {

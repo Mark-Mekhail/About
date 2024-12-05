@@ -1,0 +1,16 @@
+name: Test React App
+runs:
+  using: 'composite'
+  steps:
+    - name: Unit tests
+      shell: bash
+      run: npm run unit-test
+
+    - name: Start server
+      shell: bash
+      run: npm run start & wait-on http://localhost:3000
+
+    - name: E2E cypress tests
+      shell: bash
+      run: |
+        npm run cypress:run

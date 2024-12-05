@@ -14,7 +14,7 @@ runs:
     - name: Lint project
       shell: bash
       run: |
-        npm run prettier
+        npm run prettier:run
         npm run lint
 
     - name: Build project

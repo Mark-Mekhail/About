@@ -14,13 +14,13 @@ import Projects from "./Projects";
  */
 export default function Body() {
   return (
-    <div className="main-body">
+    <section className="main-body">
       <Intro />
       <Photos />
       <About />
       <Experience title="Student Work Experience" />
       <Skills />
       <Projects />
-    </div>
+    </section>
   );
 }
