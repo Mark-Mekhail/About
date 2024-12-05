@@ -1,5 +1,12 @@
 import React from "react";
+import { motion } from "motion/react";
 import PropTypes from "prop-types";
+
+import Variants from "../utils/Variants";
+
+const staggerVariants = Variants.cardStaggerVariants;
+const contentVariants = Variants.defaultVariants("100%", 0);
+const headingVariants = Variants.defaultVariants("-100%", 0);
 
 /**
  * Renders an experience card component.
@@ -20,9 +27,10 @@ export default function ExperienceCard({
   headingRef,
 }) {
   return (
-    <div className="experience-card">
-      <p>{description}</p>
-      <div
+    <motion.div variants={staggerVariants} className="experience-card">
+      <motion.p variants={contentVariants}>{description}</motion.p>
+      <motion.div
+        variants={headingVariants}
         className="heading"
         style={{ height: headingHeight }}
         role="experience-card-heading"
@@ -38,8 +46,8 @@ export default function ExperienceCard({
           </div>
           <img src={logo.src} alt={logo.alt} className="logo" />
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

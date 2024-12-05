@@ -1,5 +1,12 @@
 import React from "react";
+import { motion } from "motion/react";
 import PropTypes from "prop-types";
+
+import Variants from "../utils/Variants";
+
+const tagsVariants = Variants.staggerVariants(0.25);
+const tagVariants = Variants.defaultVariants("10em");
+const overlayVariants = Variants.defaultVariants(0, "100%");
 
 /**
  * Renders a project card component.
@@ -32,14 +39,15 @@ export default function ProjectCard({
       className="project-card"
     >
       <img src={image.src} alt={image.alt} className="card-image" />
-      <span className="tags">
+      <motion.span variants={tagsVariants} className="tags">
         {tags.map((tag, index) => (
-          <p key={index} className="tag">
+          <motion.p variants={tagVariants} key={index} className="tag">
             {tag}
-          </p>
+          </motion.p>
         ))}
-      </span>
-      <div
+      </motion.span>
+      <motion.div
+        variants={overlayVariants}
         className="overlay"
         style={{ height: overlayHeight }}
         role="project-card-overlay"
@@ -48,7 +56,7 @@ export default function ProjectCard({
           <h5 className="title">{title}</h5>
           <p className="description">{description}</p>
         </div>
-      </div>
+      </motion.div>
       <div className="hover-overlay">
         <p className="overlay-text">View Code Repository</p>
       </div>
