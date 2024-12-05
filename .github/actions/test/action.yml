@@ -6,10 +6,7 @@ runs:
       shell: bash
       run: npm run test:ci
 
-    - name: Start server
-      shell: bash
-      run: npm run start & wait-on http://localhost:3000
-
     - name: E2E cypress tests
-      shell: bash
-      run: npm run cypress:run
+      uses: cypress-io/github-action@v6
+      with:
+        start: npm start
