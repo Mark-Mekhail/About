@@ -13,7 +13,7 @@ const divAnimateVariant = {
   },
 };
 const headingVariants = Variants.headingVariants;
-const skillTileVariants = Variants.cardVariants;
+const skillTileVariants = Variants.defaultVariants("5vw");
 
 /**
  * Renders a skillset banner component.

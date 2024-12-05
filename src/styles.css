@@ -46,7 +46,7 @@
   --header-vertical-padding: min(2vh, var(--heading-icon-radius));
   --card-gap: max(1vh, 2em);
   --unit-width: 5rem;
-  --landscape-photo-max-width: calc(20 * var(--unit-width));
+  --landscape-photo-max-width: calc(18 * var(--unit-width));
   --portrait-photo-max-width: calc(var(--landscape-photo-max-width) / 3);
   --about-card-max-width: calc(8 * var(--unit-width));
   --experience-card-max-width: calc(8 * var(--unit-width));
@@ -377,6 +377,7 @@ section.photos {
   width: min(100%, var(--skills-banner-max-width));
   display: flex;
   justify-content: center;
+  overflow-x: clip;
 }
 
 /* SkillsetBanner component styling */
