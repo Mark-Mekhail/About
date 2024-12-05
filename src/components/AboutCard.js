@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 import Variants from "../utils/Variants";
 
 const staggerVariants = Variants.cardStaggerVariants;
-const headingVariants = Variants.defaultVariants("50%", 0, 1);
-const contentVariants = Variants.defaultVariants("-50%", 0, 1);
+const headingVariants = Variants.defaultVariants("50%", 0);
+const contentVariants = Variants.defaultVariants("-50%", 0);
 
 /**
  * Renders a card component for displaying information about a person.

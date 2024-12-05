@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 import Variants from "../utils/Variants";
 
 const staggerVariants = Variants.cardStaggerVariants;
-const contentVariants = Variants.defaultVariants("100%", 0, 1);
-const headingVariants = Variants.defaultVariants("-100%", 0, 1);
+const contentVariants = Variants.defaultVariants("100%", 0);
+const headingVariants = Variants.defaultVariants("-100%", 0);
 
 /**
  * Renders an experience card component.
