@@ -24,30 +24,28 @@ describe("About Mark webpage", () => {
 
   it("shows all elements on scroll", () => {
     componentSelectors.forEach((selector) => {
-      const section = cy.get(selector);
-
-      section.then((element) => {
+      cy.get(selector).then((element) => {
         if (!element.is(":visible")) {
-          section
-            .scrollIntoView({ duration: 25 })
-            .should("not.have.css", "opacity", "0");
+          cy.get(selector).scrollIntoView({ duration: 25 });
+          cy.get(selector).should("not.have.css", "opacity", "0");
         }
       });
 
-      section.find("*").each((element, index) => {
-        if (!element.is(":visible")) {
-          if (element.is(".hover-overlay")) {
-            cy.get(element)
-              .scrollIntoView({ duration: 25 })
-              .realHover()
-              .should("not.have.css", "opacity", "0");
-          } else {
-            cy.get(element)
-              .scrollIntoView({ duration: 25 })
-              .should("not.have.css", "opacity", "0");
+      cy.get(selector)
+        .find("*")
+        .each((element) => {
+          if (!element.is(":visible")) {
+            if (element.is(".hover-overlay")) {
+              cy.get(element).scrollIntoView({ duration: 25 });
+              cy.get(element)
+                .realHover()
+                .should("not.have.css", "opacity", "0");
+            } else {
+              cy.get(element).scrollIntoView({ duration: 25 });
+              cy.get(element).should("not.have.css", "opacity", "0");
+            }
           }
-        }
-      });
+        });
     });
   });
 

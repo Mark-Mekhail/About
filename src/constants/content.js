@@ -161,7 +161,10 @@ const skillsets = [
         name: "Data Structures",
         icon: { src: dataStructure, alt: "Data Structures Icon" },
       },
-      { name: "Algorithms", icon: { src: algorithm, alt: "Algorithms Icon" } },
+      {
+        name: "Algorithms",
+        icon: { src: algorithm, alt: "Algorithms Icon" },
+      },
       {
         name: "Object-Oriented Programming",
         icon: { src: oop, alt: "OOP Icon" },

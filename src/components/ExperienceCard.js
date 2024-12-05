@@ -27,7 +27,11 @@ export default function ExperienceCard({
         style={{ height: headingHeight }}
         role="experience-card-heading"
       >
-        <div ref={headingRef} className="heading-content-container">
+        <div
+          ref={headingRef}
+          className="heading-content-container"
+          role="heading-content-container"
+        >
           <div className="info">
             <h5>{role}</h5>
             <h6 className="company-name">{company}</h6>

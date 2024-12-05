@@ -4,7 +4,7 @@ runs:
   steps:
     - name: Unit tests
       shell: bash
-      run: npm run unit-test
+      run: npm run test:ci
 
     - name: Start server
       shell: bash

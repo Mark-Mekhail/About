@@ -1,6 +1,6 @@
 {
   "name": "personal-website",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://mark-mekhail.github.io/About-Mark",
   "main": "/src/index.js",
   "scripts": {
@@ -13,7 +13,10 @@
     "stylelint:check": "stylelint src/**/*.css",
     "stylelint:fix": "stylelint src/**/*.css --fix",
     "lint": "prettier -c src/**/*.js cypress/**/*.js src/**/*.css && eslint src/**/*.js cypress/**/*.js --max-warnings=0 && stylelint src/**/*.css --max-warnings=0",
-    "unit-test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --watchAll=false",
+    "test:coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
+    "test:watch": "react-scripts test --env=jsdom",
+    "test:ci": "react-scripts test --ci --env=jsdom --watchAll=false --coverage --coverage-threshold='{ \"**/src/components/*.js\": { \"lines\": 95, \"branch\": 90 } }'",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "eject": "react-scripts eject"
@@ -71,11 +74,23 @@
     },
     "transformIgnorePatterns": [
       "/node_modules/(?!motion-utils|motion-react)/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.js"
     ]
   },
-  "type": "module",
   "description": "This is a repository containing the code I wrote for my [personal website](https://mark-mekhail.github.io/About-Mark/).",
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "personal-website",
+    "react",
+    "motion",
+    "cypress",
+    "jest",
+    "eslint",
+    "stylelint",
+    "prettier"
+  ],
+  "author": "Mark Mekhail",
   "license": "ISC"
 }

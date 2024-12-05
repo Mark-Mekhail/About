@@ -91,7 +91,6 @@ export default class StaggerAnimationHelper {
   onAnimationStart(index) {
     return (variant) => {
       if (variant !== "animate") {
-        console.log(variant);
         return;
       }
 
