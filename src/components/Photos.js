@@ -28,20 +28,24 @@ export default function Photos() {
       whileInView="animate"
       viewport={{ once: true, amount: 0.4 }}
       className="photos"
+      role="photos-section"
     >
       <motion.img
         variants={topPortraitVariants}
         src={markBanff}
+        alt="Mark in Banff"
         className="top-portrait"
       />
       <motion.img
         variants={landscapeVariants}
         src={markBeehiveHike}
+        alt="Mark on the Beehive Hike"
         className="landscape"
       />
       <motion.img
         variants={bottomPortraitVariants}
         src={markSeattle}
+        alt="Mark in Seattle"
         className="bottom-portrait"
       />
     </motion.section>

@@ -21,7 +21,7 @@ export default function Projects() {
   const heightStandardizer = new HeightStandardizer();
 
   return (
-    <section className="projects">
+    <section className="projects" role="projects-section">
       <motion.h1 {...staggerAnimationHelper.headingProps()}>Projects</motion.h1>
       <div className="section-body">
         {projects.map((project, index) => (

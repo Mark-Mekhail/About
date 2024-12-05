@@ -15,7 +15,7 @@ export default function AboutCard({ title, icon, content }) {
     <div className="about-card">
       <div className="about-card-heading">
         <h3>{title}</h3>
-        <img src={icon} className="icon" />
+        <img src={icon.src} alt={icon.alt} className="icon" />
       </div>
       <p>{content}</p>
     </div>
@@ -24,6 +24,7 @@ export default function AboutCard({ title, icon, content }) {
 
 AboutCard.propTypes = {
   title: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.shape({ src: PropTypes.string, alt: PropTypes.string })
+    .isRequired,
   content: PropTypes.string.isRequired,
 };

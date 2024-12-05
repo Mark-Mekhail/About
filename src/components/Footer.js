@@ -29,7 +29,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={social.image} />
+            <img src={social.icon.src} alt={social.icon.alt} />
             {social.site}
           </a>
         ))}

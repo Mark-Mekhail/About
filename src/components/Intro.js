@@ -19,6 +19,7 @@ export default function Intro() {
       whileInView="animate"
       viewport={{ once: true, amount: "all" }}
       className="intro"
+      role="intro-section"
     >
       <motion.h1 variants={headingVariants}>Mark Mekhail</motion.h1>
       <motion.p variants={bodyVariants}>

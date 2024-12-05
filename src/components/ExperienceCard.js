@@ -22,13 +22,21 @@ export default function ExperienceCard({
   return (
     <div className="experience-card">
       <p>{description}</p>
-      <div className="heading" style={{ height: headingHeight }}>
-        <div ref={headingRef} className="heading-content-container">
+      <div
+        className="heading"
+        style={{ height: headingHeight }}
+        role="experience-card-heading"
+      >
+        <div
+          ref={headingRef}
+          className="heading-content-container"
+          role="heading-content-container"
+        >
           <div className="info">
             <h5>{role}</h5>
             <h6 className="company-name">{company}</h6>
           </div>
-          <img src={logo} className="logo" />
+          <img src={logo.src} alt={logo.alt} className="logo" />
         </div>
       </div>
     </div>
@@ -39,7 +47,8 @@ ExperienceCard.propTypes = {
   role: PropTypes.string.isRequired,
   company: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  logo: PropTypes.string.isRequired,
+  logo: PropTypes.shape({ src: PropTypes.string, alt: PropTypes.string })
+    .isRequired,
   headingRef: PropTypes.func.isRequired,
   headingHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };

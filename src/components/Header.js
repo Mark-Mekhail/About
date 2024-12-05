@@ -22,7 +22,7 @@ export default function Header() {
         viewport={{ once: true }}
         className="signature"
       >
-        <img className="icon" src={mark} />
+        <img src={mark} alt="mark portrait" className="icon" />
         <h4>Mark Mekhail</h4>
       </motion.div>
     </header>

@@ -1,0 +1,12 @@
+name: Test React App
+runs:
+  using: 'composite'
+  steps:
+    - name: Unit tests
+      shell: bash
+      run: npm run test:ci
+
+    - name: E2E cypress tests
+      uses: cypress-io/github-action@v6
+      with:
+        start: npm start

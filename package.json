@@ -1,32 +1,50 @@
 {
   "name": "personal-website",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://mark-mekhail.github.io/About-Mark",
   "main": "/src/index.js",
   "scripts": {
-    "dev": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "prettier": "prettier -c src/**/*.js src/**/*.css",
-    "lint": "eslint src/**/*.js --max-warnings=0 && stylelint src/**/*.css --max-warnings=0",
-    "test": "react-scripts test --env=jsdom",
+    "prettier:check": "prettier -c src/**/*.js src/**/*.css cypress/**/*.js",
+    "prettier:fix": "prettier -c --write src/**/*.js src/**/*.css cypress/**/*.js",
+    "eslint:check": "eslint src/**/*.js cypress/**/*.js",
+    "eslint:fix": "eslint src/**/*.js cypress/**/*.js --fix",
+    "stylelint:check": "stylelint src/**/*.css",
+    "stylelint:fix": "stylelint src/**/*.css --fix",
+    "lint": "prettier -c src/**/*.js cypress/**/*.js src/**/*.css && eslint src/**/*.js cypress/**/*.js --max-warnings=0 && stylelint src/**/*.css --max-warnings=0",
+    "test": "react-scripts test --env=jsdom --watchAll=false",
+    "test:coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
+    "test:watch": "react-scripts test --env=jsdom",
+    "test:ci": "react-scripts test --ci --env=jsdom --watchAll=false --coverage --coverage-threshold='{ \"**/src/components/*.js\": { \"lines\": 95, \"branch\": 90 } }'",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "eject": "react-scripts eject"
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "motion": "^11.11.17",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-scripts": "^5.0.0"
+    "motion": "^11.13.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@eslint/js": "^9.15.0",
-    "eslint": "^8.57.1",
+    "@babel/preset-env": "^7.26.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "babel-jest": "^29.7.0",
+    "cypress-real-events": "^1.13.0",
+    "eslint": "^9.16.0",
+    "eslint-plugin-cypress": "^4.1.0",
+    "eslint-plugin-jest": "^28.9.0",
     "eslint-plugin-react": "^7.37.2",
-    "globals": "^15.12.0",
+    "globals": "^15.13.0",
+    "jest": "^27.5.1",
     "postcss-preset-env": "^10.1.1",
-    "prettier": "3.4.1",
-    "stylelint": "^16.10.0",
+    "prettier": "^3.4.2",
+    "react-scripts": "^5.0.1",
+    "stylelint": "^16.11.0",
     "stylelint-config-standard": "^36.0.1"
   },
   "browserslist": {
@@ -49,5 +67,30 @@
     "singleQuote": false,
     "tabWidth": 2,
     "trailingComma": "es5"
-  }
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!motion-utils|motion-react)/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.js"
+    ]
+  },
+  "description": "This is a repository containing the code I wrote for my [personal website](https://mark-mekhail.github.io/About-Mark/).",
+  "keywords": [
+    "personal-website",
+    "react",
+    "motion",
+    "cypress",
+    "jest",
+    "eslint",
+    "stylelint",
+    "prettier"
+  ],
+  "author": "Mark Mekhail",
+  "license": "ISC"
 }
