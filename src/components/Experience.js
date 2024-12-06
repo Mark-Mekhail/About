@@ -16,7 +16,7 @@ import ExperienceCard from "./ExperienceCard";
  * @param {string} props.title - The title of the experience section.
  * @returns {JSX.Element} The rendered Experience component.
  */
-export default function Experience({ title }) {
+export default function Experience({ title, ...props }) {
   const staggerAnimationHelper = new StaggerAnimationHelper(
     experiences.length + 1
   );
@@ -24,7 +24,7 @@ export default function Experience({ title }) {
   const heightStandardizer = new HeightStandardizer();
 
   return (
-    <section className="experience">
+    <section className="experience" {...props}>
       <motion.h1 {...staggerAnimationHelper.headingProps()}>{title}</motion.h1>
       <div className="section-body">
         {experiences.map((exp, index) => {

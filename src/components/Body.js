@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Required components
 import Intro from "./Intro";
@@ -12,15 +13,32 @@ import Projects from "./Projects";
  * Renders the main body component.
  * @returns {JSX.Element} The rendered main body component.
  */
-export default function Body() {
+export default function Body({
+  aboutRef,
+  experienceRef,
+  skillsRef,
+  projectsRef,
+  ...props
+}) {
   return (
-    <section className="main-body">
+    <section className="main-body" {...props}>
       <Intro />
       <Photos />
-      <About />
-      <Experience title="Student Work Experience" />
-      <Skills />
-      <Projects />
+      <About ref={aboutRef} />
+      <Experience
+        ref={experienceRef}
+        title="Student Work Experience"
+        id="experience"
+      />
+      <Skills ref={skillsRef} id="skills" />
+      <Projects ref={projectsRef} id="projects" />
     </section>
   );
 }
+
+Body.propTypes = {
+  aboutRef: PropTypes.object.isRequired,
+  experienceRef: PropTypes.object.isRequired,
+  skillsRef: PropTypes.object.isRequired,
+  projectsRef: PropTypes.object.isRequired,
+};

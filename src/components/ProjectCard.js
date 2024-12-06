@@ -30,6 +30,7 @@ export default function ProjectCard({
   tags,
   overlayHeight,
   overlayRef,
+  ...props
 }) {
   return (
     <a
@@ -37,6 +38,7 @@ export default function ProjectCard({
       target="_blank"
       rel="noopener noreferrer"
       className="project-card"
+      {...props}
     >
       <img src={image.src} alt={image.alt} className="card-image" />
       <motion.span variants={tagsVariants} className="tags">

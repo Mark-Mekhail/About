@@ -134,14 +134,60 @@ p {
   width: 100%;
   padding: var(--header-vertical-padding) 5vw;
   position: fixed;
-  top: 0;
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
+  top: 0;
   z-index: 2;
   background-color: rgba(255 255 255 / 80%);
 }
 
-.signature {
+.header .nav {
+  display: flex;
+  gap: 2em;
+}
+
+.header .nav a {
+  text-decoration: none;
+  color: var(--theme-color-2);
+}
+
+.header .nav a:hover {
+  color: var(--theme-color-3);
+}
+
+.header .nav *:hover {
+  cursor: pointer;
+}
+
+@media (width > 50em) {
+  .header .nav .icon {
+    display: none;
+  }
+
+  .header .nav a {
+    text-align: center;
+  }
+}
+
+@media (width <= 50em) {
+  .header .nav {
+    flex-direction: column;
+  }
+
+  .header .nav .icon {
+    height: calc(2 * var(--heading-icon-radius));
+    width: calc(2 * var(--heading-icon-radius));
+    object-fit: scale-down;
+  }
+
+  .header .nav a {
+    text-align: start;
+    display: none;
+  }
+}
+
+.header .signature {
+  height: fit-content;
   margin: 0;
   display: flex;
   align-items: center;
@@ -149,7 +195,7 @@ p {
   gap: 1em;
 }
 
-.signature .icon {
+.header .signature .icon {
   width: calc(2 * var(--heading-icon-radius));
   height: calc(2 * var(--heading-icon-radius));
   border-radius: var(--heading-icon-radius);

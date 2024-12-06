@@ -25,9 +25,14 @@ export default function ExperienceCard({
   logo,
   headingHeight,
   headingRef,
+  ...props
 }) {
   return (
-    <motion.div variants={staggerVariants} className="experience-card">
+    <motion.div
+      variants={staggerVariants}
+      className="experience-card"
+      {...props}
+    >
       <motion.p variants={contentVariants}>{description}</motion.p>
       <motion.div
         variants={headingVariants}

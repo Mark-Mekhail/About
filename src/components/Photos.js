@@ -20,7 +20,7 @@ bottomPortraitVariants.animate.transition.delay = 0.5;
  *
  * @returns {JSX.Element} The rendered Photos component.
  */
-export default function Photos() {
+export default function Photos({ ...props }) {
   return (
     <motion.section
       variants={sectionVariants}
@@ -29,6 +29,7 @@ export default function Photos() {
       viewport={{ once: true, amount: 0.4 }}
       className="photos"
       role="photos-section"
+      {...props}
     >
       <motion.img
         variants={topPortraitVariants}

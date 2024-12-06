@@ -16,12 +16,13 @@ const skillTileVariants = Variants.defaultVariants("100%");
  * @param {Array} props.skills - The array of skills to display.
  * @returns {JSX.Element} The skillset banner component.
  */
-export default function SkillsetBanner({ category, skills }) {
+export default function SkillsetBanner({ category, skills, ...props }) {
   return (
     <motion.div
       variants={staggerVariants}
       className="skillset-banner"
       role="skillset-banner"
+      {...props}
     >
       <motion.h4 variants={headingVariants} className="heading">
         {category}

@@ -14,11 +14,11 @@ const aboutCardAnimateVariant = Variants.defaultAnimateVariant();
  * Renders the About section of the website.
  * @returns {JSX.Element} The About section component.
  */
-export default function About() {
+export default function About({ ...props }) {
   const staggerAnimationHelper = new StaggerAnimationHelper(abouts.length + 1);
 
   return (
-    <section className="about">
+    <section className="about" {...props}>
       <motion.h1 {...staggerAnimationHelper.headingProps()}>About Me</motion.h1>
       <div className="section-body">
         {abouts.map((about, index) => {

@@ -11,7 +11,7 @@ const bodyVariants = Variants.defaultVariants("10vw");
  * Renders the introductory section of the website.
  * @returns {JSX.Element} The JSX element representing the introductory section.
  */
-export default function Intro() {
+export default function Intro({ ...props }) {
   return (
     <motion.section
       variants={sectionVariants}
@@ -20,6 +20,7 @@ export default function Intro() {
       viewport={{ once: true, amount: "all" }}
       className="intro"
       role="intro-section"
+      {...props}
     >
       <motion.h1 variants={headingVariants}>Mark Mekhail</motion.h1>
       <motion.p variants={bodyVariants}>

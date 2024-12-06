@@ -11,13 +11,13 @@ import SkillsetBanner from "./SkillsetBanner";
  * Renders the Skills component.
  * @returns {JSX.Element} The rendered Skills component.
  */
-export default function Skills() {
+export default function Skills({ ...props }) {
   const staggerAnimationHelper = new StaggerAnimationHelper(
     skillsets.length + 1
   );
 
   return (
-    <section className="skills" role="skills-section">
+    <section className="skills" role="skills-section" {...props}>
       <motion.h1 {...staggerAnimationHelper.headingProps()}>Skills</motion.h1>
       <div className="skillsets">
         {skillsets.map((skillset, index) => (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 // Required components
 import Header from "./components/Header";
@@ -10,10 +10,17 @@ import Footer from "./components/Footer";
  * @returns {JSX.Element} The rendered App component.
  */
 export default function App() {
+  const refs = {
+    aboutRef: useRef(null),
+    experienceRef: useRef(null),
+    skillsRef: useRef(null),
+    projectsRef: useRef(null),
+  }
+
   return (
     <div id="react-app">
-      <Header />
-      <Body />
+      <Header {...refs} />
+      <Body {...refs} />
       <Footer />
     </div>
   );

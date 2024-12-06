@@ -12,7 +12,7 @@ const copyrightVariants = Variants.defaultVariants("10vw");
  * Renders the Footer component.
  * @returns {JSX.Element} The rendered Footer component.
  */
-export default function Footer() {
+export default function Footer({ ...props }) {
   return (
     <motion.footer
       variants={footerVariants}
@@ -20,6 +20,7 @@ export default function Footer() {
       whileInView="animate"
       viewport={{ once: true }}
       className="footer"
+      {...props}
     >
       <motion.div variants={socialVariants} className="social-links">
         {socials.map((social, index) => (

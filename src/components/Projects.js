@@ -13,7 +13,7 @@ import ProjectCard from "./ProjectCard";
  *
  * @returns {JSX.Element} The rendered Projects component.
  */
-export default function Projects() {
+export default function Projects({ ...props }) {
   const staggerAnimationHelper = new StaggerAnimationHelper(
     projects.length + 1
   );
@@ -21,7 +21,7 @@ export default function Projects() {
   const heightStandardizer = new HeightStandardizer();
 
   return (
-    <section className="projects" role="projects-section">
+    <section className="projects" role="projects-section" {...props}>
       <motion.h1 {...staggerAnimationHelper.headingProps()}>Projects</motion.h1>
       <div className="section-body">
         {projects.map((project, index) => (

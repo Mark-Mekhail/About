@@ -17,9 +17,9 @@ const contentVariants = Variants.defaultVariants("-50%", 0);
  * @param {string} props.content - The content to be displayed in the card.
  * @returns {JSX.Element} The rendered AboutCard component.
  */
-export default function AboutCard({ title, icon, content }) {
+export default function AboutCard({ title, icon, content, ...props }) {
   return (
-    <motion.div variants={staggerVariants} className="about-card">
+    <motion.div variants={staggerVariants} className="about-card" {...props}>
       <motion.div variants={headingVariants} className="about-card-heading">
         <h3>{title}</h3>
         <img src={icon.src} alt={icon.alt} className="icon" />
