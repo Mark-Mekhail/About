@@ -53,39 +53,44 @@ export default function Header({
       <div className="nav">
         <motion.img
           variants={navItemVariants}
+          animate="animate"
           src={hamburger}
           alt="hamburger icon"
           className="icon"
           onClick={toggleMenu}
         />
-        <motion.a
+        <motion.h5
           variants={navItemVariants}
+          style={linkStyle}
+          className="nav-item"
           onClick={onLinkClick(aboutRef)}
-          style={linkStyle}
         >
-          <h5>About</h5>
-        </motion.a>
-        <motion.a
+          About
+        </motion.h5>
+        <motion.h5
           variants={navItemVariants}
+          style={linkStyle}
+          className="nav-item"
           onClick={onLinkClick(experienceRef)}
-          style={linkStyle}
         >
-          <h5>Experience</h5>
-        </motion.a>
-        <motion.a
+          Experience
+        </motion.h5>
+        <motion.h5
           variants={navItemVariants}
+          style={linkStyle}
+          className="nav-item"
           onClick={onLinkClick(skillsRef)}
-          style={linkStyle}
         >
-          <h5>Skills</h5>
-        </motion.a>
-        <motion.a
+          Skills
+        </motion.h5>
+        <motion.h5
           variants={navItemVariants}
-          onClick={onLinkClick(projectsRef)}
           style={linkStyle}
+          className="nav-item"
+          onClick={onLinkClick(projectsRef)}
         >
-          <h5>Projects</h5>
-        </motion.a>
+          Projects
+        </motion.h5>
       </div>
       <div className="signature">
         <motion.img

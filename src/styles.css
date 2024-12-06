@@ -163,10 +163,6 @@ p {
   .header .nav .icon {
     display: none;
   }
-
-  .header .nav a {
-    text-align: center;
-  }
 }
 
 @media (width <= 50em) {
@@ -180,7 +176,7 @@ p {
     object-fit: scale-down;
   }
 
-  .header .nav a {
+  .header .nav .nav-item {
     text-align: start;
     display: none;
   }
