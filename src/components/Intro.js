@@ -3,9 +3,9 @@ import { motion } from "motion/react";
 
 import Variants from "../utils/Variants";
 
-const sectionVariants = Variants.defaultVariants();
-const headingVariants = Variants.headingVariants;
-const bodyVariants = Variants.defaultVariants("10vw");
+const staggerVariants = Variants.staggerVariants(1);
+const headingVariants = Variants.defaultVariants("10em");
+const bodyVariants = Variants.cardVariants;
 
 /**
  * Renders the introductory section of the website.
@@ -14,10 +14,10 @@ const bodyVariants = Variants.defaultVariants("10vw");
 export default function Intro({ ...props }) {
   return (
     <motion.section
-      variants={sectionVariants}
+      variants={staggerVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, amount: "all" }}
+      viewport={{ once: true, amount: 0.75 }}
       className="intro"
       role="intro-section"
       {...props}

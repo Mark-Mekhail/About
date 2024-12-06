@@ -9,7 +9,9 @@ import { emToPx } from "../utils/unitConversion";
 import mark from "../images/mark-portrait.jpeg";
 import hamburger from "../images/hamburger.png";
 
-const signatureVariants = Variants.defaultVariants(0, "5vh");
+const staggerVariants = Variants.staggerVariants(0.5, -1);
+const navItemVariants = Variants.defaultVariants("-50vw");
+const signatureItemVariants = Variants.defaultVariants("-100vw");
 
 const scrollOffset = emToPx(5);
 function scrollToSection(ref) {
@@ -41,38 +43,60 @@ export default function Header({
   const linkStyle = isMenuOpen ? { display: "block" } : {};
 
   return (
-    <header className="header" {...props}>
+    <motion.header
+      variants={staggerVariants}
+      initial="initial"
+      animate="animate"
+      className="header"
+      {...props}
+    >
       <div className="nav">
-        <img
+        <motion.img
+          variants={navItemVariants}
           src={hamburger}
           alt="hamburger icon"
           className="icon"
           onClick={toggleMenu}
         />
-        <a onClick={onLinkClick(aboutRef)} style={linkStyle}>
+        <motion.a
+          variants={navItemVariants}
+          onClick={onLinkClick(aboutRef)}
+          style={linkStyle}
+        >
           <h5>About</h5>
-        </a>
-        <a onClick={onLinkClick(experienceRef)} style={linkStyle}>
+        </motion.a>
+        <motion.a
+          variants={navItemVariants}
+          onClick={onLinkClick(experienceRef)}
+          style={linkStyle}
+        >
           <h5>Experience</h5>
-        </a>
-        <a onClick={onLinkClick(skillsRef)} style={linkStyle}>
+        </motion.a>
+        <motion.a
+          variants={navItemVariants}
+          onClick={onLinkClick(skillsRef)}
+          style={linkStyle}
+        >
           <h5>Skills</h5>
-        </a>
-        <a onClick={onLinkClick(projectsRef)} style={linkStyle}>
+        </motion.a>
+        <motion.a
+          variants={navItemVariants}
+          onClick={onLinkClick(projectsRef)}
+          style={linkStyle}
+        >
           <h5>Projects</h5>
-        </a>
+        </motion.a>
       </div>
-      <motion.div
-        variants={signatureVariants}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        className="signature"
-      >
-        <img src={mark} alt="mark portrait" className="icon" />
-        <h4>Mark Mekhail</h4>
-      </motion.div>
-    </header>
+      <div className="signature">
+        <motion.img
+          variants={signatureItemVariants}
+          src={mark}
+          alt="mark portrait"
+          className="icon"
+        />
+        <motion.h4 variants={signatureItemVariants}>Mark Mekhail</motion.h4>
+      </div>
+    </motion.header>
   );
 }
 
