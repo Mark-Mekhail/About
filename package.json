@@ -9,7 +9,7 @@
     "test": "react-scripts test --env=jsdom --watchAll=false",
     "test:coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
     "test:watch": "react-scripts test --env=jsdom",
-    "test:ci": "react-scripts test --ci --env=jsdom --watchAll=false --coverage --coverage-threshold='{ \"/src/components/*.js\": { \"lines\": 95, \"branch\": 90 } }'",
+    "test:ci": "react-scripts test --ci --env=jsdom --watchAll=false --coverage --coverage-threshold='{ \"src/components/*.js\": { \"lines\": 95, \"branch\": 90 } }'",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "prettier:check": "prettier -c src/**/*.js",
