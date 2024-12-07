@@ -8,7 +8,7 @@ This is a repository containing the code I wrote for my [personal website](https
 - **React**: A JavaScript library for building user interfaces.
 - **npm**: Node package manager used for managing project dependencies.
 
-### Testing
+### Testing Tools
 - **Jest**: A JavaScript testing framework used for writing unit and integration tests.
 - **React Testing Library**: A library for testing React components used in conjunction with Jest to test user interactions and component behavior.
 - **Cypress**: A testing framework for end-to-end testing of the entire application flow.
