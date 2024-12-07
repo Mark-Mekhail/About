@@ -1,8 +1,8 @@
 /**
- * CSS module for the Header component.
+ * CSS module for the SkillsetBanner component.
  */
 
-.Header {
+.header {
   box-sizing: border-box;
   width: 100%;
   padding: var(--header-vertical-padding) 5vw;
@@ -21,41 +21,30 @@
 
 .nav {
   display: flex;
-  gap: 2em;
+  flex-direction: column;
+  gap: 1em 2em;
 }
 
-.nav a {
+.nav .icon {
+  object-fit: scale-down;
+}
+
+.nav-items {
+  display: flex;
+  gap: 1em 2em;
+}
+
+.nav-item {
   text-decoration: none;
   color: var(--theme-color-2);
 }
 
-.nav a:hover {
+.nav-item:hover {
   color: var(--theme-color-3);
 }
 
-.nav *:hover {
+.nav :is(.nav-item, .icon):hover {
   cursor: pointer;
-}
-
-@media (width > 50em) {
-  .nav .icon {
-    display: none;
-  }
-}
-
-@media (width <= 50em) {
-  .nav {
-    flex-direction: column;
-  }
-
-  .nav .icon {
-    object-fit: scale-down;
-  }
-
-  .nav-item {
-    text-align: start;
-    display: none;
-  }
 }
 
 .signature {

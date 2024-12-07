@@ -24,14 +24,17 @@ export default function SkillsetBanner({ category, skills, ...props }) {
   return (
     <motion.div
       variants={staggerVariants}
-      className={styles.SkillsetBanner}
+      className={styles["skillset-banner"]}
       role="skillset-banner"
       {...props}
     >
       <motion.h4 variants={headingVariants} className={styles.heading}>
         {category}
       </motion.h4>
-      <motion.div variants={staggerVariants} className={styles["skills-container"]}>
+      <motion.div
+        variants={staggerVariants}
+        className={styles["skills-container"]}
+      >
         {skills.map((skill, index) => (
           <motion.div
             key={index}

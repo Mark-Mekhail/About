@@ -2,7 +2,7 @@
  * CSS module for the Photos component.
  */
 
-.Photos {
+.photos {
   display: flex;
   flex-direction: row;
   gap: 0;
@@ -11,7 +11,7 @@
   align-self: center;
 }
 
-.Photos img {
+.photos img {
   border-radius: 1em;
 }
 

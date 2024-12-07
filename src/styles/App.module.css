@@ -1,8 +1,8 @@
 /**
  * CSS module for the App component.
  */
- 
-.App {
+
+.app {
   width: 100%;
   display: flex;
   flex-direction: column;

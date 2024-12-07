@@ -34,7 +34,7 @@ export default class Variants {
     return {
       x: [x, 0],
       y: [y, 0],
-      opacity: 1,
+      opacity: [0, 1],
       transition: {
         duration: duration,
       },

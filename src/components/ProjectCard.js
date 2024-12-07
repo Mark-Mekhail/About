@@ -41,7 +41,7 @@ export default function ProjectCard({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className={styles.ProjectCard}
+      className={styles["project-card"]}
       {...props}
     >
       <img src={image.src} alt={image.alt} className={styles["card-image"]} />
@@ -63,7 +63,7 @@ export default function ProjectCard({
           <p className={styles.description}>{description}</p>
         </div>
       </motion.div>
-      <div className={styles["hover-overlay"]}>
+      <div className={styles["hover-overlay"]} role="hover-overlay">
         <p>View Code Repository</p>
       </div>
     </a>

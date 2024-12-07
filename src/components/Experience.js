@@ -30,7 +30,7 @@ export default function Experience({ title, ...props }) {
   const heightStandardizer = new HeightStandardizer();
 
   return (
-    <section className={styles.Experience} {...props}>
+    <section className={styles.experience} role="experience" {...props}>
       <motion.h1 {...staggerAnimationHelper.headingProps()}>{title}</motion.h1>
       <div className={styles.body}>
         {experiences.map((exp, index) => {

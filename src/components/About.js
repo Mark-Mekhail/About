@@ -24,7 +24,7 @@ export default function About({ ...props }) {
   const staggerAnimationHelper = new StaggerAnimationHelper(abouts.length + 1);
 
   return (
-    <section className={styles.About} {...props}>
+    <section className={styles.about} role="about" {...props}>
       <motion.h1 {...staggerAnimationHelper.headingProps()}>About Me</motion.h1>
       <div className={styles.body}>
         {abouts.map((about, index) => {

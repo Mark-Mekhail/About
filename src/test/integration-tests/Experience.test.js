@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Experience from "../components/Experience";
-import { experiences } from "../constants/content";
+import Experience from "../../components/Experience";
+import { experiences } from "../../constants/content";
 
 describe("Experience Component", () => {
   test("contains all experience information", () => {

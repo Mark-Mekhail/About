@@ -23,7 +23,11 @@ const contentVariants = Variants.defaultVariants("-50%", 0);
  */
 export default function AboutCard({ title, icon, content, ...props }) {
   return (
-    <motion.div variants={staggerVariants} className={styles.AboutCard} {...props}>
+    <motion.div
+      variants={staggerVariants}
+      className={styles["about-card"]}
+      {...props}
+    >
       <motion.div variants={headingVariants} className={styles.heading}>
         <h3>{title}</h3>
         <img src={icon.src} alt={icon.alt} className={styles.icon} />

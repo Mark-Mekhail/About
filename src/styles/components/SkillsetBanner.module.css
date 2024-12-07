@@ -2,7 +2,7 @@
  * CSS module for the SkillsetBanner component.
  */
 
-.SkillsetBanner {
+.skillset-banner {
   width: min(100%, var(--skills-banner-max-width));
   padding: max(2em, 2%) 1%;
   border: solid;

@@ -2,7 +2,7 @@
  * CSS module for the Body component.
  */
 
-.Body {
+.body {
   width: 90vw;
   margin-top: calc(2 * var(--heading-icon-radius) + 10vh);
   margin-bottom: 5vh;

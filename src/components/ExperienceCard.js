@@ -34,7 +34,7 @@ export default function ExperienceCard({
   return (
     <motion.div
       variants={staggerVariants}
-      className={styles.ExperienceCard}
+      className={styles["experience-card"]}
       {...props}
     >
       <motion.p variants={contentVariants}>{description}</motion.p>

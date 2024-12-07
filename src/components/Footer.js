@@ -25,7 +25,7 @@ export default function Footer({ ...props }) {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className={styles.Footer}
+      className={styles.footer}
       {...props}
     >
       <motion.div variants={socialVariants} className={styles["social-links"]}>

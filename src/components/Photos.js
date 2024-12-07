@@ -31,8 +31,8 @@ export default function Photos({ ...props }) {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.4 }}
-      className={styles.Photos}
-      role="photos-section"
+      className={styles.photos}
+      role="photos"
       {...props}
     >
       <motion.img

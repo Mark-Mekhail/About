@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import About from "../components/About";
-import { abouts } from "../constants/content";
+import About from "../../components/About";
+import { abouts } from "../../constants/content";
 
-jest.mock("../components/AboutCard", () => ({ title }) => <div>{title}</div>);
+jest.mock("../../components/AboutCard", () => ({ title }) => <div>{title}</div>);
 
 describe("About Component", () => {
   test("renders the title correctly", () => {

@@ -2,7 +2,7 @@
  * CSS module for the AboutCard component.
  */
 
-.AboutCard {
+.about-card {
   box-sizing: border-box;
   max-width: var(--about-card-max-width);
   display: flex;
@@ -27,6 +27,6 @@
   height: var(--about-icon-height);
 }
 
-.AboutCard p {
+.about-card p {
   text-align: justify;
 }

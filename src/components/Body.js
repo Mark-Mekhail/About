@@ -23,7 +23,7 @@ export default function Body({
   ...props
 }) {
   return (
-    <section className={styles.Body} {...props}>
+    <section className={styles.body} {...props}>
       <Intro />
       <Photos />
       <About ref={aboutRef} />

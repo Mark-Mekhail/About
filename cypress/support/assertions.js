@@ -9,7 +9,7 @@ function isInViewport(element) {
     rect.top <= windowHeight &&
     rect.left <= windowWidth
   );
-};
+}
 
 chai.Assertion.addMethod("inViewport", function () {
   const subject = this._obj;

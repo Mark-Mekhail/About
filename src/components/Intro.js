@@ -22,8 +22,8 @@ export default function Intro({ ...props }) {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.75 }}
-      className={styles.Intro}
-      role="intro-section"
+      className={styles.intro}
+      role="intro"
       {...props}
     >
       <motion.h1 variants={headingVariants}>Mark Mekhail</motion.h1>

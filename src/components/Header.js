@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import PropTypes from "prop-types";
 
 // Styles
@@ -7,14 +7,34 @@ import styles from "../styles/components/Header.module.css";
 
 // Utils
 import Variants from "../utils/Variants";
-import { emToPx } from "../utils/unitConversion";
+import { useWindowWidth } from "../utils/Window";
+import { emToPx } from "../utils/UnitConversion";
 
 // Required images
 import mark from "../images/mark-portrait.jpeg";
 import hamburger from "../images/hamburger.png";
 
 const staggerVariants = Variants.staggerVariants(0.5, -1);
-const navItemVariants = Variants.defaultVariants("-50vw");
+const barNavItemVariants = Variants.defaultVariants("-50vw");
+const dropDownStaggerVariants = {
+  ...Variants.staggerVariants(0.1),
+  exit: {
+    transition: {
+      staggerDirection: -1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+const dropdownNavItemVariants = {
+  ...Variants.defaultVariants("-10vw", 0, 0.5),
+  exit: {
+    opacity: 0,
+    x: "-10vw",
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 const signatureItemVariants = Variants.defaultVariants("-100vw");
 
 const scrollOffset = emToPx(5);
@@ -24,6 +44,7 @@ function scrollToSection(ref) {
     behavior: "smooth",
   });
 }
+const menuWidthThreshold = emToPx(60);
 
 /**
  * Renders the header component.
@@ -36,65 +57,70 @@ export default function Header({
   projectsRef,
   ...props
 }) {
+  const navItems = [
+    { ref: aboutRef, text: "About" },
+    { ref: experienceRef, text: "Experience" },
+    { ref: skillsRef, text: "Skills" },
+    { ref: projectsRef, text: "Projects" },
+  ];
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const onLinkClick = (ref) => () => {
     setIsMenuOpen(false);
     scrollToSection(ref);
   };
 
-  const linkStyle = isMenuOpen ? { display: "block" } : {};
+  const windowWidth = useWindowWidth();
 
   return (
     <motion.header
       variants={staggerVariants}
       initial="initial"
       animate="animate"
-      className={styles.Header}
+      className={styles.header}
       {...props}
     >
       <div className={styles.nav}>
-        <motion.img
-          variants={navItemVariants}
-          animate="animate"
-          src={hamburger}
-          alt="hamburger icon"
-          className={styles.icon}
-          onClick={toggleMenu}
-        />
-        <motion.h5
-          variants={navItemVariants}
-          style={linkStyle}
-          className={styles["nav-item"]}
-          onClick={onLinkClick(aboutRef)}
-        >
-          About
-        </motion.h5>
-        <motion.h5
-          variants={navItemVariants}
-          style={linkStyle}
-          className={styles["nav-item"]}
-          onClick={onLinkClick(experienceRef)}
-        >
-          Experience
-        </motion.h5>
-        <motion.h5
-          variants={navItemVariants}
-          style={linkStyle}
-          className={styles["nav-item"]}
-          onClick={onLinkClick(skillsRef)}
-        >
-          Skills
-        </motion.h5>
-        <motion.h5
-          variants={navItemVariants}
-          style={linkStyle}
-          className={styles["nav-item"]}
-          onClick={onLinkClick(projectsRef)}
-        >
-          Projects
-        </motion.h5>
+        {windowWidth <= menuWidthThreshold && (
+          <motion.img
+            variants={barNavItemVariants}
+            animate="animate"
+            src={hamburger}
+            alt="menu icon"
+            className={styles.icon}
+            onClick={toggleMenu}
+            role="menu-icon"
+          />
+        )}
+        <AnimatePresence>
+          {(windowWidth > menuWidthThreshold || isMenuOpen) && (
+            <motion.div
+              variants={isMenuOpen ? dropDownStaggerVariants : staggerVariants}
+              exit="exit"
+              className={styles["nav-items"]}
+              style={{ flexDirection: isMenuOpen ? "column" : "row" }}
+            >
+              {navItems.map(({ ref, text }) => (
+                <motion.h5
+                  key={text}
+                  variants={
+                    isMenuOpen ? dropdownNavItemVariants : barNavItemVariants
+                  }
+                  className={styles["nav-item"]}
+                  onClick={onLinkClick(ref)}
+                  role="nav-item"
+                >
+                  {text}
+                </motion.h5>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
       <div className={styles.signature}>
         <motion.img
