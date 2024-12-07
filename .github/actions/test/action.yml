@@ -9,4 +9,5 @@ runs:
     - name: E2E cypress tests
       uses: cypress-io/github-action@v6
       with:
+        auto-cancel-after-failures: 1
         start: npm start
