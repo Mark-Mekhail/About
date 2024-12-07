@@ -43,7 +43,7 @@ viewportSizes.forEach((viewportSize) => {
 
     it("shows all elements after scrolling through the page", () => {
       cy.get(selectors.footer).then((element) => {
-        const scrollableHeight = (element[0].offsetTop + element[0].offsetHeight) * 1.25;
+        const scrollableHeight = ((element[0].offsetTop + element[0].offsetHeight) / viewportSize.height) * 1000;
         cy.get(element).scrollIntoView({ duration: scrollableHeight, easing: "linear" });
       });
 
