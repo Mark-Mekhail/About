@@ -10,9 +10,14 @@ jest.mock("../../components/Experience", () => () => <div>Experience</div>);
 jest.mock("../../components/Skills", () => () => <div>Skills</div>);
 jest.mock("../../components/Projects", () => () => <div>Projects</div>);
 
+const mockNavSectionRefs = {
+  Photos: {},
+  About: {},
+};
+
 describe("Body Component", () => {
   test("renders all child components", () => {
-    render(<Body />);
+    render(<Body navSectionRefs={mockNavSectionRefs} />);
 
     const componentNames = [
       "Intro",

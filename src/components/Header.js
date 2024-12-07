@@ -13,8 +13,8 @@ import { useWindowWidth, remToPx } from "../utils/Window";
 import mark from "../images/mark-portrait.jpeg";
 import hamburger from "../images/hamburger.png";
 
-const staggerVariants = Variants.staggerVariants(0.5, -1);
-const barNavItemVariants = Variants.defaultVariants("-50vw");
+const staggerVariants = Variants.staggerVariants(0.25, -1);
+const barNavItemVariants = Variants.defaultVariants("-40em");
 const dropDownStaggerVariants = {
   ...Variants.staggerVariants(0.1),
   exit: {
@@ -49,19 +49,11 @@ const menuWidthThreshold = remToPx(60);
  * Renders the header component.
  * @returns {JSX.Element} The rendered header component.
  */
-export default function Header({
-  aboutRef,
-  experienceRef,
-  skillsRef,
-  projectsRef,
-  ...props
-}) {
-  const navItems = [
-    { ref: aboutRef, text: "About" },
-    { ref: experienceRef, text: "Experience" },
-    { ref: skillsRef, text: "Skills" },
-    { ref: projectsRef, text: "Projects" },
-  ];
+export default function Header({ navSectionRefs, ...props }) {
+  const navItems = Object.entries(navSectionRefs).map(([section, ref]) => ({
+    section,
+    ref,
+  }));
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -100,13 +92,13 @@ export default function Header({
           {(windowWidth > menuWidthThreshold || isMenuOpen) && (
             <motion.div
               variants={isMenuOpen ? dropDownStaggerVariants : staggerVariants}
-              exit="exit"
+              {...(isMenuOpen ? { exit: "exit" } : {})}
               className={styles["nav-items"]}
               style={{ flexDirection: isMenuOpen ? "column" : "row" }}
             >
-              {navItems.map(({ ref, text }) => (
+              {navItems.map(({ section, ref }) => (
                 <motion.h5
-                  key={text}
+                  key={section}
                   variants={
                     isMenuOpen ? dropdownNavItemVariants : barNavItemVariants
                   }
@@ -114,7 +106,7 @@ export default function Header({
                   onClick={onLinkClick(ref)}
                   role="nav-item"
                 >
-                  {text}
+                  {section}
                 </motion.h5>
               ))}
             </motion.div>
@@ -135,8 +127,5 @@ export default function Header({
 }
 
 Header.propTypes = {
-  aboutRef: PropTypes.object.isRequired,
-  experienceRef: PropTypes.object.isRequired,
-  skillsRef: PropTypes.object.isRequired,
-  projectsRef: PropTypes.object.isRequired,
+  navSectionRefs: PropTypes.objectOf(PropTypes.object).isRequired,
 };

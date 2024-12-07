@@ -52,6 +52,8 @@ import computerNetwork from "../images/computer-network.png";
 // Social links images
 import linkedin from "../images/linkedin.png";
 
+const navSections = ["About", "Experience", "Skills", "Projects"];
+
 // About section content
 const abouts = [
   {
@@ -267,4 +269,4 @@ const socials = [
   },
 ];
 
-export { abouts, experiences, projects, skillsets, socials };
+export { navSections, abouts, experiences, projects, skillsets, socials };

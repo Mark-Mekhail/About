@@ -15,32 +15,23 @@ import styles from "../styles/components/Body.module.css";
  * Renders the main body component.
  * @returns {JSX.Element} The rendered main body component.
  */
-export default function Body({
-  aboutRef,
-  experienceRef,
-  skillsRef,
-  projectsRef,
-  ...props
-}) {
+export default function Body({ navSectionRefs, ...props }) {
   return (
     <section className={styles.body} {...props}>
-      <Intro />
-      <Photos />
-      <About ref={aboutRef} />
+      <Intro ref={navSectionRefs["Intro"]} />
+      <Photos ref={navSectionRefs["Photos"]} />
+      <About ref={navSectionRefs["About"]} />
       <Experience
-        ref={experienceRef}
+        ref={navSectionRefs["Experience"]}
         title="Student Work Experience"
         id="experience"
       />
-      <Skills ref={skillsRef} id="skills" />
-      <Projects ref={projectsRef} id="projects" />
+      <Skills ref={navSectionRefs["Skills"]} id="skills" />
+      <Projects ref={navSectionRefs["Projects"]} id="projects" />
     </section>
   );
 }
 
 Body.propTypes = {
-  aboutRef: PropTypes.object.isRequired,
-  experienceRef: PropTypes.object.isRequired,
-  skillsRef: PropTypes.object.isRequired,
-  projectsRef: PropTypes.object.isRequired,
+  navSectionRefs: PropTypes.objectOf(PropTypes.object).isRequired,
 };
