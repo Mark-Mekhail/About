@@ -2,9 +2,13 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import Header from "../../components/Header";
 
-jest.mock("../../utils/UnitConversion", () => ({
-  emToPx: jest.fn((em) => em),
-}));
+jest.mock("../../utils/Window", () => {
+  const originalModule = jest.requireActual("../../utils/Window");
+  return {
+    ...originalModule,
+    remToPx: jest.fn((rem) => rem),
+  };
+});
 
 describe("Header Component", () => {
   test("renders the header with correct content", () => {

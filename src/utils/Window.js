@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { debounce } from "lodash";
 
+const rootFontSize = parseFloat(
+  getComputedStyle(document.documentElement).fontSize
+);
+
 function useWindowWidth() {
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -14,4 +18,8 @@ function useWindowWidth() {
   return width;
 }
 
-export { useWindowWidth };
+function remToPx(rem) {
+  return rem * rootFontSize;
+}
+
+export { useWindowWidth, remToPx };

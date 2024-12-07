@@ -7,8 +7,7 @@ import styles from "../styles/components/Header.module.css";
 
 // Utils
 import Variants from "../utils/Variants";
-import { useWindowWidth } from "../utils/Window";
-import { emToPx } from "../utils/UnitConversion";
+import { useWindowWidth, remToPx } from "../utils/Window";
 
 // Required images
 import mark from "../images/mark-portrait.jpeg";
@@ -37,14 +36,14 @@ const dropdownNavItemVariants = {
 };
 const signatureItemVariants = Variants.defaultVariants("-100vw");
 
-const scrollOffset = emToPx(5);
+const scrollOffset = remToPx(5);
 function scrollToSection(ref) {
   window.scrollTo({
     top: ref.current.offsetTop - scrollOffset,
     behavior: "smooth",
   });
 }
-const menuWidthThreshold = emToPx(60);
+const menuWidthThreshold = remToPx(60);
 
 /**
  * Renders the header component.
