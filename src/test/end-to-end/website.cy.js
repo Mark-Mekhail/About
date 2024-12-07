@@ -42,24 +42,16 @@ viewportSizes.forEach((viewportSize) => {
     });
 
     it.only("shows all elements as the user scrolls down the page", () => {
-      mainSections.forEach((section) => {
-        const selector = selectors[section];
-        cy.get(selector).then((element) => {
-          if (!element.is(":visible")) {
-            cy.get(element).scrollIntoView({ offset: { top: viewportSize.height / 4 } });
-            cy.get(element).should("not.have.css", "opacity", "0");
-          }
-        });
+      cy.get(selectors.footer).then((footer) => {
+        const scrollableHeight = footer[0].offsetTop + footer[0].offsetHeight;
+        const scrollDuration = (scrollableHeight / viewportSize.height) * Math.max(1000, Math.min(3000, viewportSize.width * 0.75));
+        cy.get(footer).scrollIntoView({ duration: scrollDuration, easing: "linear" });
+      });
 
-        cy.get(selector)
-          .find("*")
-          .not(selectors.hoverOverlay)
-          .each((element) => {
-            if (!element.is(":visible")) {
-              cy.get(element).scrollIntoView({ offset: { top: viewportSize.height / 4 } });
-              cy.get(element).should("not.have.css", "opacity", "0");
-            }
-          });
+      cy.get("#root").find("*").not(selectors.hoverOverlay).each((element) => {
+        if (!element.is(":visible")) {
+          cy.get(element).should("not.have.css", "opacity", "0");
+        }
       });
     });
 
