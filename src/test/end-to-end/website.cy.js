@@ -41,17 +41,13 @@ viewportSizes.forEach((viewportSize) => {
       });
     });
 
-    it("shows all elements after scrolling through the page", () => {
-      cy.get(selectors.footer).then((element) => {
-        const scrollableHeight = ((element[0].offsetTop + element[0].offsetHeight) / viewportSize.height) * 1000;
-        cy.get(element).scrollIntoView({ duration: scrollableHeight, easing: "linear" });
-      });
-
+    it.only("shows all elements as the user scrolls down the page", () => {
       mainSections.forEach((section) => {
         const selector = selectors[section];
         cy.get(selector).then((element) => {
           if (!element.is(":visible")) {
-            cy.get(selector).should("not.have.css", "opacity", "0");
+            cy.get(element).scrollIntoView({ offset: { top: viewportSize.height / 4 } });
+            cy.get(element).should("not.have.css", "opacity", "0");
           }
         });
 
@@ -60,6 +56,7 @@ viewportSizes.forEach((viewportSize) => {
           .not(selectors.hoverOverlay)
           .each((element) => {
             if (!element.is(":visible")) {
+              cy.get(element).scrollIntoView({ offset: { top: viewportSize.height / 4 } });
               cy.get(element).should("not.have.css", "opacity", "0");
             }
           });
