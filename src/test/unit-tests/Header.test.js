@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { act, render, screen, waitFor } from "@testing-library/react";
 import Header from "../../components/Header";
 
 jest.mock("../../utils/Window", () => {
@@ -10,12 +10,34 @@ jest.mock("../../utils/Window", () => {
   };
 });
 
+window.scrollTo = jest.fn();
+
 const mockNavSectionRefs = {
-  Photos: {},
-  About: {},
-  Experience: {},
-  Skills: {},
-  Projects: {},
+  Photos: {
+    current: {
+      offsetTop: 100,
+    },
+  },
+  About: {
+    current: {
+      offsetTop: 200,
+    },
+  },
+  Experience: {
+    current: {
+      offsetTop: 300,
+    },
+  },
+  Skills: {
+    current: {
+      offsetTop: 400,
+    },
+  },
+  Projects: {
+    current: {
+      offsetTop: 500,
+    },
+  },
 };
 
 describe("Header Component", () => {
@@ -53,5 +75,50 @@ describe("Header Component", () => {
 
     expect(navItems).toHaveLength(0);
     expect(menuIcon).toBeInTheDocument();
+  });
+
+  test("toggles the menu when the menu icon is clicked", () => {
+    window.innerWidth = 50;
+
+    render(<Header navSectionRefs={mockNavSectionRefs} />);
+
+    const menuIcon = screen.getByAltText("menu icon");
+    const navItems = screen.queryAllByRole("nav-item");
+
+    expect(navItems).toHaveLength(0);
+
+    act(() => {
+      menuIcon.click();
+    });
+
+    const toggledNavItems = screen.getAllByRole("nav-item");
+    expect(toggledNavItems).toHaveLength(Object.keys(mockNavSectionRefs).length);
+  });
+
+  test("collapses the menu when a navigation item is clicked", () => {
+    window.innerWidth = 50;
+
+    render(<Header navSectionRefs={mockNavSectionRefs} />);
+
+    const menuIcon = screen.getByAltText("menu icon");
+    const navItems = screen.queryAllByRole("nav-item");
+
+    expect(navItems).toHaveLength(0);
+
+    act(() => {
+      menuIcon.click();
+    });
+
+    const toggledNavItems = screen.getAllByRole("nav-item");
+    expect(toggledNavItems).toHaveLength(Object.keys(mockNavSectionRefs).length);
+
+    act(() => {
+      toggledNavItems[0].click();
+    });
+
+    waitFor(() => {
+      const collapsedNavItems = screen.queryAllByRole("nav-item");
+      expect(collapsedNavItems).toHaveLength(0);
+    });
   });
 });
