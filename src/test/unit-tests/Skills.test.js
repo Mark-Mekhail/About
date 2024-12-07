@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Skills from "../components/Skills";
-import { skillsets } from "../constants/content";
+import Skills from "../../components/Skills";
+import { skillsets } from "../../constants/content";
 
-jest.mock("../components/SkillsetBanner", () => ({ category }) => (
+jest.mock("../../components/SkillsetBanner", () => ({ category }) => (
   <div>{category}</div>
 ));
 

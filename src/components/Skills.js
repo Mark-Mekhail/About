@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
 
+// Styles
+import styles from "../styles/components/Skills.module.css";
+
+// Utils
 import StaggerAnimationHelper from "../utils/StaggerAnimationHelper";
 import { skillsets } from "../constants/content";
 
@@ -11,20 +15,20 @@ import SkillsetBanner from "./SkillsetBanner";
  * Renders the Skills component.
  * @returns {JSX.Element} The rendered Skills component.
  */
-export default function Skills() {
+export default function Skills({ ...props }) {
   const staggerAnimationHelper = new StaggerAnimationHelper(
     skillsets.length + 1
   );
 
   return (
-    <section className="skills" role="skills-section">
+    <section className={styles.skills} role="skills" {...props}>
       <motion.h1 {...staggerAnimationHelper.headingProps()}>Skills</motion.h1>
-      <div className="skillsets">
+      <div className={styles.skillsets}>
         {skillsets.map((skillset, index) => (
           <motion.div
             key={skillset.category}
             {...staggerAnimationHelper.cardProps(index)}
-            className="skillset-container"
+            className={styles["skillset-container"]}
           >
             <SkillsetBanner {...skillset} />
           </motion.div>

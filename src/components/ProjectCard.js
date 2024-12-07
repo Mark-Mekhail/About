@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "motion/react";
 import PropTypes from "prop-types";
 
+// Styles
+import styles from "../styles/components/ProjectCard.module.css";
+
+// Utils
 import Variants from "../utils/Variants";
 
 const tagsVariants = Variants.staggerVariants(0.25);
@@ -30,35 +34,37 @@ export default function ProjectCard({
   tags,
   overlayHeight,
   overlayRef,
+  ...props
 }) {
   return (
     <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="project-card"
+      className={styles["project-card"]}
+      {...props}
     >
-      <img src={image.src} alt={image.alt} className="card-image" />
-      <motion.span variants={tagsVariants} className="tags">
+      <img src={image.src} alt={image.alt} className={styles["card-image"]} />
+      <motion.span variants={tagsVariants} className={styles.tags}>
         {tags.map((tag, index) => (
-          <motion.p variants={tagVariants} key={index} className="tag">
+          <motion.p variants={tagVariants} key={index} className={styles.tag}>
             {tag}
           </motion.p>
         ))}
       </motion.span>
       <motion.div
         variants={overlayVariants}
-        className="overlay"
+        className={styles["info-overlay-container"]}
         style={{ height: overlayHeight }}
         role="project-card-overlay"
       >
-        <div ref={overlayRef} className="overlay-content-container">
-          <h5 className="title">{title}</h5>
-          <p className="description">{description}</p>
+        <div ref={overlayRef} className={styles["info-overlay"]}>
+          <h5 className={styles.title}>{title}</h5>
+          <p className={styles.description}>{description}</p>
         </div>
       </motion.div>
-      <div className="hover-overlay">
-        <p className="overlay-text">View Code Repository</p>
+      <div className={styles["hover-overlay"]} role="hover-overlay">
+        <p>View Code Repository</p>
       </div>
     </a>
   );

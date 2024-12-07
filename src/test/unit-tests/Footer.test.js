@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Footer from "../components/Footer";
-import { socials } from "../constants/content";
+import Footer from "../../components/Footer";
+import { socials } from "../../constants/content";
 
 const currentYear = new Date().getUTCFullYear();
 const iconsLink = "https://icons8.com/";

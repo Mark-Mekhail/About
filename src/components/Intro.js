@@ -1,25 +1,30 @@
 import React from "react";
 import { motion } from "motion/react";
 
+// Styles
+import styles from "../styles/components/Intro.module.css";
+
+// Utils
 import Variants from "../utils/Variants";
 
-const sectionVariants = Variants.defaultVariants();
-const headingVariants = Variants.headingVariants;
-const bodyVariants = Variants.defaultVariants("10vw");
+const staggerVariants = Variants.staggerVariants(1);
+const headingVariants = Variants.defaultVariants("10em");
+const bodyVariants = Variants.cardVariants;
 
 /**
  * Renders the introductory section of the website.
  * @returns {JSX.Element} The JSX element representing the introductory section.
  */
-export default function Intro() {
+export default function Intro({ ...props }) {
   return (
     <motion.section
-      variants={sectionVariants}
+      variants={staggerVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, amount: "all" }}
-      className="intro"
-      role="intro-section"
+      viewport={{ once: true, amount: 0.75 }}
+      className={styles.intro}
+      role="intro"
+      {...props}
     >
       <motion.h1 variants={headingVariants}>Mark Mekhail</motion.h1>
       <motion.p variants={bodyVariants}>

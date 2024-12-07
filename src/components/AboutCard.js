@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "motion/react";
 import PropTypes from "prop-types";
 
+// Styles
+import styles from "../styles/components/AboutCard.module.css";
+
+// Utils
 import Variants from "../utils/Variants";
 
 const staggerVariants = Variants.cardStaggerVariants;
@@ -17,12 +21,16 @@ const contentVariants = Variants.defaultVariants("-50%", 0);
  * @param {string} props.content - The content to be displayed in the card.
  * @returns {JSX.Element} The rendered AboutCard component.
  */
-export default function AboutCard({ title, icon, content }) {
+export default function AboutCard({ title, icon, content, ...props }) {
   return (
-    <motion.div variants={staggerVariants} className="about-card">
-      <motion.div variants={headingVariants} className="about-card-heading">
+    <motion.div
+      variants={staggerVariants}
+      className={styles["about-card"]}
+      {...props}
+    >
+      <motion.div variants={headingVariants} className={styles.heading}>
         <h3>{title}</h3>
-        <img src={icon.src} alt={icon.alt} className="icon" />
+        <img src={icon.src} alt={icon.alt} className={styles.icon} />
       </motion.div>
       <motion.p variants={contentVariants}>{content}</motion.p>
     </motion.div>

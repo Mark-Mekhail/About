@@ -1,0 +1,21 @@
+/**
+ * CSS module for the Skills component.
+ */
+
+.skillsets {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    min(100%, var(--skills-banner-max-width))
+  );
+  justify-content: center;
+  gap: calc(var(--card-gap) + 1em) var(--card-gap);
+}
+
+.skillset-container {
+  width: min(100%, var(--skills-banner-max-width));
+  display: flex;
+  justify-content: center;
+  overflow-x: clip;
+}

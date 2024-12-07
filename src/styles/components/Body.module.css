@@ -1,0 +1,12 @@
+/**
+ * CSS module for the Body component.
+ */
+
+.body {
+  width: 90vw;
+  margin-top: calc(2 * var(--heading-icon-radius) + 10vh);
+  margin-bottom: 5vh;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}

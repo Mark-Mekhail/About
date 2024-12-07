@@ -34,7 +34,7 @@ export default class Variants {
     return {
       x: [x, 0],
       y: [y, 0],
-      opacity: 1,
+      opacity: [0, 1],
       transition: {
         duration: duration,
       },
@@ -78,13 +78,13 @@ export default class Variants {
    * The heading variants.
    * @type {object}
    */
-  static headingVariants = this.defaultVariants("-10vw");
+  static headingVariants = this.defaultVariants("-10em");
 
   /**
    * The card variants.
    * @type {object}
    */
-  static cardVariants = this.defaultVariants(0, "min(10em, 10vh)");
+  static cardVariants = this.defaultVariants(0, "5em");
 
   /**
    * The card stagger variants.

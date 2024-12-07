@@ -1,12 +1,18 @@
 import React from "react";
 import { motion } from "motion/react";
 
-import Variants from "../utils/Variants";
-import StaggerAnimationHelper from "../utils/StaggerAnimationHelper";
-import { abouts } from "../constants/content";
+// Styles
+import styles from "../styles/components/About.module.css";
 
 // Required components
 import AboutCard from "./AboutCard";
+
+// Utils
+import Variants from "../utils/Variants";
+import StaggerAnimationHelper from "../utils/StaggerAnimationHelper";
+
+// Constants
+import { abouts } from "../constants/content";
 
 const aboutCardAnimateVariant = Variants.defaultAnimateVariant();
 
@@ -14,13 +20,13 @@ const aboutCardAnimateVariant = Variants.defaultAnimateVariant();
  * Renders the About section of the website.
  * @returns {JSX.Element} The About section component.
  */
-export default function About() {
+export default function About({ ...props }) {
   const staggerAnimationHelper = new StaggerAnimationHelper(abouts.length + 1);
 
   return (
-    <section className="about">
+    <section className={styles.about} role="about" {...props}>
       <motion.h1 {...staggerAnimationHelper.headingProps()}>About Me</motion.h1>
-      <div className="section-body">
+      <div className={styles.body}>
         {abouts.map((about, index) => {
           return (
             <motion.div

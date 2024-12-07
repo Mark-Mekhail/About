@@ -1,0 +1,63 @@
+/**
+ * CSS module for the SkillsetBanner component.
+ */
+
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--header-vertical-padding) 5vw;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(255 255 255 / 80%);
+}
+
+.icon {
+  height: calc(2 * var(--heading-icon-radius));
+  width: calc(2 * var(--heading-icon-radius));
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1em 2em;
+}
+
+.nav .icon {
+  object-fit: scale-down;
+}
+
+.nav-items {
+  display: flex;
+  gap: 1em 2em;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: var(--theme-color-2);
+}
+
+.nav-item:hover {
+  color: var(--theme-color-3);
+}
+
+.nav :is(.nav-item, .icon):hover {
+  cursor: pointer;
+}
+
+.signature {
+  height: fit-content;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.signature .icon {
+  border-radius: var(--heading-icon-radius);
+  object-fit: cover;
+  object-position: 0% 90%;
+}

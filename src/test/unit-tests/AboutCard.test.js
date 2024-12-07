@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import AboutCard from "../components/AboutCard";
+import AboutCard from "../../components/AboutCard";
 
 const about = {
   title: "Test Title",

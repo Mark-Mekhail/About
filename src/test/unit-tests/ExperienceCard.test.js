@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import ExperienceCard from "../components/ExperienceCard";
+import ExperienceCard from "../../components/ExperienceCard";
 
 const experience = {
   role: "Software Engineer",

@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Projects from "../components/Projects";
-import { projects } from "../constants/content";
+import Projects from "../../components/Projects";
+import { projects } from "../../constants/content";
 
 describe("Projects Component", () => {
   test("contains all project information", () => {

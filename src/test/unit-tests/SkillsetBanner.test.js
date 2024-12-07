@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import SkillsetBanner from "../components/SkillsetBanner";
+import SkillsetBanner from "../../components/SkillsetBanner";
 
 const category = "Category 1";
 const skills = [

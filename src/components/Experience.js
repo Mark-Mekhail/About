@@ -2,8 +2,14 @@ import React from "react";
 import { motion } from "motion/react";
 import PropTypes from "prop-types";
 
+// Styles
+import styles from "../styles/components/Experience.module.css";
+
+// Utils
 import HeightStandardizer from "../utils/HeightStandardizer";
 import StaggerAnimationHelper from "../utils/StaggerAnimationHelper";
+
+// Constants
 import { experiences } from "../constants/content";
 
 // Required components
@@ -16,7 +22,7 @@ import ExperienceCard from "./ExperienceCard";
  * @param {string} props.title - The title of the experience section.
  * @returns {JSX.Element} The rendered Experience component.
  */
-export default function Experience({ title }) {
+export default function Experience({ title, ...props }) {
   const staggerAnimationHelper = new StaggerAnimationHelper(
     experiences.length + 1
   );
@@ -24,9 +30,9 @@ export default function Experience({ title }) {
   const heightStandardizer = new HeightStandardizer();
 
   return (
-    <section className="experience">
+    <section className={styles.experience} role="experience" {...props}>
       <motion.h1 {...staggerAnimationHelper.headingProps()}>{title}</motion.h1>
-      <div className="section-body">
+      <div className={styles.body}>
         {experiences.map((exp, index) => {
           return (
             <motion.div

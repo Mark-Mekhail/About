@@ -1,0 +1,32 @@
+/**
+ * CSS module for the AboutCard component.
+ */
+
+.about-card {
+  box-sizing: border-box;
+  max-width: var(--about-card-max-width);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1em;
+  overflow: hidden;
+}
+
+.heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.heading h3 {
+  display: inline;
+  text-wrap: nowrap;
+}
+
+.heading .icon {
+  height: var(--about-icon-height);
+}
+
+.about-card p {
+  text-align: justify;
+}

@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
 
+// Styles
+import styles from "../styles/components/Photos.module.css";
+
+// Utils
 import Variants from "../utils/Variants";
 
 // Required images
@@ -20,33 +24,34 @@ bottomPortraitVariants.animate.transition.delay = 0.5;
  *
  * @returns {JSX.Element} The rendered Photos component.
  */
-export default function Photos() {
+export default function Photos({ ...props }) {
   return (
     <motion.section
       variants={sectionVariants}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.4 }}
-      className="photos"
-      role="photos-section"
+      className={styles.photos}
+      role="photos"
+      {...props}
     >
       <motion.img
         variants={topPortraitVariants}
         src={markBanff}
         alt="Mark in Banff"
-        className="top-portrait"
+        className={styles["top-portrait"]}
       />
       <motion.img
         variants={landscapeVariants}
         src={markBeehiveHike}
         alt="Mark on the Beehive Hike"
-        className="landscape"
+        className={styles.landscape}
       />
       <motion.img
         variants={bottomPortraitVariants}
         src={markSeattle}
         alt="Mark in Seattle"
-        className="bottom-portrait"
+        className={styles["bottom-portrait"]}
       />
     </motion.section>
   );

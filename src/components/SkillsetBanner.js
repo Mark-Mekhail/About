@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "motion/react";
 import PropTypes from "prop-types";
 
+// Styles
+import styles from "../styles/components/SkillsetBanner.module.css";
+
+// Utils
 import Variants from "../utils/Variants";
 
 const staggerVariants = Variants.staggerVariants(0.25);
@@ -16,27 +20,31 @@ const skillTileVariants = Variants.defaultVariants("100%");
  * @param {Array} props.skills - The array of skills to display.
  * @returns {JSX.Element} The skillset banner component.
  */
-export default function SkillsetBanner({ category, skills }) {
+export default function SkillsetBanner({ category, skills, ...props }) {
   return (
     <motion.div
       variants={staggerVariants}
-      className="skillset-banner"
+      className={styles["skillset-banner"]}
       role="skillset-banner"
+      {...props}
     >
-      <motion.h4 variants={headingVariants} className="heading">
+      <motion.h4 variants={headingVariants} className={styles.heading}>
         {category}
       </motion.h4>
-      <motion.div variants={staggerVariants} className="skills-container">
+      <motion.div
+        variants={staggerVariants}
+        className={styles["skills-container"]}
+      >
         {skills.map((skill, index) => (
           <motion.div
             key={index}
             variants={skillTileVariants}
-            className="skill-tile"
+            className={styles["skill-tile"]}
           >
             <img
               src={skill.icon.src}
               alt={skill.icon.alt}
-              className="skill-tile-image"
+              className={styles["skill-icon"]}
             />
             <h6>{skill.name}</h6>
           </motion.div>

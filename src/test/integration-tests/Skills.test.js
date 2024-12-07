@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Skills from "../components/Skills";
-import { skillsets } from "../constants/content";
+import Skills from "../../components/Skills";
+import { skillsets } from "../../constants/content";
 
 describe("Skills Component", () => {
   test("contains all skill information", () => {
