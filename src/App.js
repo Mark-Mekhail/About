@@ -1,5 +1,8 @@
 import React, { useRef } from "react";
 
+// Styles
+import styles from "./styles/App.module.css";
+
 // Required components
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -18,7 +21,7 @@ export default function App() {
   }
 
   return (
-    <div id="react-app">
+    <div className={styles.App}>
       <Header {...refs} />
       <Body {...refs} />
       <Footer />

@@ -2,8 +2,14 @@ import React from "react";
 import { motion } from "motion/react";
 import PropTypes from "prop-types";
 
+// Styles
+import styles from "../styles/components/Experience.module.css";
+
+// Utils
 import HeightStandardizer from "../utils/HeightStandardizer";
 import StaggerAnimationHelper from "../utils/StaggerAnimationHelper";
+
+// Constants
 import { experiences } from "../constants/content";
 
 // Required components
@@ -24,9 +30,9 @@ export default function Experience({ title, ...props }) {
   const heightStandardizer = new HeightStandardizer();
 
   return (
-    <section className="experience" {...props}>
+    <section className={styles.Experience} {...props}>
       <motion.h1 {...staggerAnimationHelper.headingProps()}>{title}</motion.h1>
-      <div className="section-body">
+      <div className={styles.body}>
         {experiences.map((exp, index) => {
           return (
             <motion.div

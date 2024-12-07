@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
 
+// Styles
+import styles from "../styles/components/Intro.module.css";
+
+// Utils
 import Variants from "../utils/Variants";
 
 const staggerVariants = Variants.staggerVariants(1);
@@ -18,7 +22,7 @@ export default function Intro({ ...props }) {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.75 }}
-      className="intro"
+      className={styles.Intro}
       role="intro-section"
       {...props}
     >

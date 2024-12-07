@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
 
+// Styles
+import styles from "../styles/components/Photos.module.css";
+
+// Utils
 import Variants from "../utils/Variants";
 
 // Required images
@@ -27,7 +31,7 @@ export default function Photos({ ...props }) {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.4 }}
-      className="photos"
+      className={styles.Photos}
       role="photos-section"
       {...props}
     >
@@ -35,19 +39,19 @@ export default function Photos({ ...props }) {
         variants={topPortraitVariants}
         src={markBanff}
         alt="Mark in Banff"
-        className="top-portrait"
+        className={styles["top-portrait"]}
       />
       <motion.img
         variants={landscapeVariants}
         src={markBeehiveHike}
         alt="Mark on the Beehive Hike"
-        className="landscape"
+        className={styles.landscape}
       />
       <motion.img
         variants={bottomPortraitVariants}
         src={markSeattle}
         alt="Mark in Seattle"
-        className="bottom-portrait"
+        className={styles["bottom-portrait"]}
       />
     </motion.section>
   );

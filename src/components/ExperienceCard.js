@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "motion/react";
 import PropTypes from "prop-types";
 
+// Styles
+import styles from "../styles/components/ExperienceCard.module.css";
+
+// Utils
 import Variants from "../utils/Variants";
 
 const staggerVariants = Variants.cardStaggerVariants;
@@ -30,26 +34,26 @@ export default function ExperienceCard({
   return (
     <motion.div
       variants={staggerVariants}
-      className="experience-card"
+      className={styles.ExperienceCard}
       {...props}
     >
       <motion.p variants={contentVariants}>{description}</motion.p>
       <motion.div
         variants={headingVariants}
-        className="heading"
+        className={styles["heading-container"]}
         style={{ height: headingHeight }}
         role="experience-card-heading"
       >
         <div
           ref={headingRef}
-          className="heading-content-container"
-          role="heading-content-container"
+          className={styles.heading}
+          role="heading-container"
         >
-          <div className="info">
+          <div className={styles.info}>
             <h5>{role}</h5>
-            <h6 className="company-name">{company}</h6>
+            <h6 className={styles["company-name"]}>{company}</h6>
           </div>
-          <img src={logo.src} alt={logo.alt} className="logo" />
+          <img src={logo.src} alt={logo.alt} className={styles.logo} />
         </div>
       </motion.div>
     </motion.div>

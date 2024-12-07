@@ -1,0 +1,44 @@
+/**
+ * CSS module for the SkillsetBanner component.
+ */
+
+.SkillsetBanner {
+  width: min(100%, var(--skills-banner-max-width));
+  padding: max(2em, 2%) 1%;
+  border: solid;
+  border-width: var(--card-border-width);
+  border-color: var(--theme-color-3);
+  border-radius: var(--card-border-radius);
+  position: relative;
+}
+
+.heading {
+  padding: 0 0.5em;
+  position: absolute;
+  top: -0.75em;
+  left: 5%;
+  background-color: var(--theme-color-1);
+}
+
+.skills-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--skill-tile-width));
+  gap: var(--card-gap) 0.5em;
+  justify-content: center;
+}
+
+.skill-tile {
+  width: var(--skill-tile-width);
+  height: 8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 0.5em;
+}
+
+.skill-icon {
+  height: 5em;
+}

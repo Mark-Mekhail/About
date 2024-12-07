@@ -1,0 +1,49 @@
+/**
+ * CSS module for the ExperienceCard component.
+ */
+
+.ExperienceCard {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  border: solid;
+  border-radius: var(--card-border-radius);
+  border-color: var(--theme-color-3);
+  border-width: var(--card-border-width);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 2em;
+  overflow: hidden;
+  text-align: left;
+}
+
+.heading-container {
+  width: 100%;
+}
+
+.heading  {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.heading .logo {
+  max-width: min(40%, 7em);
+  max-height: 4em;
+  align-self: end;
+}
+
+.heading .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-self: end;
+}
+
+.heading .info .company-name {
+  color: var(--theme-color-4);
+}

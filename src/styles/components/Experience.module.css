@@ -1,0 +1,15 @@
+/**
+ * CSS module for the Experience component.
+ */
+
+.body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    min(100%, var(--experience-card-max-width))
+  );
+  grid-auto-rows: 1fr;
+  gap: var(--card-gap);
+  justify-content: center;
+}

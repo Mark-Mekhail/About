@@ -9,6 +9,8 @@ import Experience from "./Experience";
 import Skills from "./Skills";
 import Projects from "./Projects";
 
+import styles from "../styles/components/Body.module.css";
+
 /**
  * Renders the main body component.
  * @returns {JSX.Element} The rendered main body component.
@@ -21,7 +23,7 @@ export default function Body({
   ...props
 }) {
   return (
-    <section className="main-body" {...props}>
+    <section className={styles.Body} {...props}>
       <Intro />
       <Photos />
       <About ref={aboutRef} />

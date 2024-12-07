@@ -1,0 +1,8 @@
+/**
+ * CSS module for the Intro component.
+ */
+
+.Intro p {
+  font-size: calc(1em + var(--heading-font-size-multiplier));
+  text-align: center;
+}

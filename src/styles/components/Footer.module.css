@@ -1,0 +1,48 @@
+/**
+ * CSS module for the Footer component.
+ */
+
+.Footer {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 5vh;
+  padding: calc(2 * var(--header-vertical-padding));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  text-align: center;
+  background-color: rgba(200 200 200 / 80%);
+  color: var(--theme-color-2);
+  overflow: hidden;
+}
+
+.Footer a {
+  color: var(--theme-color-2);
+  text-decoration: underline;
+}
+
+.Footer p {
+  font-size: 1em;
+}
+
+.social-links {
+  display: flex;
+  gap: 2vw;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  color: var(--theme-color-2);
+  text-decoration: none;
+}
+
+.social-link img {
+  height: 1em;
+}
+
+.Footer a:hover {
+  color: var(--theme-color-4);
+}

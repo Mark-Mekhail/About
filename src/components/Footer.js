@@ -1,7 +1,13 @@
 import React from "react";
 import { motion } from "motion/react";
 
+// Styles
+import styles from "../styles/components/Footer.module.css";
+
+// Utils
 import Variants from "../utils/Variants";
+
+// Constants
 import { socials } from "../constants/content";
 
 const footerVariants = Variants.defaultVariants();
@@ -19,16 +25,17 @@ export default function Footer({ ...props }) {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="footer"
+      className={styles.Footer}
       {...props}
     >
-      <motion.div variants={socialVariants} className="social-links">
+      <motion.div variants={socialVariants} className={styles["social-links"]}>
         {socials.map((social, index) => (
           <a
             key={index}
             href={social.link}
             target="_blank"
             rel="noopener noreferrer"
+            className={styles["social-link"]}
           >
             <img src={social.icon.src} alt={social.icon.alt} />
             {social.site}

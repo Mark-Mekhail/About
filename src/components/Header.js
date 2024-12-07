@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import PropTypes from "prop-types";
 
+// Styles
+import styles from "../styles/components/Header.module.css";
+
+// Utils
 import Variants from "../utils/Variants";
 import { emToPx } from "../utils/unitConversion";
 
@@ -47,22 +51,22 @@ export default function Header({
       variants={staggerVariants}
       initial="initial"
       animate="animate"
-      className="header"
+      className={styles.Header}
       {...props}
     >
-      <div className="nav">
+      <div className={styles.nav}>
         <motion.img
           variants={navItemVariants}
           animate="animate"
           src={hamburger}
           alt="hamburger icon"
-          className="icon"
+          className={styles.icon}
           onClick={toggleMenu}
         />
         <motion.h5
           variants={navItemVariants}
           style={linkStyle}
-          className="nav-item"
+          className={styles["nav-item"]}
           onClick={onLinkClick(aboutRef)}
         >
           About
@@ -70,7 +74,7 @@ export default function Header({
         <motion.h5
           variants={navItemVariants}
           style={linkStyle}
-          className="nav-item"
+          className={styles["nav-item"]}
           onClick={onLinkClick(experienceRef)}
         >
           Experience
@@ -78,7 +82,7 @@ export default function Header({
         <motion.h5
           variants={navItemVariants}
           style={linkStyle}
-          className="nav-item"
+          className={styles["nav-item"]}
           onClick={onLinkClick(skillsRef)}
         >
           Skills
@@ -86,18 +90,18 @@ export default function Header({
         <motion.h5
           variants={navItemVariants}
           style={linkStyle}
-          className="nav-item"
+          className={styles["nav-item"]}
           onClick={onLinkClick(projectsRef)}
         >
           Projects
         </motion.h5>
       </div>
-      <div className="signature">
+      <div className={styles.signature}>
         <motion.img
           variants={signatureItemVariants}
           src={mark}
           alt="mark portrait"
-          className="icon"
+          className={styles.icon}
         />
         <motion.h4 variants={signatureItemVariants}>Mark Mekhail</motion.h4>
       </div>
