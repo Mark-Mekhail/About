@@ -13,6 +13,16 @@
 
 .photos img {
   border-radius: 1em;
+  width: 100%;
+}
+
+.landscape {
+  aspect-ratio: 4 / 3;
+}
+
+.top-portrait, 
+.bottom-portrait {
+  aspect-ratio: 3 / 4;
 }
 
 @media (width < 35em) {
@@ -61,7 +71,6 @@
   .landscape {
     max-width: min(60vw, var(--landscape-photo-max-width));
     max-height: 80vh;
-    aspect-ratio: 4 / 3;
   }
 
   .bottom-portrait {
