@@ -216,7 +216,7 @@ const projects = [
     title: "About Mark Website",
     description:
       "A React application developed to create the website you are currently browsing",
-    link: "https://github.com/Mark-Mekhail/About-Mark",
+    link: "https://github.com/Mark-Mekhail/About",
     image: { src: website, alt: "Website Image" },
     tags: ["GitHub Actions (CI/CD)", "React", "HTML", "CSS", "Jest", "Cypress"],
   },

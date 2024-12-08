@@ -1,6 +1,6 @@
-# About-Mark
+# About
 ## Description
-This is a repository containing the code I wrote for my [personal website](https://mark-mekhail.github.io/About-Mark/).
+This is a repository containing the code I wrote for my [personal website](https://mark-mekhail.github.io/About/).
 
 ## Technical Details
 ### Development Tools and Languages
@@ -57,4 +57,4 @@ I welcome any suggestions for improvement to this project, including:
   - Linters (e.g. linters used, linter configurations)
   - Security
 
-To share a suggestion, please start a new [discussion](https://github.com/Mark-Mekhail/About-Mark/discussions/categories/ideas) with the details of your suggestion.
+To share a suggestion, please start a new [discussion](https://github.com/Mark-Mekhail/About/discussions/categories/ideas) with the details of your suggestion.

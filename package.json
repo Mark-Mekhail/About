@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "version": "1.0.0",
-  "homepage": "https://mark-mekhail.github.io/About-Mark",
+  "homepage": "https://mark-mekhail.github.io/About",
   "main": "/src/index.js",
   "scripts": {
     "start": "react-scripts start",
@@ -81,7 +81,7 @@
       "!src/index.js"
     ]
   },
-  "description": "This is a repository containing the code I wrote for my [personal website](https://mark-mekhail.github.io/About-Mark/).",
+  "description": "This is a repository containing the code I wrote for my [personal website](https://mark-mekhail.github.io/About/).",
   "keywords": [
     "personal-website",
     "react",
