@@ -23,7 +23,7 @@ This is a repository containing the code I wrote for my [personal website](https
 
 ### Folder Structure
 - **src/**: Contains the source code of the project.
-- **public/**: Contains the public assets such as HTML files and images.
+- **public/**: Contains public assets such as HTML files and some images.
 - **.github/**: Contains GitHub-specific files such as workflows and composite actions for CI/CD.
 
 ### Deployment
