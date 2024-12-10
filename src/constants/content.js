@@ -232,7 +232,7 @@ const projects = [
     description: "A server for multiplayer Battleship games",
     link: "https://github.com/Mark-Mekhail/Battleship",
     image: { src: battleship, alt: "Battleship Image" },
-    tags: ["JavaScript", "Node.js", "Express", "WebSocket", "REST API"],
+    tags: ["JavaScript", "Node.js", "WebSocket", "REST API"],
   },
   {
     title: "Course Project Samples",
