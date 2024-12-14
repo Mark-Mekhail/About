@@ -63,7 +63,7 @@ const abouts = [
       alt: "Student Icon",
     },
     content:
-      "I have consistently demonstrated academic excellence throughout my studies, achieving a GPA that comfortably places me within the top 4% of my cohort. With a perfect straight-A record across all subjects, I have proven my dedication to achieving exceptional results. Notably, I have earned the highest score in my section for several challenging courses, including Basic Algorithms and Data Structures, Intermediate Algorithms and Data Structures, Machine Learning and Data Mining, Computer Communications, Computing Systems, University Writing, Technical Communication, and Principles of Microeconomics.",
+      "I have consistently demonstrated academic excellence throughout my studies, achieving a GPA that comfortably places me within the top 4% of my cohort. With a perfect straight-A record across all subjects, I have proven my dedication to achieving exceptional results. Notably, I have earned the highest score in my section for several challenging courses, including: Basic Algorithms and Data Structures, Intermediate Algorithms and Data Structures, Machine Learning and Data Mining, Computer Communications, Computing Systems, University Writing, Technical Communication, and Principles of Microeconomics.",
   },
   {
     title: "Skilled Engineer",
