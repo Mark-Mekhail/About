@@ -7,9 +7,9 @@ describe("Photos Component", () => {
     render(<Photos />);
 
     const sectionElement = screen.getByRole("photos");
-    const topPortraitElement = screen.getByAltText("Mark in Banff");
-    const landscapeElement = screen.getByAltText("Mark on the Beehive Hike");
-    const bottomPortraitElement = screen.getByAltText("Mark in Seattle");
+    const topPortraitElement = screen.getByAltText("top portrait of Mark");
+    const landscapeElement = screen.getByAltText("landscape of Mark");
+    const bottomPortraitElement = screen.getByAltText("bottom portrait of Mark");
 
     expect(sectionElement).toBeInTheDocument();
     expect(topPortraitElement).toBeInTheDocument();
