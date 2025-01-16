@@ -8,9 +8,9 @@ import styles from "../styles/components/Photos.module.css";
 import Variants from "../utils/Variants";
 
 // Required images
-import markSeattle from "../images/mark-seattle.jpeg";
-import markBanff from "../images/mark-banff.jpeg";
-import markBeehiveHike from "../images/mark-beehive-hike.jpeg";
+import topPortraitImage from "../images/mark-banff.jpeg";
+import landscapeImage from "../images/presentation.jpeg";
+import bottomPortraitImage from "../images/mark-seattle.jpeg";
 
 const sectionVariants = Variants.defaultVariants();
 const landscapeVariants = Variants.defaultVariants("-5vw");
@@ -37,20 +37,20 @@ export default function Photos({ ...props }) {
     >
       <motion.img
         variants={topPortraitVariants}
-        src={markBanff}
-        alt="Mark in Banff"
+        src={topPortraitImage}
+        alt="top portrait of Mark"
         className={styles["top-portrait"]}
       />
       <motion.img
         variants={landscapeVariants}
-        src={markBeehiveHike}
-        alt="Mark on the Beehive Hike"
+        src={landscapeImage}
+        alt="landscape of Mark"
         className={styles.landscape}
       />
       <motion.img
         variants={bottomPortraitVariants}
-        src={markSeattle}
-        alt="Mark in Seattle"
+        src={bottomPortraitImage}
+        alt="bottom portrait of Mark"
         className={styles["bottom-portrait"]}
       />
     </motion.section>
