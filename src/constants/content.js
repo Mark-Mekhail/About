@@ -4,6 +4,7 @@ import developerIcon from "../images/software-developer.png";
 import studentIcon from "../images/student.png";
 
 // Project section images
+import software_slayer from "../images/software-slayer.jpeg";
 import braille_alphabet from "../images/braille.jpg";
 import meta_puzzles from "../images/computer-puzzle.jpeg";
 import website from "../images/website.png";
@@ -12,6 +13,7 @@ import battleship from "../images/battleship.png";
 
 // Experience section images
 import intelLogo from "../images/intel.png";
+import remitlyLogo from "../images/remitly.png";
 import selLogo from "../images/sel.png";
 import ubcLogo from "../images/ubc.svg";
 import safeLogo from "../images/safe.png";
@@ -21,8 +23,10 @@ import canadaLogo from "../images/canada.png";
 import java from "../images/java.svg";
 import python from "../images/python.svg";
 import javascript from "../images/javascript.svg";
+import typescript from "../images/typescript.svg";
 import cpp from "../images/cpp.svg";
 import c from "../images/c.svg";
+import go from "../images/golang.svg";
 import html from "../images/html.svg";
 import css from "../images/css.svg";
 import database from "../images/database.png";
@@ -88,6 +92,12 @@ const abouts = [
 // Experience section content
 const experiences = [
   {
+    role: "Software Engineer",
+    company: "Remitly",
+    description: "The Remittance Network Expansion (RNE) team at Remitly aims to build a competitive and locally relevant remittance delivery experience for customers. On this team, I am responsible for developing the Remitly mobile app's send flow and the backend services that support it.",
+    logo: { src: remitlyLogo, alt: "Remitly Logo" },
+  },
+  {
     role: "Simulation Engineer",
     company: "Intel",
     description:
@@ -132,7 +142,9 @@ const skillsets = [
       { name: "Python", icon: { src: python, alt: "Python Icon" } },
       { name: "C++", icon: { src: cpp, alt: "C++ Icon" } },
       { name: "C", icon: { src: c, alt: "C Icon" } },
+      { name: "Go (Golang)", icon: { src: go, alt: "Go Icon" } },
       { name: "JavaScript", icon: { src: javascript, alt: "JavaScript Icon" } },
+      { name: "TypeScript", icon: { src: typescript, alt: "TypeScript Icon" } },
       { name: "HTML", icon: { src: html, alt: "HTML Icon" } },
       { name: "CSS", icon: { src: css, alt: "CSS Icon" } },
       { name: "SQL", icon: { src: database, alt: "SQL Icon" } },
@@ -155,7 +167,7 @@ const skillsets = [
       },
       { name: "AWS", icon: { src: aws, alt: "AWS Icon" } },
       { name: "Node.js", icon: { src: node, alt: "Node.js Icon" } },
-      { name: "React", icon: { src: react, alt: "React Icon" } },
+      { name: "React/ReactNative", icon: { src: react, alt: "React Icon" } },
       { name: "MongoDB", icon: { src: mongodb, alt: "MongoDB Icon" } },
       { name: "Jest", icon: { src: jest, alt: "Jest Icon" } },
       { name: "Cypress", icon: { src: cypress, alt: "Cypress Icon" } },
@@ -204,6 +216,13 @@ const skillsets = [
 
 // Project section content
 const projects = [
+  {
+    title: "Software Slayer",
+    description: "A mobile application for tracking software skills to learn",
+    link: "https://github.com/Mark-Mekhail/Software-Slayer",
+    image: { src: software_slayer, alt: "Software Slayer Image" },
+    tags: ["ReactNative", "TypeScript", "Go", "MySQL", "Docker"],
+  },
   {
     title: "Meta Coding Puzzles",
     description:

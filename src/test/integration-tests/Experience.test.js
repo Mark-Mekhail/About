@@ -8,12 +8,12 @@ describe("Experience Component", () => {
     render(<Experience title="Experience" />);
 
     experiences.forEach((experience) => {
-      const roleElement = screen.getByText(experience.role);
+      const roleElement = screen.getAllByText(experience.role);
       const companyElement = screen.getByText(experience.company);
       const descriptionElement = screen.getByText(experience.description);
       const logoElement = screen.getByAltText(experience.logo.alt);
 
-      expect(roleElement).toBeInTheDocument();
+      expect(roleElement.length).toBeGreaterThan(0);
       expect(companyElement).toBeInTheDocument();
       expect(descriptionElement).toBeInTheDocument();
       expect(logoElement).toBeInTheDocument();
