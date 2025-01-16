@@ -94,7 +94,8 @@ const experiences = [
   {
     role: "Software Engineer",
     company: "Remitly",
-    description: "The Remittance Network Expansion (RNE) team at Remitly aims to build a competitive and locally relevant remittance delivery experience for customers. On this team, I am responsible for developing the Remitly mobile app's send flow and the backend services that support it.",
+    description:
+      "The Remittance Network Expansion (RNE) team at Remitly aims to build a competitive and locally relevant remittance delivery experience for customers. On this team, I am responsible for developing the Remitly mobile app's send flow and the backend services that support it.",
     logo: { src: remitlyLogo, alt: "Remitly Logo" },
   },
   {
