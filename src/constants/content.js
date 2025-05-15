@@ -12,6 +12,7 @@ import cpen_code from "../images/coding-project.jpeg";
 import battleship from "../images/battleship.png";
 
 // Experience section images
+import amazonLogo from "../images/amazon.png";
 import intelLogo from "../images/intel.png";
 import remitlyLogo from "../images/remitly.png";
 import selLogo from "../images/sel.png";
@@ -93,6 +94,13 @@ const abouts = [
 const experiences = [
   {
     role: "Software Engineer",
+    company: "Amazon",
+    description:
+      "As an SDE intern for Amazon's retail International Technology team, I was responsible for helping Amazon expand its global retail footprint and developing locally relevant experiences for customers in Latin America.",
+    logo: { src: amazonLogo, alt: "Amazon Logo" },
+  },
+  {
+    role: "Software Engineer",
     company: "Remitly",
     description:
       "The Remittance Network Expansion (RNE) team at Remitly aims to build a competitive and locally relevant remittance delivery experience for customers. On this team, I am responsible for developing the Remitly mobile app's send flow and the backend services that support it.",
@@ -168,7 +176,7 @@ const skillsets = [
       },
       { name: "AWS", icon: { src: aws, alt: "AWS Icon" } },
       { name: "Node.js", icon: { src: node, alt: "Node.js Icon" } },
-      { name: "React/ReactNative", icon: { src: react, alt: "React Icon" } },
+      { name: "React Native", icon: { src: react, alt: "React Icon" } },
       { name: "MongoDB", icon: { src: mongodb, alt: "MongoDB Icon" } },
       { name: "Jest", icon: { src: jest, alt: "Jest Icon" } },
       { name: "Cypress", icon: { src: cypress, alt: "Cypress Icon" } },
