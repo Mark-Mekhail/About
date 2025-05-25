@@ -4,6 +4,7 @@ import developerIcon from "../images/software-developer.png";
 import studentIcon from "../images/student.png";
 
 // Project section images
+import aiChat from "../images/ai-chat.png";
 import software_slayer from "../images/software-slayer.jpeg";
 import braille_alphabet from "../images/braille.jpg";
 import meta_puzzles from "../images/computer-puzzle.jpeg";
@@ -225,6 +226,13 @@ const skillsets = [
 
 // Project section content
 const projects = [
+  {
+    title: "AI Chatbot",
+    description: "A full-stack web application for an AI chatbot using LLMs",
+    link: "https://github.com/Mark-Mekhail/AI-Chatbot",
+    image: { src: aiChat, alt: "AI Chatbot Image" },
+    tags: ["LLMs", "Docker", "Python", "Server-Sent Events (SSE)", "React"],
+  },
   {
     title: "Software Slayer",
     description: "A mobile application for tracking software skills to learn",
