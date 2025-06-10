@@ -9,7 +9,7 @@ import Variants from "../utils/Variants";
 
 // Required images
 import topPortraitImage from "../images/mark-banff.jpeg";
-import landscapeImage from "../images/amazon-photo.png";
+import landscapeImage from "../images/amazon-photo.jpeg";
 import bottomPortraitImage from "../images/mark-seattle.jpeg";
 
 const sectionVariants = Variants.defaultVariants();
