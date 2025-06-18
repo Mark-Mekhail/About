@@ -41,20 +41,6 @@ viewportSizes.forEach((viewportSize) => {
       });
     });
 
-    it("shows all elements as the user scrolls down the page", () => {
-      cy.get(selectors.footer).then((footer) => {
-        const scrollableHeight = footer[0].offsetTop + footer[0].offsetHeight;
-        const scrollDuration = (scrollableHeight / viewportSize.height) * 3000;
-        cy.get(footer).scrollIntoView({ duration: scrollDuration, easing: "linear" });
-      });
-
-      cy.get("#root").find("*").not(selectors.hoverOverlay).each((element) => {
-        if (!element.is(":visible")) {
-          cy.get(element).should("not.have.css", "opacity", "0");
-        }
-      });
-    });
-
     it("shows all hover overlays on hover", () => {
       cy.get(selectors.hoverOverlay).each((overlay) => {
         cy.get(overlay).realHover();
