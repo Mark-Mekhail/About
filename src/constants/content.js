@@ -18,7 +18,6 @@ import intelLogo from "../images/intel.png";
 import remitlyLogo from "../images/remitly.png";
 import selLogo from "../images/sel.png";
 import shopifyLogo from "../images/shopify-logo.jpeg";
-import shopifyLogo from "../images/shopify-logo.jpeg";
 import ubcLogo from "../images/ubc.svg";
 import safeLogo from "../images/safe.png";
 import canadaLogo from "../images/canada.png";
@@ -52,7 +51,6 @@ import algorithm from "../images/algorithm.png";
 import oop from "../images/oop.png";
 import split from "../images/split.png";
 import restApi from "../images/rest-api.png";
-import ruby from "../images/ruby.png";
 import ruby from "../images/ruby.png";
 import distributedSystem from "../images/distributed-system.png";
 import ml from "../images/ml.png";
@@ -116,14 +114,12 @@ const experiences = [
     company: "Remitly",
     description:
       "The Remittance Network Expansion (RNX) team at Remitly aims to build a competitive and locally relevant remittance delivery experience for customers. As an intern on this team, I worked on the Remitly mobile app's send flow and the backend services that support it.",
-      "The Remittance Network Expansion (RNX) team at Remitly aims to build a competitive and locally relevant remittance delivery experience for customers. As an intern on this team, I worked on the Remitly mobile app's send flow and the backend services that support it.",
     logo: { src: remitlyLogo, alt: "Remitly Logo" },
   },
   {
     role: "Simulation Engineer",
     company: "Intel",
     description:
-      "The Virtual Platform teams at Intel Foundry Services (IFS) create software simulations of system-on-chip (SoC) designs. As a member of one of these teams, I contributed to developing these simulations and took on infrastructure-related tasks related to CI/CD and streamlining project creation.",
       "The Virtual Platform teams at Intel Foundry Services (IFS) create software simulations of system-on-chip (SoC) designs. As a member of one of these teams, I contributed to developing these simulations and took on infrastructure-related tasks related to CI/CD and streamlining project creation.",
     logo: { src: intelLogo, alt: "Intel Logo" },
   },
@@ -132,14 +128,12 @@ const experiences = [
     company: "SEL",
     description:
       "Schweitzer Engineering Laboratories (SEL) specializes in creating digital products and systems that protect, control, and automate power systems around the world. In my role, I worked on test automation, CI/CD pipelines, Windows and Linux server setup, and VHDL testbenches for RTL components.",
-      "Schweitzer Engineering Laboratories (SEL) specializes in creating digital products and systems that protect, control, and automate power systems around the world. In my role, I worked on test automation, CI/CD pipelines, Windows and Linux server setup, and VHDL testbenches for RTL components.",
     logo: { src: selLogo, alt: "SEL Logo" },
   },
   {
     role: "Teaching Assistant",
     company: "UBC",
     description:
-      "As a teaching assistant for CPEN 211 (Introduction to Computing Systems), I engaged with students by holding office hours, providing assistance and feedback on assignments, and answering online forum questions. CPEN 211 covers topics such as digital logic design, microcomputer organization, assembly language programming, and I/O programming.",
       "As a teaching assistant for CPEN 211 (Introduction to Computing Systems), I engaged with students by holding office hours, providing assistance and feedback on assignments, and answering online forum questions. CPEN 211 covers topics such as digital logic design, microcomputer organization, assembly language programming, and I/O programming.",
     logo: { src: ubcLogo, alt: "UBC Logo" },
   },
@@ -148,14 +142,12 @@ const experiences = [
     company: "Safe Software",
     description:
       'As a backend software developer co-op at Safe Software, I helped develop the backend of FME Server, a web app that automates data and application integration workflows. Safe Software (aka. "Safe") is a leading company that develops and sells FME, the data integration platform with the best support for spatial data.',
-      'As a backend software developer co-op at Safe Software, I helped develop the backend of FME Server, a web app that automates data and application integration workflows. Safe Software (aka. "Safe") is a leading company that develops and sells FME, the data integration platform with the best support for spatial data.',
     logo: { src: safeLogo, alt: "Safe Software Logo" },
   },
   {
     role: "Full-Stack Developer",
     company: "Government of Canada",
     description:
-      "While working for the Canadian federal government, I developed frontend and backend microservices used for national security purposes. I also worked on integrating Grafana and Sentry into applications for monitoring and observability.",
       "While working for the Canadian federal government, I developed frontend and backend microservices used for national security purposes. I also worked on integrating Grafana and Sentry into applications for monitoring and observability.",
     logo: { src: canadaLogo, alt: "Government of Canada Logo" },
   },
@@ -172,7 +164,6 @@ const skillsets = [
       { name: "Go (Golang)", icon: { src: go, alt: "Go Icon" } },
       { name: "JavaScript", icon: { src: javascript, alt: "JavaScript Icon" } },
       { name: "TypeScript", icon: { src: typescript, alt: "TypeScript Icon" } },
-      { name: "Ruby", icon: { src: ruby, alt: "Ruby Icon" } },
       { name: "Ruby", icon: { src: ruby, alt: "Ruby Icon" } },
       { name: "HTML", icon: { src: html, alt: "HTML Icon" } },
       { name: "CSS", icon: { src: css, alt: "CSS Icon" } },
