@@ -9,8 +9,8 @@ import Variants from "../utils/Variants";
 
 // Required images
 import topPortraitImage from "../images/mark-banff.jpeg";
-import landscapeImage from "../images/amazon-photo.jpeg";
-import bottomPortraitImage from "../images/mark-seattle.jpeg";
+import landscapeImage from "../images/mark-toronto.jpeg";
+import bottomPortraitImage from "../images/mark-niagara.png";
 
 const sectionVariants = Variants.defaultVariants();
 const landscapeVariants = Variants.defaultVariants("-5vw");
